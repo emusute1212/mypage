@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const Header = props => (
-  <header id="header" style={props.timeout ? { display: 'none' } : {}}>
+  <header id="header" style={props.timeout ? {display: 'none'} : {}}>
     <div className="logo">
-      <span className="icon fa-diamond"></span>
+      <span className="icon fa-diamond"/>
     </div>
     <div className="content">
       <div className="inner">
@@ -12,7 +12,7 @@ const Header = props => (
         <p>
           A fully responsive site template designed by{' '}
           <a href="https://html5up.net">HTML5 UP</a> and released
-          <br />
+          <br/>
           for free under the{' '}
           <a href="https://html5up.net/license">Creative Commons</a> license.
         </p>
@@ -59,11 +59,11 @@ const Header = props => (
       </ul>
     </nav>
   </header>
-)
+);
 
 Header.propTypes = {
   onOpenArticle: PropTypes.func,
   timeout: PropTypes.bool,
-}
+};
 
 export default Header
