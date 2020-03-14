@@ -8,8 +8,10 @@
 
 	.icon {
 		@include icon;
-		border-bottom: none;
-		position: relative;
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        width :auto;
 
 		> .label {
 			display: none;

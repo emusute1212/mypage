@@ -4,7 +4,9 @@ import React from 'react'
 const Header = props => (
   <header id="header" style={props.timeout ? {display: 'none'} : {}}>
     <div className="logo">
-      <span className="icon fa-diamond"/>
+      <img
+        className="icon"
+        src="https://pbs.twimg.com/profile_images/1003154770385747968/vdaJtxID_400x400.jpg"/>
     </div>
     <div className="content">
       <div className="inner">
