@@ -192,7 +192,7 @@ class Main extends React.Component {
               </a>
             </li>
             <li>
-              <a href="https://qiita.com/emusute1212" className="icon fa-sticky-note">
+              <a href="https://qiita.com/emusute1212" className="icon fa-search">
                 <span className="label">Qiita</span>
               </a>
             </li>
