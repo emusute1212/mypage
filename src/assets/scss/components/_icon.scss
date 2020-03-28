@@ -8,10 +8,50 @@
 
 	.icon {
 		@include icon;
-		border-bottom: none;
-		position: relative;
+        border-bottom: none;
+        position: relative;
 
 		> .label {
 			display: none;
 		}
 	}
+
+    .thumbnail{
+        width: 0;
+
+        .icon {
+           @include icon;
+           border-bottom: none;
+           max-width: 100%;
+           height: auto;
+           border-radius: 50%;
+           width :auto;
+           position: absolute;
+
+           &.changeImage {
+              opacity: 0;
+              animation: fadeInOut;
+              animation-delay: 3s;
+              animation-duration: 10s;
+              animation-iteration-count: infinite;
+           }
+        }
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 1;
+        }
+        70% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+   }
