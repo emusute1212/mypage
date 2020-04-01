@@ -196,6 +196,11 @@ class Main extends React.Component {
                 <span className="label">Qiita</span>
               </a>
             </li>
+            <li>
+              <a href="https://emusute.hatenablog.com/" className="icon fa-sticky-note">
+                <span className="label">HatenaBlog</span>
+              </a>
+            </li>
           </ul>
           {close}
         </article>
