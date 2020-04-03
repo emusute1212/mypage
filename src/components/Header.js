@@ -3,6 +3,7 @@ import React from 'react'
 import AutoToggleIcon from './AutoToggleIcon'
 import icon_cat from '../images/icon_cat.jpg'
 import icon from '../images/favicon.png'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
@@ -25,6 +26,10 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
+              trackCustomEvent({
+                category: "Intro Button",
+                action: "Click",
+              })
               props.onOpenArticle('intro')
             }}
           >
@@ -34,6 +39,10 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
+              trackCustomEvent({
+                category: "Work Button",
+                action: "Click",
+              })
               props.onOpenArticle('work')
             }}
           >
@@ -43,7 +52,11 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
-              props.onOpenArticle('about')
+              trackCustomEvent({
+                category: "Private Button",
+                action: "Click",
+              })
+              props.onOpenArticle('private')
             }}
           >
             Private
@@ -52,6 +65,10 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
+              trackCustomEvent({
+                category: "Contact Button",
+                action: "Click",
+              })
               props.onOpenArticle('contact')
             }}
           >
