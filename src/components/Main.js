@@ -3,6 +3,7 @@ import React from 'react'
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 class Main extends React.Component {
   render() {
@@ -123,8 +124,8 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="about"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${
+          id="private"
+          className={`${this.props.article === 'private' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
             }`}
           style={{ display: 'none' }}
@@ -169,33 +170,73 @@ class Main extends React.Component {
           </p>
           <ul className="icons">
             <li>
-              <a
-                href="https://twitter.com/emusute1212"
-                className="icon fa-twitter"
+              <a href="https://twitter.com/emusute1212"
+                 className="icon fa-twitter"
+                 onClick={
+                   () => {
+                     trackCustomEvent({
+                       category: 'Twitter Button',
+                       action: 'Click',
+                     })
+                   }
+                 }
               >
                 <span className="label">Twitter</span>
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/yosuke.miyanishi" className="icon fa-facebook">
+              <a href="https://www.facebook.com/yosuke.miyanishi"
+                 className="icon fa-facebook"
+                 onClick={
+                   () => {
+                     trackCustomEvent({
+                       category: 'Facebook Button',
+                       action: 'Click',
+                     })
+                   }
+                 }>
                 <span className="label">Facebook</span>
               </a>
             </li>
             <li>
-              <a
-                href="https://github.com/emusute1212"
-                className="icon fa-github"
-              >
+              <a href="https://github.com/emusute1212"
+                 className="icon fa-github"
+                 onClick={
+                   () => {
+                     trackCustomEvent({
+                       category: 'Github Button',
+                       action: 'Click',
+                     })
+                   }
+                 }>
                 <span className="label">GitHub</span>
               </a>
             </li>
             <li>
-              <a href="https://qiita.com/emusute1212" className="icon fa-search">
+              <a href="https://qiita.com/emusute1212"
+                 className="icon fa-search"
+                 onClick={
+                   () => {
+                     trackCustomEvent({
+                       category: 'Qiita Button',
+                       action: 'Click',
+                     })
+                   }
+                 }>
                 <span className="label">Qiita</span>
               </a>
             </li>
             <li>
-              <a href="https://emusute.hatenablog.com/" className="icon fa-sticky-note">
+              <a href="https://emusute.hatenablog.com/"
+                 className="icon fa-sticky-note"
+                 onClick={
+                   () => {
+                     trackCustomEvent({
+                       category: 'HatenaBlog Button',
+                       action: 'Click',
+                     })
+                   }
+                 }>
                 <span className="label">HatenaBlog</span>
               </a>
             </li>
