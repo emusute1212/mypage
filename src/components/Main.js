@@ -80,46 +80,18 @@ class Main extends React.Component {
             <img src={pic02} alt=""/>
           </span>
           <p>
-            都内の企業にて学習タブレット開発のクライアントサイドを担当しています。
-            タブレット自体はAndroidを用いているので、基本的にAndroidアプリ開発を行なっております。<br/>
-            学生時代の事は割愛します。
+            都内の企業にてタブレット専用のアプリ開発を行なっており、クライアントサイドを担当しています。<br/>
+            タブレット専用のアプリというのはKIOSKアプリのような物をイメージしていただけるとわかりやすいと思います。<br/>
+            タブレット自体はAndroidを用いているので、基本的にAndroidアプリの開発を行なっております。<br/>
           </p>
-          <h3>親との振り返り機能</h3>
           <p>
-            サービスのコアとなる学習の確認機能をOJTとして実装。<br/>
-            自分の実装した機能を実際にユーザに使っていただき、クライアントサイド開発の楽しさを痛感する。<br/>
-            技術的には Coroutine + Dagger + MVVM という、当時のモダン環境で実装。<br/>
-            アーキテクチャ設計などの大切さ・面白さを学んだ。
+            業務内容としては、新機能の実装・メンテナンスなどをメインに行なっております。<br/>
+            また、タブレット専用アプリなので、ホームアプリや設定などの低レイヤアプリの実装も行なっております。<br/>
           </p>
-          <h3>ホーム画面周りの調整</h3>
           <p>
-            ホーム画面の設定画面や各種設定項目の実装を担当。<br/>
-            設定自体は、通常のアプリケーションのような設定とは異なり、低レイヤの設定項目が多く、
-            端末が文鎮化する可能性もあったので、その辺りは気をつけて実装を進めた。<br/>
-            実装を進める上では、既存の自社サービスを模倣する形で調整しながら進めた。
+            使用技術：Kotlin/Android/Python/HTML+CSS+JS/Git
           </p>
-          <h3>新型タブレット対応</h3>
-          <p>
-            新型タブレットの導入のため、Androidバージョンのアップデート対応を行なった。
-            マイグレーションは 5.1 -> 9 であり、ほぼ全てのアプリケーションが影響を受ける状態であった。<br/>
-            移行を進める上で、マイグレーションチームが設けられており、自分はそこに1メンバーとしてアサインされました。<br/>
-            リリースの対応や、半分ほどのアプリケーションの移行対応を行う事で、バージョンアップ対応の難しさや、
-            ライブラリへの理解が深まりました。また、副産物として、Gradleについてチョット理解できたかなと思っています。
-          </p>
-          <h3>動画再生アプリ開発</h3>
-          <p>
-            解説とヒントを動画で説明する機能の開発を行なった。<br/>
-            具体的には、動画の変換ツールとAndroid上でのストリーミング再生機能を実装した。<br/>
-            動画のビルドツールは Python + FFmpeg で作成し、Android上での動画再生は ExoPlayer というライブラリを用いた。<br/>
-            動画の変換ツールについて、渡される動画自体はmp4形式であり、動画を受け取るのが開発とは別のチームだったので、
-            そのチームが直接動画を変換してS3へ配置するためのツールが必要だったので実装。<br/>
-            そのチームはITについての知識があるわけでもないので、IT知識がなくても使えるように手順書等をまとめた。<br/>
-            Android上でのストリーミング再生について、
-            アーキテクチャとしては MVVM を採用し、メッセンジャーパターンを意識して実装。<br/>
-            一番難しかったポイントとしては、ExoPlayerを用いたコントロールバーのデザイン調整。
-            こちらについては後々記事にしたいなと思っている。
-          </p>
-          <b>詳細はコンタクトへお願いします！</b>
+          <b>詳細は<a href="https://www.resume.id/emusute">Resume</a>にてお願いいたします！</b>
           {close}
         </article>
 
@@ -138,12 +110,21 @@ class Main extends React.Component {
           <p>
             学生時代に作成したアプリケーションを、今の技術力でリファクタリングし、
             どこまで自分か成長しているか実感するために実施。<br/>
-            また、新しい技術へのインプットのために利用したりもしている。（TODOアプリのような感じ。。。）<br/>
+            また、新しい技術へのインプットのために利用したりもしている。<br/>
             アプリケーションの機能としては、母集団を入力し、組み分け数を選択すると、
             メンバーを自動でランダム組み分けしてくれるというもの。<br/>
             現在は、Android / iOS / Web に対応していて、今後の展望としては、Firebaseを用いて、
             各アプリケーションで組み分け内容を共有できるようにしたいと思っている。<br/>
             使用技術：Android + Kotlin / Flutter / React / Vue.js
+          </p>
+          <p>
+            Android版についてはリリースしています！ダウンロードは⬇️からお願いします！！<br/>
+            <a
+              href='https://play.google.com/store/apps/details?id=io.github.emusute1212.makasetechoice&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+              alt='Google Play で手に入れよう'
+              src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png'
+              width="150px"
+            /></a>
           </p>
           <h3>DroidKaigi2020へのコントリビューション</h3>
           <p>
@@ -166,7 +147,8 @@ class Main extends React.Component {
         >
           <h2 className="major">Contact</h2>
           <p>
-            TwitterかFacebookで連絡していただければ反応しやすいので、そちらからお願いします！🙋‍♂️
+            TwitterかFacebookで「emusute.comからきました」と一言添えて連絡していただければ反応しやすいので、そちらからお願いします！🙋‍♂️<br/>
+            <a href="https://www.resume.id/emusute">Resume</a>も見てくれると助かります！！！
           </p>
           <ul className="icons">
             <li>
@@ -227,17 +209,17 @@ class Main extends React.Component {
               </a>
             </li>
             <li>
-              <a href="https://emusute.hatenablog.com/"
-                 className="icon fa-sticky-note"
+              <a href="https://zenn.dev/emusute"
+                 className="icon fa-file"
                  onClick={
                    () => {
                      trackCustomEvent({
-                       category: 'HatenaBlog Button',
+                       category: 'zenn Button',
                        action: 'Click',
                      })
                    }
                  }>
-                <span className="label">HatenaBlog</span>
+                <span className="label">zenn</span>
               </a>
             </li>
           </ul>
