@@ -106,19 +106,35 @@ class Main extends React.Component {
           <span className="image main">
             <img src={pic03} alt=""/>
           </span>
-          <h3>自動組み分けアプリ開発</h3>
+          <h3>電卓アプリ</h3>
           <p>
-            学生時代に作成したアプリケーションを、今の技術力でリファクタリングし、
-            どこまで自分か成長しているか実感するために実施。<br/>
-            また、新しい技術へのインプットのために利用したりもしている。<br/>
-            アプリケーションの機能としては、母集団を入力し、組み分け数を選択すると、
-            メンバーを自動でランダム組み分けしてくれるというもの。<br/>
-            現在は、Android / iOS / Web に対応していて、今後の展望としては、Firebaseを用いて、
-            各アプリケーションで組み分け内容を共有できるようにしたいと思っている。<br/>
-            使用技術：Android + Kotlin / Flutter / React / Vue.js
+            通常の電卓アプリ。<br/>
+            シンプルで使いやすい電卓アプリになっております。<br/>
+            数値と四則演算のボタンの形状を分けることでわかりやすく、押しやすくなっております。<br/>
+            一般的に使用する機能を網羅しています。<br/>
+            広告なしで使えます！！！<br/>
+            （デザインはデザイナーさんに作っていただきました。）<br/>
+            <a
+              href='https://play.google.com/store/apps/details?id=io.github.emusute1212.calculator&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+              alt='Google Play で手に入れよう'
+              src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png'
+              width="150px"
+            /></a>
           </p>
+          <h3>LifecycleLogger</h3>
           <p>
-            Android版についてはリリースしています！ダウンロードは⬇️からお願いします！！<br/>
+            Androidのライフサイクルをロギングするライブラリ。<br/>
+            Daggerや独自のBaseActivityなどを用いても利用可能。<br/>
+            ログを残したいActivityやFragmentのLifecycleOwnerをbindに渡せば、勝手にログを残してくれるというライブラリ。<br/><br/>
+            <a href="https://github.com/emusute1212/LifecycleLogger">導入方法</a>
+          </p>
+          <h3>まかせてチョイス！</h3>
+          <p>
+            メンバーを自動で組み分けてくれる、アプリ。<br/>
+            スポーツ、仕事、ゲームなど、様々なシーンでチーム分けというのが必要だと思います。<br/>
+            ただし、チーム分けするといっても、時間がかかってしまうのが現状です。<br/>
+            そこで、本アプリケーションを使えば全自動かつ一瞬でチーム分けが可能です。<br/>
+            メンバーを登録後、組み分け数を選択して「チョイス」するだけで簡単にチーム分けができます。<br/>
             <a
               href='https://play.google.com/store/apps/details?id=io.github.emusute1212.makasetechoice&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
               alt='Google Play で手に入れよう'
@@ -126,15 +142,9 @@ class Main extends React.Component {
               width="150px"
             /></a>
           </p>
-          <h3>DroidKaigi2020へのコントリビューション</h3>
           <p>
-            DroidKaigi2020のアプリケーションへのコントリビュートを行いました！<br/>
-            規模の大きいOSSでは、初コントリビュートで、緊張しながらも無事にマージまで持っていくことができました...😌<br/>
-            モダンなAndroidアプリ開発について学ぶことができ、非常に貴重な体験ができたと思っています。<br/>
-            時間がある時に再度コードを読み直して、今後のAndroidアプリ開発についてインプット・アウトプット
-            していけたらなと思っています。🎉
+            Google Play および Google Play ロゴは、Google LLC の商標です。
           </p>
-          <h3>絶賛アプリ開発の設計中！（未公開）</h3>
           {close}
         </article>
 
