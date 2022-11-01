@@ -8,7 +8,7 @@ part of 'home_entity.dart';
 
 _$_HomeEntity _$$_HomeEntityFromJson(Map<String, dynamic> json) =>
     _$_HomeEntity(
-      icon: (json['icon'] as List<dynamic>).map((e) => e as String).toList(),
+      icons: (json['icons'] as List<dynamic>).map((e) => e as String).toList(),
       name: json['name'] as String,
       mainMessage: json['mainMessage'] as String,
       subMessage: json['subMessage'] as String,
@@ -16,7 +16,7 @@ _$_HomeEntity _$$_HomeEntityFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_HomeEntityToJson(_$_HomeEntity instance) =>
     <String, dynamic>{
-      'icon': instance.icon,
+      'icons': instance.icons,
       'name': instance.name,
       'mainMessage': instance.mainMessage,
       'subMessage': instance.subMessage,

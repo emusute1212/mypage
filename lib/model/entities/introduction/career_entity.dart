@@ -6,7 +6,7 @@ part 'career_entity.g.dart';
 @freezed
 class CareerEntity with _$CareerEntity {
   const factory CareerEntity({
-    required DateTime iconUrl,
+    required DateTime date,
     required String detail,
   }) = _CareerEntity;
 

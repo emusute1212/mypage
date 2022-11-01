@@ -8,12 +8,12 @@ part of 'career_entity.dart';
 
 _$_CareerEntity _$$_CareerEntityFromJson(Map<String, dynamic> json) =>
     _$_CareerEntity(
-      iconUrl: DateTime.parse(json['iconUrl'] as String),
+      date: DateTime.parse(json['date'] as String),
       detail: json['detail'] as String,
     );
 
 Map<String, dynamic> _$$_CareerEntityToJson(_$_CareerEntity instance) =>
     <String, dynamic>{
-      'iconUrl': instance.iconUrl.toIso8601String(),
+      'date': instance.date.toIso8601String(),
       'detail': instance.detail,
     };

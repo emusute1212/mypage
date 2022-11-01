@@ -9,7 +9,7 @@ part of 'introduction_entity.dart';
 _$_IntroductionEntity _$$_IntroductionEntityFromJson(
         Map<String, dynamic> json) =>
     _$_IntroductionEntity(
-      icon: (json['icon'] as List<dynamic>).map((e) => e as String).toList(),
+      icons: (json['icons'] as List<dynamic>).map((e) => e as String).toList(),
       name: json['name'] as String,
       from: json['from'] as String,
       likes: json['likes'] as String,
@@ -24,7 +24,7 @@ _$_IntroductionEntity _$$_IntroductionEntityFromJson(
 Map<String, dynamic> _$$_IntroductionEntityToJson(
         _$_IntroductionEntity instance) =>
     <String, dynamic>{
-      'icon': instance.icon,
+      'icons': instance.icons,
       'name': instance.name,
       'from': instance.from,
       'likes': instance.likes,

@@ -1,20 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'contract_entity.dart';
+part of 'contact_entity.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ContractEntity _$$_ContractEntityFromJson(Map<String, dynamic> json) =>
-    _$_ContractEntity(
+_$_ContactEntity _$$_ContactEntityFromJson(Map<String, dynamic> json) =>
+    _$_ContactEntity(
       contracts: (json['contracts'] as List<dynamic>)
-          .map((e) => ContractServiceEntity.fromJson(e as Map<String, dynamic>))
+          .map((e) => ContactServiceEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
       message: json['message'] as String,
     );
 
-Map<String, dynamic> _$$_ContractEntityToJson(_$_ContractEntity instance) =>
+Map<String, dynamic> _$$_ContactEntityToJson(_$_ContactEntity instance) =>
     <String, dynamic>{
       'contracts': instance.contracts,
       'message': instance.message,

@@ -20,7 +20,7 @@ CareerEntity _$CareerEntityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CareerEntity {
-  DateTime get iconUrl => throw _privateConstructorUsedError;
+  DateTime get date => throw _privateConstructorUsedError;
   String get detail => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ abstract class $CareerEntityCopyWith<$Res> {
           CareerEntity value, $Res Function(CareerEntity) then) =
       _$CareerEntityCopyWithImpl<$Res, CareerEntity>;
   @useResult
-  $Res call({DateTime iconUrl, String detail});
+  $Res call({DateTime date, String detail});
 }
 
 /// @nodoc
@@ -51,13 +51,13 @@ class _$CareerEntityCopyWithImpl<$Res, $Val extends CareerEntity>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? iconUrl = null,
+    Object? date = null,
     Object? detail = null,
   }) {
     return _then(_value.copyWith(
-      iconUrl: null == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
       detail: null == detail
           ? _value.detail
@@ -75,7 +75,7 @@ abstract class _$$_CareerEntityCopyWith<$Res>
       __$$_CareerEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({DateTime iconUrl, String detail});
+  $Res call({DateTime date, String detail});
 }
 
 /// @nodoc
@@ -89,13 +89,13 @@ class __$$_CareerEntityCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? iconUrl = null,
+    Object? date = null,
     Object? detail = null,
   }) {
     return _then(_$_CareerEntity(
-      iconUrl: null == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
       detail: null == detail
           ? _value.detail
@@ -108,19 +108,19 @@ class __$$_CareerEntityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CareerEntity implements _CareerEntity {
-  const _$_CareerEntity({required this.iconUrl, required this.detail});
+  const _$_CareerEntity({required this.date, required this.detail});
 
   factory _$_CareerEntity.fromJson(Map<String, dynamic> json) =>
       _$$_CareerEntityFromJson(json);
 
   @override
-  final DateTime iconUrl;
+  final DateTime date;
   @override
   final String detail;
 
   @override
   String toString() {
-    return 'CareerEntity(iconUrl: $iconUrl, detail: $detail)';
+    return 'CareerEntity(date: $date, detail: $detail)';
   }
 
   @override
@@ -128,13 +128,13 @@ class _$_CareerEntity implements _CareerEntity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CareerEntity &&
-            (identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl) &&
+            (identical(other.date, date) || other.date == date) &&
             (identical(other.detail, detail) || other.detail == detail));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, iconUrl, detail);
+  int get hashCode => Object.hash(runtimeType, date, detail);
 
   @JsonKey(ignore: true)
   @override
@@ -152,14 +152,14 @@ class _$_CareerEntity implements _CareerEntity {
 
 abstract class _CareerEntity implements CareerEntity {
   const factory _CareerEntity(
-      {required final DateTime iconUrl,
+      {required final DateTime date,
       required final String detail}) = _$_CareerEntity;
 
   factory _CareerEntity.fromJson(Map<String, dynamic> json) =
       _$_CareerEntity.fromJson;
 
   @override
-  DateTime get iconUrl;
+  DateTime get date;
   @override
   String get detail;
   @override
