@@ -1,7 +1,10 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/model/entities/introduction/career_entity.dart';
 import 'package:mypage/model/entities/introduction/introduction_entity.dart';
 import 'package:mypage/model/entities/introduction/tech_entity.dart';
 import 'package:mypage/model/entities/introduction/topic_entity.dart';
+
+final introductionRepositoryProvider = Provider((ref) => IntroductionRepository());
 
 class IntroductionRepository {
   IntroductionEntity getIntroductionContent() {

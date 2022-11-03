@@ -1,5 +1,8 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/model/entities/contact/contact_entity.dart';
 import 'package:mypage/model/entities/contact/contact_service_entity.dart';
+
+final contractRepositoryProvider = Provider((ref) => ContactRepository());
 
 class ContactRepository {
   ContactEntity getContactContent() {

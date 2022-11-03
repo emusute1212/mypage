@@ -1,6 +1,9 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/model/entities/link_entity.dart';
 import 'package:mypage/model/entities/works/work_created_service_entity.dart';
 import 'package:mypage/model/entities/works/work_entity.dart';
+
+final workRepositoryProvider = Provider((ref) => WorkRepository());
 
 class WorkRepository {
   WorkEntity getWorkContent() {

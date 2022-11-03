@@ -1,4 +1,7 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/model/entities/home/home_entity.dart';
+
+final homeRepositoryProvider = Provider((ref) => HomeRepository());
 
 class HomeRepository {
   HomeEntity getHomeContent() {
