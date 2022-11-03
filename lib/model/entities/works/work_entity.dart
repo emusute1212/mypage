@@ -7,7 +7,7 @@ part 'work_entity.g.dart';
 @freezed
 class WorkEntity with _$WorkEntity {
   const factory WorkEntity({
-    required String iconUrl,
+    required String topImage,
     required String name,
     required List<WorkCreatedServiceEntity> services,
   }) = _WorkEntity;

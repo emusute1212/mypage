@@ -20,7 +20,7 @@ WorkEntity _$WorkEntityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$WorkEntity {
-  String get iconUrl => throw _privateConstructorUsedError;
+  String get topImage => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   List<WorkCreatedServiceEntity> get services =>
       throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ abstract class $WorkEntityCopyWith<$Res> {
       _$WorkEntityCopyWithImpl<$Res, WorkEntity>;
   @useResult
   $Res call(
-      {String iconUrl, String name, List<WorkCreatedServiceEntity> services});
+      {String topImage, String name, List<WorkCreatedServiceEntity> services});
 }
 
 /// @nodoc
@@ -54,14 +54,14 @@ class _$WorkEntityCopyWithImpl<$Res, $Val extends WorkEntity>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? iconUrl = null,
+    Object? topImage = null,
     Object? name = null,
     Object? services = null,
   }) {
     return _then(_value.copyWith(
-      iconUrl: null == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
+      topImage: null == topImage
+          ? _value.topImage
+          : topImage // ignore: cast_nullable_to_non_nullable
               as String,
       name: null == name
           ? _value.name
@@ -84,7 +84,7 @@ abstract class _$$_WorkEntityCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String iconUrl, String name, List<WorkCreatedServiceEntity> services});
+      {String topImage, String name, List<WorkCreatedServiceEntity> services});
 }
 
 /// @nodoc
@@ -98,14 +98,14 @@ class __$$_WorkEntityCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? iconUrl = null,
+    Object? topImage = null,
     Object? name = null,
     Object? services = null,
   }) {
     return _then(_$_WorkEntity(
-      iconUrl: null == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
+      topImage: null == topImage
+          ? _value.topImage
+          : topImage // ignore: cast_nullable_to_non_nullable
               as String,
       name: null == name
           ? _value.name
@@ -123,7 +123,7 @@ class __$$_WorkEntityCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_WorkEntity implements _WorkEntity {
   const _$_WorkEntity(
-      {required this.iconUrl,
+      {required this.topImage,
       required this.name,
       required final List<WorkCreatedServiceEntity> services})
       : _services = services;
@@ -132,7 +132,7 @@ class _$_WorkEntity implements _WorkEntity {
       _$$_WorkEntityFromJson(json);
 
   @override
-  final String iconUrl;
+  final String topImage;
   @override
   final String name;
   final List<WorkCreatedServiceEntity> _services;
@@ -144,7 +144,7 @@ class _$_WorkEntity implements _WorkEntity {
 
   @override
   String toString() {
-    return 'WorkEntity(iconUrl: $iconUrl, name: $name, services: $services)';
+    return 'WorkEntity(topImage: $topImage, name: $name, services: $services)';
   }
 
   @override
@@ -152,14 +152,15 @@ class _$_WorkEntity implements _WorkEntity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_WorkEntity &&
-            (identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl) &&
+            (identical(other.topImage, topImage) ||
+                other.topImage == topImage) &&
             (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other._services, _services));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, iconUrl, name,
+  int get hashCode => Object.hash(runtimeType, topImage, name,
       const DeepCollectionEquality().hash(_services));
 
   @JsonKey(ignore: true)
@@ -178,7 +179,7 @@ class _$_WorkEntity implements _WorkEntity {
 
 abstract class _WorkEntity implements WorkEntity {
   const factory _WorkEntity(
-      {required final String iconUrl,
+      {required final String topImage,
       required final String name,
       required final List<WorkCreatedServiceEntity> services}) = _$_WorkEntity;
 
@@ -186,7 +187,7 @@ abstract class _WorkEntity implements WorkEntity {
       _$_WorkEntity.fromJson;
 
   @override
-  String get iconUrl;
+  String get topImage;
   @override
   String get name;
   @override

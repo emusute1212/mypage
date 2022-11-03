@@ -9,14 +9,16 @@ part of 'introduction_entity.dart';
 _$_IntroductionEntity _$$_IntroductionEntityFromJson(
         Map<String, dynamic> json) =>
     _$_IntroductionEntity(
-      icons: (json['icons'] as List<dynamic>).map((e) => e as String).toList(),
-      name: json['name'] as String,
-      from: json['from'] as String,
-      likes: json['likes'] as String,
+      topImage: json['topImage'] as String,
+      from: TopicEntity.fromJson(json['from'] as Map<String, dynamic>),
+      likes: TopicEntity.fromJson(json['likes'] as Map<String, dynamic>),
       resume: (json['resume'] as List<dynamic>)
           .map((e) => CareerEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
-      skills: (json['skills'] as List<dynamic>)
+      mainSkills: (json['mainSkills'] as List<dynamic>)
+          .map((e) => TechEntity.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      subSkills: (json['subSkills'] as List<dynamic>)
           .map((e) => TechEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
@@ -24,10 +26,10 @@ _$_IntroductionEntity _$$_IntroductionEntityFromJson(
 Map<String, dynamic> _$$_IntroductionEntityToJson(
         _$_IntroductionEntity instance) =>
     <String, dynamic>{
-      'icons': instance.icons,
-      'name': instance.name,
+      'topImage': instance.topImage,
       'from': instance.from,
       'likes': instance.likes,
       'resume': instance.resume,
-      'skills': instance.skills,
+      'mainSkills': instance.mainSkills,
+      'subSkills': instance.subSkills,
     };

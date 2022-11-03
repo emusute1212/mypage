@@ -7,7 +7,7 @@ part 'private_entity.g.dart';
 @freezed
 class PrivateEntity with _$PrivateEntity {
   const factory PrivateEntity({
-    required String iconUrl,
+    required String topImage,
     required String name,
     required List<PrivateCreatedServiceEntity> services,
   }) = _PrivateEntity;

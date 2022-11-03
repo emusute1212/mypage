@@ -8,8 +8,7 @@ class HomeEntity with _$HomeEntity {
   const factory HomeEntity({
     required List<String> icons,
     required String name,
-    required String mainMessage,
-    required String subMessage,
+    required String message,
   }) = _HomeEntity;
 
   factory HomeEntity.fromJson(Map<String, Object?> json) =>

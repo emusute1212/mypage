@@ -20,12 +20,12 @@ IntroductionEntity _$IntroductionEntityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$IntroductionEntity {
-  List<String> get icons => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get from => throw _privateConstructorUsedError;
-  String get likes => throw _privateConstructorUsedError;
+  String get topImage => throw _privateConstructorUsedError;
+  TopicEntity get from => throw _privateConstructorUsedError;
+  TopicEntity get likes => throw _privateConstructorUsedError;
   List<CareerEntity> get resume => throw _privateConstructorUsedError;
-  List<TechEntity> get skills => throw _privateConstructorUsedError;
+  List<TechEntity> get mainSkills => throw _privateConstructorUsedError;
+  List<TechEntity> get subSkills => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,12 +40,15 @@ abstract class $IntroductionEntityCopyWith<$Res> {
       _$IntroductionEntityCopyWithImpl<$Res, IntroductionEntity>;
   @useResult
   $Res call(
-      {List<String> icons,
-      String name,
-      String from,
-      String likes,
+      {String topImage,
+      TopicEntity from,
+      TopicEntity likes,
       List<CareerEntity> resume,
-      List<TechEntity> skills});
+      List<TechEntity> mainSkills,
+      List<TechEntity> subSkills});
+
+  $TopicEntityCopyWith<$Res> get from;
+  $TopicEntityCopyWith<$Res> get likes;
 }
 
 /// @nodoc
@@ -61,39 +64,55 @@ class _$IntroductionEntityCopyWithImpl<$Res, $Val extends IntroductionEntity>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? icons = null,
-    Object? name = null,
+    Object? topImage = null,
     Object? from = null,
     Object? likes = null,
     Object? resume = null,
-    Object? skills = null,
+    Object? mainSkills = null,
+    Object? subSkills = null,
   }) {
     return _then(_value.copyWith(
-      icons: null == icons
-          ? _value.icons
-          : icons // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      topImage: null == topImage
+          ? _value.topImage
+          : topImage // ignore: cast_nullable_to_non_nullable
               as String,
       from: null == from
           ? _value.from
           : from // ignore: cast_nullable_to_non_nullable
-              as String,
+              as TopicEntity,
       likes: null == likes
           ? _value.likes
           : likes // ignore: cast_nullable_to_non_nullable
-              as String,
+              as TopicEntity,
       resume: null == resume
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as List<CareerEntity>,
-      skills: null == skills
-          ? _value.skills
-          : skills // ignore: cast_nullable_to_non_nullable
+      mainSkills: null == mainSkills
+          ? _value.mainSkills
+          : mainSkills // ignore: cast_nullable_to_non_nullable
+              as List<TechEntity>,
+      subSkills: null == subSkills
+          ? _value.subSkills
+          : subSkills // ignore: cast_nullable_to_non_nullable
               as List<TechEntity>,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TopicEntityCopyWith<$Res> get from {
+    return $TopicEntityCopyWith<$Res>(_value.from, (value) {
+      return _then(_value.copyWith(from: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TopicEntityCopyWith<$Res> get likes {
+    return $TopicEntityCopyWith<$Res>(_value.likes, (value) {
+      return _then(_value.copyWith(likes: value) as $Val);
+    });
   }
 }
 
@@ -106,12 +125,17 @@ abstract class _$$_IntroductionEntityCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> icons,
-      String name,
-      String from,
-      String likes,
+      {String topImage,
+      TopicEntity from,
+      TopicEntity likes,
       List<CareerEntity> resume,
-      List<TechEntity> skills});
+      List<TechEntity> mainSkills,
+      List<TechEntity> subSkills});
+
+  @override
+  $TopicEntityCopyWith<$Res> get from;
+  @override
+  $TopicEntityCopyWith<$Res> get likes;
 }
 
 /// @nodoc
@@ -125,37 +149,37 @@ class __$$_IntroductionEntityCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? icons = null,
-    Object? name = null,
+    Object? topImage = null,
     Object? from = null,
     Object? likes = null,
     Object? resume = null,
-    Object? skills = null,
+    Object? mainSkills = null,
+    Object? subSkills = null,
   }) {
     return _then(_$_IntroductionEntity(
-      icons: null == icons
-          ? _value._icons
-          : icons // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      topImage: null == topImage
+          ? _value.topImage
+          : topImage // ignore: cast_nullable_to_non_nullable
               as String,
       from: null == from
           ? _value.from
           : from // ignore: cast_nullable_to_non_nullable
-              as String,
+              as TopicEntity,
       likes: null == likes
           ? _value.likes
           : likes // ignore: cast_nullable_to_non_nullable
-              as String,
+              as TopicEntity,
       resume: null == resume
           ? _value._resume
           : resume // ignore: cast_nullable_to_non_nullable
               as List<CareerEntity>,
-      skills: null == skills
-          ? _value._skills
-          : skills // ignore: cast_nullable_to_non_nullable
+      mainSkills: null == mainSkills
+          ? _value._mainSkills
+          : mainSkills // ignore: cast_nullable_to_non_nullable
+              as List<TechEntity>,
+      subSkills: null == subSkills
+          ? _value._subSkills
+          : subSkills // ignore: cast_nullable_to_non_nullable
               as List<TechEntity>,
     ));
   }
@@ -165,32 +189,25 @@ class __$$_IntroductionEntityCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_IntroductionEntity implements _IntroductionEntity {
   const _$_IntroductionEntity(
-      {required final List<String> icons,
-      required this.name,
+      {required this.topImage,
       required this.from,
       required this.likes,
       required final List<CareerEntity> resume,
-      required final List<TechEntity> skills})
-      : _icons = icons,
-        _resume = resume,
-        _skills = skills;
+      required final List<TechEntity> mainSkills,
+      required final List<TechEntity> subSkills})
+      : _resume = resume,
+        _mainSkills = mainSkills,
+        _subSkills = subSkills;
 
   factory _$_IntroductionEntity.fromJson(Map<String, dynamic> json) =>
       _$$_IntroductionEntityFromJson(json);
 
-  final List<String> _icons;
   @override
-  List<String> get icons {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_icons);
-  }
-
+  final String topImage;
   @override
-  final String name;
+  final TopicEntity from;
   @override
-  final String from;
-  @override
-  final String likes;
+  final TopicEntity likes;
   final List<CareerEntity> _resume;
   @override
   List<CareerEntity> get resume {
@@ -198,16 +215,23 @@ class _$_IntroductionEntity implements _IntroductionEntity {
     return EqualUnmodifiableListView(_resume);
   }
 
-  final List<TechEntity> _skills;
+  final List<TechEntity> _mainSkills;
   @override
-  List<TechEntity> get skills {
+  List<TechEntity> get mainSkills {
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_skills);
+    return EqualUnmodifiableListView(_mainSkills);
+  }
+
+  final List<TechEntity> _subSkills;
+  @override
+  List<TechEntity> get subSkills {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_subSkills);
   }
 
   @override
   String toString() {
-    return 'IntroductionEntity(icons: $icons, name: $name, from: $from, likes: $likes, resume: $resume, skills: $skills)';
+    return 'IntroductionEntity(topImage: $topImage, from: $from, likes: $likes, resume: $resume, mainSkills: $mainSkills, subSkills: $subSkills)';
   }
 
   @override
@@ -215,24 +239,27 @@ class _$_IntroductionEntity implements _IntroductionEntity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_IntroductionEntity &&
-            const DeepCollectionEquality().equals(other._icons, _icons) &&
-            (identical(other.name, name) || other.name == name) &&
+            (identical(other.topImage, topImage) ||
+                other.topImage == topImage) &&
             (identical(other.from, from) || other.from == from) &&
             (identical(other.likes, likes) || other.likes == likes) &&
             const DeepCollectionEquality().equals(other._resume, _resume) &&
-            const DeepCollectionEquality().equals(other._skills, _skills));
+            const DeepCollectionEquality()
+                .equals(other._mainSkills, _mainSkills) &&
+            const DeepCollectionEquality()
+                .equals(other._subSkills, _subSkills));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_icons),
-      name,
+      topImage,
       from,
       likes,
       const DeepCollectionEquality().hash(_resume),
-      const DeepCollectionEquality().hash(_skills));
+      const DeepCollectionEquality().hash(_mainSkills),
+      const DeepCollectionEquality().hash(_subSkills));
 
   @JsonKey(ignore: true)
   @override
@@ -251,28 +278,28 @@ class _$_IntroductionEntity implements _IntroductionEntity {
 
 abstract class _IntroductionEntity implements IntroductionEntity {
   const factory _IntroductionEntity(
-      {required final List<String> icons,
-      required final String name,
-      required final String from,
-      required final String likes,
+      {required final String topImage,
+      required final TopicEntity from,
+      required final TopicEntity likes,
       required final List<CareerEntity> resume,
-      required final List<TechEntity> skills}) = _$_IntroductionEntity;
+      required final List<TechEntity> mainSkills,
+      required final List<TechEntity> subSkills}) = _$_IntroductionEntity;
 
   factory _IntroductionEntity.fromJson(Map<String, dynamic> json) =
       _$_IntroductionEntity.fromJson;
 
   @override
-  List<String> get icons;
+  String get topImage;
   @override
-  String get name;
+  TopicEntity get from;
   @override
-  String get from;
-  @override
-  String get likes;
+  TopicEntity get likes;
   @override
   List<CareerEntity> get resume;
   @override
-  List<TechEntity> get skills;
+  List<TechEntity> get mainSkills;
+  @override
+  List<TechEntity> get subSkills;
   @override
   @JsonKey(ignore: true)
   _$$_IntroductionEntityCopyWith<_$_IntroductionEntity> get copyWith =>

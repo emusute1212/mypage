@@ -22,8 +22,7 @@ HomeEntity _$HomeEntityFromJson(Map<String, dynamic> json) {
 mixin _$HomeEntity {
   List<String> get icons => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get mainMessage => throw _privateConstructorUsedError;
-  String get subMessage => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,8 +36,7 @@ abstract class $HomeEntityCopyWith<$Res> {
           HomeEntity value, $Res Function(HomeEntity) then) =
       _$HomeEntityCopyWithImpl<$Res, HomeEntity>;
   @useResult
-  $Res call(
-      {List<String> icons, String name, String mainMessage, String subMessage});
+  $Res call({List<String> icons, String name, String message});
 }
 
 /// @nodoc
@@ -56,8 +54,7 @@ class _$HomeEntityCopyWithImpl<$Res, $Val extends HomeEntity>
   $Res call({
     Object? icons = null,
     Object? name = null,
-    Object? mainMessage = null,
-    Object? subMessage = null,
+    Object? message = null,
   }) {
     return _then(_value.copyWith(
       icons: null == icons
@@ -68,13 +65,9 @@ class _$HomeEntityCopyWithImpl<$Res, $Val extends HomeEntity>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      mainMessage: null == mainMessage
-          ? _value.mainMessage
-          : mainMessage // ignore: cast_nullable_to_non_nullable
-              as String,
-      subMessage: null == subMessage
-          ? _value.subMessage
-          : subMessage // ignore: cast_nullable_to_non_nullable
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -88,8 +81,7 @@ abstract class _$$_HomeEntityCopyWith<$Res>
       __$$_HomeEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<String> icons, String name, String mainMessage, String subMessage});
+  $Res call({List<String> icons, String name, String message});
 }
 
 /// @nodoc
@@ -105,8 +97,7 @@ class __$$_HomeEntityCopyWithImpl<$Res>
   $Res call({
     Object? icons = null,
     Object? name = null,
-    Object? mainMessage = null,
-    Object? subMessage = null,
+    Object? message = null,
   }) {
     return _then(_$_HomeEntity(
       icons: null == icons
@@ -117,13 +108,9 @@ class __$$_HomeEntityCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      mainMessage: null == mainMessage
-          ? _value.mainMessage
-          : mainMessage // ignore: cast_nullable_to_non_nullable
-              as String,
-      subMessage: null == subMessage
-          ? _value.subMessage
-          : subMessage // ignore: cast_nullable_to_non_nullable
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -135,8 +122,7 @@ class _$_HomeEntity implements _HomeEntity {
   const _$_HomeEntity(
       {required final List<String> icons,
       required this.name,
-      required this.mainMessage,
-      required this.subMessage})
+      required this.message})
       : _icons = icons;
 
   factory _$_HomeEntity.fromJson(Map<String, dynamic> json) =>
@@ -152,13 +138,11 @@ class _$_HomeEntity implements _HomeEntity {
   @override
   final String name;
   @override
-  final String mainMessage;
-  @override
-  final String subMessage;
+  final String message;
 
   @override
   String toString() {
-    return 'HomeEntity(icons: $icons, name: $name, mainMessage: $mainMessage, subMessage: $subMessage)';
+    return 'HomeEntity(icons: $icons, name: $name, message: $message)';
   }
 
   @override
@@ -168,20 +152,13 @@ class _$_HomeEntity implements _HomeEntity {
             other is _$_HomeEntity &&
             const DeepCollectionEquality().equals(other._icons, _icons) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.mainMessage, mainMessage) ||
-                other.mainMessage == mainMessage) &&
-            (identical(other.subMessage, subMessage) ||
-                other.subMessage == subMessage));
+            (identical(other.message, message) || other.message == message));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_icons),
-      name,
-      mainMessage,
-      subMessage);
+      runtimeType, const DeepCollectionEquality().hash(_icons), name, message);
 
   @JsonKey(ignore: true)
   @override
@@ -201,8 +178,7 @@ abstract class _HomeEntity implements HomeEntity {
   const factory _HomeEntity(
       {required final List<String> icons,
       required final String name,
-      required final String mainMessage,
-      required final String subMessage}) = _$_HomeEntity;
+      required final String message}) = _$_HomeEntity;
 
   factory _HomeEntity.fromJson(Map<String, dynamic> json) =
       _$_HomeEntity.fromJson;
@@ -212,9 +188,7 @@ abstract class _HomeEntity implements HomeEntity {
   @override
   String get name;
   @override
-  String get mainMessage;
-  @override
-  String get subMessage;
+  String get message;
   @override
   @JsonKey(ignore: true)
   _$$_HomeEntityCopyWith<_$_HomeEntity> get copyWith =>

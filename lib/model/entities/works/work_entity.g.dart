@@ -8,7 +8,7 @@ part of 'work_entity.dart';
 
 _$_WorkEntity _$$_WorkEntityFromJson(Map<String, dynamic> json) =>
     _$_WorkEntity(
-      iconUrl: json['iconUrl'] as String,
+      topImage: json['topImage'] as String,
       name: json['name'] as String,
       services: (json['services'] as List<dynamic>)
           .map((e) =>
@@ -18,7 +18,7 @@ _$_WorkEntity _$$_WorkEntityFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_WorkEntityToJson(_$_WorkEntity instance) =>
     <String, dynamic>{
-      'iconUrl': instance.iconUrl,
+      'topImage': instance.topImage,
       'name': instance.name,
       'services': instance.services,
     };

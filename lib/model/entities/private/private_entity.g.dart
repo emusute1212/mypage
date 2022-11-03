@@ -8,7 +8,7 @@ part of 'private_entity.dart';
 
 _$_PrivateEntity _$$_PrivateEntityFromJson(Map<String, dynamic> json) =>
     _$_PrivateEntity(
-      iconUrl: json['iconUrl'] as String,
+      topImage: json['topImage'] as String,
       name: json['name'] as String,
       services: (json['services'] as List<dynamic>)
           .map((e) =>
@@ -18,7 +18,7 @@ _$_PrivateEntity _$$_PrivateEntityFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_PrivateEntityToJson(_$_PrivateEntity instance) =>
     <String, dynamic>{
-      'iconUrl': instance.iconUrl,
+      'topImage': instance.topImage,
       'name': instance.name,
       'services': instance.services,
     };
