@@ -7,8 +7,8 @@ class HomeRepository {
   HomeEntity getHomeContent() {
     return const HomeEntity(
       icons: [
-        "icons/thumbnail.jpg",
-        "icons/thumbnail.png",
+        "images/icons/thumbnail_1.jpg",
+        "images/icons/thumbnail_2.png",
       ],
       name: "宮西 洋輔(Yosuke Miyanishi)",
       message: "aaaaa",
