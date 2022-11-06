@@ -17,15 +17,30 @@ class HomePage extends HookConsumerWidget {
       Future.microtask(() => viewModel.init());
       return null;
     }, const []);
-    return Column(
-      children: [
-        CrossFadeImage(
-          images: state.entity?.icons.map((e) => Image.asset(e)).toList() ?? [],
-          visibleDuration: 4000,
-          width: 100,
-          height: 100,
-        )
-      ],
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          CrossFadeImage(
+            images: state.entity.icons
+                .map((e) => ClipRRect(
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(100)),
+                      child: Image.asset(e),
+                    ))
+                .toList(),
+            visibleDuration: 4000,
+            width: 100,
+            height: 100,
+          ),
+          Text(
+            state.entity.name,
+          ),
+          Text(
+            state.entity.message,
+          ),
+        ],
+      ),
     );
   }
 }

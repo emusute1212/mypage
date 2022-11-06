@@ -20,7 +20,7 @@ HomeState _$HomeStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$HomeState {
-  HomeEntity? get entity => throw _privateConstructorUsedError;
+  HomeEntity get entity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -33,9 +33,9 @@ abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
-  $Res call({HomeEntity? entity});
+  $Res call({HomeEntity entity});
 
-  $HomeEntityCopyWith<$Res>? get entity;
+  $HomeEntityCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -51,24 +51,20 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? entity = freezed,
+    Object? entity = null,
   }) {
     return _then(_value.copyWith(
-      entity: freezed == entity
+      entity: null == entity
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as HomeEntity?,
+              as HomeEntity,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $HomeEntityCopyWith<$Res>? get entity {
-    if (_value.entity == null) {
-      return null;
-    }
-
-    return $HomeEntityCopyWith<$Res>(_value.entity!, (value) {
+  $HomeEntityCopyWith<$Res> get entity {
+    return $HomeEntityCopyWith<$Res>(_value.entity, (value) {
       return _then(_value.copyWith(entity: value) as $Val);
     });
   }
@@ -81,10 +77,10 @@ abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
       __$$_HomeStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({HomeEntity? entity});
+  $Res call({HomeEntity entity});
 
   @override
-  $HomeEntityCopyWith<$Res>? get entity;
+  $HomeEntityCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -98,13 +94,13 @@ class __$$_HomeStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? entity = freezed,
+    Object? entity = null,
   }) {
     return _then(_$_HomeState(
-      entity: freezed == entity
+      entity: null == entity
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as HomeEntity?,
+              as HomeEntity,
     ));
   }
 }
@@ -118,7 +114,7 @@ class _$_HomeState implements _HomeState {
       _$$_HomeStateFromJson(json);
 
   @override
-  final HomeEntity? entity;
+  final HomeEntity entity;
 
   @override
   String toString() {
@@ -152,13 +148,13 @@ class _$_HomeState implements _HomeState {
 }
 
 abstract class _HomeState implements HomeState {
-  const factory _HomeState({required final HomeEntity? entity}) = _$_HomeState;
+  const factory _HomeState({required final HomeEntity entity}) = _$_HomeState;
 
   factory _HomeState.fromJson(Map<String, dynamic> json) =
       _$_HomeState.fromJson;
 
   @override
-  HomeEntity? get entity;
+  HomeEntity get entity;
   @override
   @JsonKey(ignore: true)
   _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>

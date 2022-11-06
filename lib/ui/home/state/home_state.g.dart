@@ -7,9 +7,7 @@ part of 'home_state.dart';
 // **************************************************************************
 
 _$_HomeState _$$_HomeStateFromJson(Map<String, dynamic> json) => _$_HomeState(
-      entity: json['entity'] == null
-          ? null
-          : HomeEntity.fromJson(json['entity'] as Map<String, dynamic>),
+      entity: HomeEntity.fromJson(json['entity'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_HomeStateToJson(_$_HomeState instance) =>

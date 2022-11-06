@@ -7,7 +7,7 @@ part 'home_state.g.dart';
 @freezed
 abstract class HomeState with _$HomeState {
   const factory HomeState({
-    required HomeEntity? entity,
+    required HomeEntity entity,
   }) = _HomeState;
 
   factory HomeState.fromJson(Map<String, dynamic> json) =>

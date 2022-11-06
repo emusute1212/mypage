@@ -1,4 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:mypage/model/entities/home/home_entity.dart';
 import 'package:mypage/model/repository/home_repository.dart';
 import 'package:mypage/ui/home/state/home_state.dart';
 
@@ -9,7 +10,14 @@ final homeViewModelProvider =
 class HomeViewModel extends StateNotifier<HomeState> {
   final HomeRepository _repository;
 
-  HomeViewModel(this._repository) : super(const HomeState(entity: null));
+  HomeViewModel(this._repository)
+      : super(const HomeState(
+          entity: HomeEntity(
+            icons: [],
+            name: "",
+            message: "",
+          ),
+        ));
 
   void init() {
     state = state.copyWith(entity: _repository.getHomeContent());
