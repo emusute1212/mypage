@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/ui/introduction/introduction_view_model.dart';
 import 'package:mypage/ui/introduction/resume/resume_component.dart';
+import 'package:mypage/ui/introduction/skills/skill_list_component.dart';
 import 'package:mypage/ui/introduction/state/introduction_state.dart';
 
 class IntroductionPage extends HookConsumerWidget {
@@ -19,25 +20,24 @@ class IntroductionPage extends HookConsumerWidget {
       return null;
     }, const []);
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-              Text(state.entity.topImage),
-              Text(state.entity.from.topic),
-              Text(state.entity.from.detail),
-              Text(state.entity.likes.topic),
-              Text(state.entity.likes.detail),
-              ResumeComponent(
-                careerEntityList: state.entity.resume,
-              ),
-            ] +
-            state.entity.mainSkills
-                .map((e) => Text("${e.icon}:${e.name}"))
-                .toList() +
-            state.entity.subSkills
-                .map((e) => Text("${e.icon}:${e.name}"))
-                .toList(),
-      ),
+      child: Column(mainAxisSize: MainAxisSize.min, children: [
+        Text(state.entity.topImage),
+        Text("出身"),
+        Text(state.entity.from.topic),
+        Text(state.entity.from.detail),
+        Text("趣味"),
+        Text(state.entity.likes.topic),
+        Text(state.entity.likes.detail),
+        ResumeComponent(
+          careerEntityList: state.entity.resume,
+        ),
+        SkillListComponent(
+          techList: state.entity.mainSkills,
+        ),
+        SkillListComponent(
+          techList: state.entity.subSkills,
+        ),
+      ]),
     );
   }
 }
