@@ -8,7 +8,6 @@ part 'private_entity.g.dart';
 class PrivateEntity with _$PrivateEntity {
   const factory PrivateEntity({
     required String topImage,
-    required String name,
     required List<PrivateCreatedServiceEntity> services,
   }) = _PrivateEntity;
 

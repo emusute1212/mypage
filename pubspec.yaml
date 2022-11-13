@@ -52,6 +52,9 @@ dependencies:
   # StateNotifier
   state_notifier: ^0.7.2+1
 
+  # UrlLauncher
+  url_launcher: ^6.1.6
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

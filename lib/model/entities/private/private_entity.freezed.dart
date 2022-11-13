@@ -21,7 +21,6 @@ PrivateEntity _$PrivateEntityFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PrivateEntity {
   String get topImage => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
   List<PrivateCreatedServiceEntity> get services =>
       throw _privateConstructorUsedError;
 
@@ -37,10 +36,7 @@ abstract class $PrivateEntityCopyWith<$Res> {
           PrivateEntity value, $Res Function(PrivateEntity) then) =
       _$PrivateEntityCopyWithImpl<$Res, PrivateEntity>;
   @useResult
-  $Res call(
-      {String topImage,
-      String name,
-      List<PrivateCreatedServiceEntity> services});
+  $Res call({String topImage, List<PrivateCreatedServiceEntity> services});
 }
 
 /// @nodoc
@@ -57,17 +53,12 @@ class _$PrivateEntityCopyWithImpl<$Res, $Val extends PrivateEntity>
   @override
   $Res call({
     Object? topImage = null,
-    Object? name = null,
     Object? services = null,
   }) {
     return _then(_value.copyWith(
       topImage: null == topImage
           ? _value.topImage
           : topImage // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
               as String,
       services: null == services
           ? _value.services
@@ -85,10 +76,7 @@ abstract class _$$_PrivateEntityCopyWith<$Res>
       __$$_PrivateEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String topImage,
-      String name,
-      List<PrivateCreatedServiceEntity> services});
+  $Res call({String topImage, List<PrivateCreatedServiceEntity> services});
 }
 
 /// @nodoc
@@ -103,17 +91,12 @@ class __$$_PrivateEntityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? topImage = null,
-    Object? name = null,
     Object? services = null,
   }) {
     return _then(_$_PrivateEntity(
       topImage: null == topImage
           ? _value.topImage
           : topImage // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
               as String,
       services: null == services
           ? _value._services
@@ -128,7 +111,6 @@ class __$$_PrivateEntityCopyWithImpl<$Res>
 class _$_PrivateEntity implements _PrivateEntity {
   const _$_PrivateEntity(
       {required this.topImage,
-      required this.name,
       required final List<PrivateCreatedServiceEntity> services})
       : _services = services;
 
@@ -137,8 +119,6 @@ class _$_PrivateEntity implements _PrivateEntity {
 
   @override
   final String topImage;
-  @override
-  final String name;
   final List<PrivateCreatedServiceEntity> _services;
   @override
   List<PrivateCreatedServiceEntity> get services {
@@ -148,7 +128,7 @@ class _$_PrivateEntity implements _PrivateEntity {
 
   @override
   String toString() {
-    return 'PrivateEntity(topImage: $topImage, name: $name, services: $services)';
+    return 'PrivateEntity(topImage: $topImage, services: $services)';
   }
 
   @override
@@ -158,14 +138,13 @@ class _$_PrivateEntity implements _PrivateEntity {
             other is _$_PrivateEntity &&
             (identical(other.topImage, topImage) ||
                 other.topImage == topImage) &&
-            (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other._services, _services));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, topImage, name,
-      const DeepCollectionEquality().hash(_services));
+  int get hashCode => Object.hash(
+      runtimeType, topImage, const DeepCollectionEquality().hash(_services));
 
   @JsonKey(ignore: true)
   @override
@@ -184,7 +163,6 @@ class _$_PrivateEntity implements _PrivateEntity {
 abstract class _PrivateEntity implements PrivateEntity {
   const factory _PrivateEntity(
           {required final String topImage,
-          required final String name,
           required final List<PrivateCreatedServiceEntity> services}) =
       _$_PrivateEntity;
 
@@ -193,8 +171,6 @@ abstract class _PrivateEntity implements PrivateEntity {
 
   @override
   String get topImage;
-  @override
-  String get name;
   @override
   List<PrivateCreatedServiceEntity> get services;
   @override

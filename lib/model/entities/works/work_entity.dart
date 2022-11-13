@@ -8,7 +8,6 @@ part 'work_entity.g.dart';
 class WorkEntity with _$WorkEntity {
   const factory WorkEntity({
     required String topImage,
-    required String name,
     required List<WorkCreatedServiceEntity> services,
   }) = _WorkEntity;
 

@@ -21,7 +21,6 @@ WorkEntity _$WorkEntityFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$WorkEntity {
   String get topImage => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
   List<WorkCreatedServiceEntity> get services =>
       throw _privateConstructorUsedError;
 
@@ -37,8 +36,7 @@ abstract class $WorkEntityCopyWith<$Res> {
           WorkEntity value, $Res Function(WorkEntity) then) =
       _$WorkEntityCopyWithImpl<$Res, WorkEntity>;
   @useResult
-  $Res call(
-      {String topImage, String name, List<WorkCreatedServiceEntity> services});
+  $Res call({String topImage, List<WorkCreatedServiceEntity> services});
 }
 
 /// @nodoc
@@ -55,17 +53,12 @@ class _$WorkEntityCopyWithImpl<$Res, $Val extends WorkEntity>
   @override
   $Res call({
     Object? topImage = null,
-    Object? name = null,
     Object? services = null,
   }) {
     return _then(_value.copyWith(
       topImage: null == topImage
           ? _value.topImage
           : topImage // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
               as String,
       services: null == services
           ? _value.services
@@ -83,8 +76,7 @@ abstract class _$$_WorkEntityCopyWith<$Res>
       __$$_WorkEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String topImage, String name, List<WorkCreatedServiceEntity> services});
+  $Res call({String topImage, List<WorkCreatedServiceEntity> services});
 }
 
 /// @nodoc
@@ -99,17 +91,12 @@ class __$$_WorkEntityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? topImage = null,
-    Object? name = null,
     Object? services = null,
   }) {
     return _then(_$_WorkEntity(
       topImage: null == topImage
           ? _value.topImage
           : topImage // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
               as String,
       services: null == services
           ? _value._services
@@ -124,7 +111,6 @@ class __$$_WorkEntityCopyWithImpl<$Res>
 class _$_WorkEntity implements _WorkEntity {
   const _$_WorkEntity(
       {required this.topImage,
-      required this.name,
       required final List<WorkCreatedServiceEntity> services})
       : _services = services;
 
@@ -133,8 +119,6 @@ class _$_WorkEntity implements _WorkEntity {
 
   @override
   final String topImage;
-  @override
-  final String name;
   final List<WorkCreatedServiceEntity> _services;
   @override
   List<WorkCreatedServiceEntity> get services {
@@ -144,7 +128,7 @@ class _$_WorkEntity implements _WorkEntity {
 
   @override
   String toString() {
-    return 'WorkEntity(topImage: $topImage, name: $name, services: $services)';
+    return 'WorkEntity(topImage: $topImage, services: $services)';
   }
 
   @override
@@ -154,14 +138,13 @@ class _$_WorkEntity implements _WorkEntity {
             other is _$_WorkEntity &&
             (identical(other.topImage, topImage) ||
                 other.topImage == topImage) &&
-            (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other._services, _services));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, topImage, name,
-      const DeepCollectionEquality().hash(_services));
+  int get hashCode => Object.hash(
+      runtimeType, topImage, const DeepCollectionEquality().hash(_services));
 
   @JsonKey(ignore: true)
   @override
@@ -180,7 +163,6 @@ class _$_WorkEntity implements _WorkEntity {
 abstract class _WorkEntity implements WorkEntity {
   const factory _WorkEntity(
       {required final String topImage,
-      required final String name,
       required final List<WorkCreatedServiceEntity> services}) = _$_WorkEntity;
 
   factory _WorkEntity.fromJson(Map<String, dynamic> json) =
@@ -188,8 +170,6 @@ abstract class _WorkEntity implements WorkEntity {
 
   @override
   String get topImage;
-  @override
-  String get name;
   @override
   List<WorkCreatedServiceEntity> get services;
   @override

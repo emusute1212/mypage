@@ -9,14 +9,13 @@ class WorkRepository {
   WorkEntity getWorkContent() {
     return const WorkEntity(
       topImage: "aaaa",
-      name: "プライベート",
       services: [
         WorkCreatedServiceEntity(
           title: "めもって",
           detail: "メモアプリ",
           link: LinkEntity(
             imageUrl: "aaaa",
-            url: "aaaa",
+            url: "https://play.google.com/store/apps/details?id=io.github.emusute1212.memotte",
           ),
         ),
         WorkCreatedServiceEntity(
@@ -24,7 +23,7 @@ class WorkRepository {
           detail: "電卓アプリ",
           link: LinkEntity(
             imageUrl: "aaaa",
-            url: "aaaa",
+            url: "https://play.google.com/store/apps/details?id=io.github.emusute1212.calculator",
           ),
         ),
       ],

@@ -9,14 +9,13 @@ class PrivateRepository {
   PrivateEntity getPrivateContent() {
     return const PrivateEntity(
       topImage: "aaaa",
-      name: "プライベート",
       services: [
         PrivateCreatedServiceEntity(
           title: "めもって",
           detail: "メモアプリ",
           link: LinkEntity(
             imageUrl: "aaaa",
-            url: "aaaa",
+            url: "https://play.google.com/store/apps/details?id=io.github.emusute1212.memotte",
           ),
         ),
         PrivateCreatedServiceEntity(
@@ -24,7 +23,7 @@ class PrivateRepository {
           detail: "電卓アプリ",
           link: LinkEntity(
             imageUrl: "aaaa",
-            url: "aaaa",
+            url: "https://play.google.com/store/apps/details?id=io.github.emusute1212.calculator",
           ),
         ),
       ],
