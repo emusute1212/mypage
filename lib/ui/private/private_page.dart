@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:mypage/ui/works/component/work_service_list_component.dart';
-import 'package:mypage/ui/works/state/work_state.dart';
-import 'package:mypage/ui/works/work_view_model.dart';
+import 'package:mypage/ui/private/component/private_service_list_component.dart';
+import 'package:mypage/ui/private/private_view_model.dart';
+import 'package:mypage/ui/private/state/private_state.dart';
 
-class WorkPage extends HookConsumerWidget {
-  const WorkPage({
+class PrivatePage extends HookConsumerWidget {
+  const PrivatePage({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final WorkViewModel viewModel = ref.read(workViewModelProvider.notifier);
-    final WorkState state = ref.watch(workViewModelProvider);
+    final PrivateViewModel viewModel = ref.read(privateViewModelProvider.notifier);
+    final PrivateState state = ref.watch(privateViewModelProvider);
 
     useEffect(() {
       Future.microtask(() => viewModel.init());

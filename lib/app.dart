@@ -6,6 +6,7 @@ import 'package:mypage/ui/app/app_view_model.dart';
 import 'package:mypage/ui/app/state/app_state.dart';
 import 'package:mypage/ui/home/home_page.dart';
 import 'package:mypage/ui/introduction/introduction_page.dart';
+import 'package:mypage/ui/private/private_page.dart';
 import 'package:mypage/ui/works/work_page.dart';
 
 class App extends HookConsumerWidget {
@@ -65,7 +66,7 @@ class App extends HookConsumerWidget {
       case Contents.work:
         return const WorkPage();
       case Contents.private:
-        return const Text("private");
+        return const PrivatePage();
       case Contents.contact:
         return const Text("contact");
     }

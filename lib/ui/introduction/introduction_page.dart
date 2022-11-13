@@ -20,24 +20,27 @@ class IntroductionPage extends HookConsumerWidget {
       return null;
     }, const []);
     return Center(
-      child: Column(mainAxisSize: MainAxisSize.min, children: [
-        Text(state.entity.topImage),
-        Text("出身"),
-        Text(state.entity.from.topic),
-        Text(state.entity.from.detail),
-        Text("趣味"),
-        Text(state.entity.likes.topic),
-        Text(state.entity.likes.detail),
-        ResumeComponent(
-          careerEntityList: state.entity.resume,
-        ),
-        SkillListComponent(
-          techList: state.entity.mainSkills,
-        ),
-        SkillListComponent(
-          techList: state.entity.subSkills,
-        ),
-      ]),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(state.entity.topImage),
+          Text("出身"),
+          Text(state.entity.from.topic),
+          Text(state.entity.from.detail),
+          Text("趣味"),
+          Text(state.entity.likes.topic),
+          Text(state.entity.likes.detail),
+          ResumeComponent(
+            careerEntityList: state.entity.resume,
+          ),
+          SkillListComponent(
+            techList: state.entity.mainSkills,
+          ),
+          SkillListComponent(
+            techList: state.entity.subSkills,
+          ),
+        ],
+      ),
     );
   }
 }
