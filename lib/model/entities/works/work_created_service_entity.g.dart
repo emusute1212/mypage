@@ -11,7 +11,11 @@ _$_WorkCreatedServiceEntity _$$_WorkCreatedServiceEntityFromJson(
     _$_WorkCreatedServiceEntity(
       title: json['title'] as String,
       detail: json['detail'] as String,
-      link: LinkEntity.fromJson(json['link'] as Map<String, dynamic>),
+      link: json['link'] == null
+          ? null
+          : LinkEntity.fromJson(json['link'] as Map<String, dynamic>),
+      skills:
+          (json['skills'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$$_WorkCreatedServiceEntityToJson(
@@ -20,4 +24,5 @@ Map<String, dynamic> _$$_WorkCreatedServiceEntityToJson(
       'title': instance.title,
       'detail': instance.detail,
       'link': instance.link,
+      'skills': instance.skills,
     };

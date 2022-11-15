@@ -16,11 +16,10 @@ _$_IntroductionEntity _$$_IntroductionEntityFromJson(
           .map((e) => CareerEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
       mainSkills: (json['mainSkills'] as List<dynamic>)
-          .map((e) => TechEntity.fromJson(e as Map<String, dynamic>))
+          .map((e) => e as String)
           .toList(),
-      subSkills: (json['subSkills'] as List<dynamic>)
-          .map((e) => TechEntity.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      subSkills:
+          (json['subSkills'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$$_IntroductionEntityToJson(

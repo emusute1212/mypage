@@ -11,7 +11,7 @@ class HomeRepository {
         "images/icons/thumbnail_2.png",
       ],
       name: "宮西 洋輔(Yosuke Miyanishi)",
-      message: "aaaaa",
+      message: "Handle name is 'emusute'.\nAnd, I'm Android engineer.👨‍💻",
     );
   }
 }

@@ -23,7 +23,8 @@ PrivateCreatedServiceEntity _$PrivateCreatedServiceEntityFromJson(
 mixin _$PrivateCreatedServiceEntity {
   String get title => throw _privateConstructorUsedError;
   String get detail => throw _privateConstructorUsedError;
-  LinkEntity get link => throw _privateConstructorUsedError;
+  LinkEntity? get link => throw _privateConstructorUsedError;
+  List<String> get skills => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,9 +40,10 @@ abstract class $PrivateCreatedServiceEntityCopyWith<$Res> {
       _$PrivateCreatedServiceEntityCopyWithImpl<$Res,
           PrivateCreatedServiceEntity>;
   @useResult
-  $Res call({String title, String detail, LinkEntity link});
+  $Res call(
+      {String title, String detail, LinkEntity? link, List<String> skills});
 
-  $LinkEntityCopyWith<$Res> get link;
+  $LinkEntityCopyWith<$Res>? get link;
 }
 
 /// @nodoc
@@ -60,7 +62,8 @@ class _$PrivateCreatedServiceEntityCopyWithImpl<$Res,
   $Res call({
     Object? title = null,
     Object? detail = null,
-    Object? link = null,
+    Object? link = freezed,
+    Object? skills = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -71,17 +74,25 @@ class _$PrivateCreatedServiceEntityCopyWithImpl<$Res,
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as String,
-      link: null == link
+      link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as LinkEntity,
+              as LinkEntity?,
+      skills: null == skills
+          ? _value.skills
+          : skills // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LinkEntityCopyWith<$Res> get link {
-    return $LinkEntityCopyWith<$Res>(_value.link, (value) {
+  $LinkEntityCopyWith<$Res>? get link {
+    if (_value.link == null) {
+      return null;
+    }
+
+    return $LinkEntityCopyWith<$Res>(_value.link!, (value) {
       return _then(_value.copyWith(link: value) as $Val);
     });
   }
@@ -96,10 +107,11 @@ abstract class _$$_PrivateCreatedServiceEntityCopyWith<$Res>
       __$$_PrivateCreatedServiceEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, String detail, LinkEntity link});
+  $Res call(
+      {String title, String detail, LinkEntity? link, List<String> skills});
 
   @override
-  $LinkEntityCopyWith<$Res> get link;
+  $LinkEntityCopyWith<$Res>? get link;
 }
 
 /// @nodoc
@@ -117,7 +129,8 @@ class __$$_PrivateCreatedServiceEntityCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? detail = null,
-    Object? link = null,
+    Object? link = freezed,
+    Object? skills = null,
   }) {
     return _then(_$_PrivateCreatedServiceEntity(
       title: null == title
@@ -128,10 +141,14 @@ class __$$_PrivateCreatedServiceEntityCopyWithImpl<$Res>
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as String,
-      link: null == link
+      link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as LinkEntity,
+              as LinkEntity?,
+      skills: null == skills
+          ? _value._skills
+          : skills // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -140,7 +157,11 @@ class __$$_PrivateCreatedServiceEntityCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PrivateCreatedServiceEntity implements _PrivateCreatedServiceEntity {
   const _$_PrivateCreatedServiceEntity(
-      {required this.title, required this.detail, required this.link});
+      {required this.title,
+      required this.detail,
+      required this.link,
+      required final List<String> skills})
+      : _skills = skills;
 
   factory _$_PrivateCreatedServiceEntity.fromJson(Map<String, dynamic> json) =>
       _$$_PrivateCreatedServiceEntityFromJson(json);
@@ -150,11 +171,17 @@ class _$_PrivateCreatedServiceEntity implements _PrivateCreatedServiceEntity {
   @override
   final String detail;
   @override
-  final LinkEntity link;
+  final LinkEntity? link;
+  final List<String> _skills;
+  @override
+  List<String> get skills {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_skills);
+  }
 
   @override
   String toString() {
-    return 'PrivateCreatedServiceEntity(title: $title, detail: $detail, link: $link)';
+    return 'PrivateCreatedServiceEntity(title: $title, detail: $detail, link: $link, skills: $skills)';
   }
 
   @override
@@ -164,12 +191,14 @@ class _$_PrivateCreatedServiceEntity implements _PrivateCreatedServiceEntity {
             other is _$_PrivateCreatedServiceEntity &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.detail, detail) || other.detail == detail) &&
-            (identical(other.link, link) || other.link == link));
+            (identical(other.link, link) || other.link == link) &&
+            const DeepCollectionEquality().equals(other._skills, _skills));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, detail, link);
+  int get hashCode => Object.hash(runtimeType, title, detail, link,
+      const DeepCollectionEquality().hash(_skills));
 
   @JsonKey(ignore: true)
   @override
@@ -191,7 +220,8 @@ abstract class _PrivateCreatedServiceEntity
   const factory _PrivateCreatedServiceEntity(
       {required final String title,
       required final String detail,
-      required final LinkEntity link}) = _$_PrivateCreatedServiceEntity;
+      required final LinkEntity? link,
+      required final List<String> skills}) = _$_PrivateCreatedServiceEntity;
 
   factory _PrivateCreatedServiceEntity.fromJson(Map<String, dynamic> json) =
       _$_PrivateCreatedServiceEntity.fromJson;
@@ -201,7 +231,9 @@ abstract class _PrivateCreatedServiceEntity
   @override
   String get detail;
   @override
-  LinkEntity get link;
+  LinkEntity? get link;
+  @override
+  List<String> get skills;
   @override
   @JsonKey(ignore: true)
   _$$_PrivateCreatedServiceEntityCopyWith<_$_PrivateCreatedServiceEntity>

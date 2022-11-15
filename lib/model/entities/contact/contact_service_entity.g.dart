@@ -9,13 +9,22 @@ part of 'contact_service_entity.dart';
 _$_ContactServiceEntity _$$_ContactServiceEntityFromJson(
         Map<String, dynamic> json) =>
     _$_ContactServiceEntity(
-      iconUrl: json['iconUrl'] as String,
+      service: $enumDecode(_$ContactServiceEnumMap, json['service']),
       url: json['url'] as String,
     );
 
 Map<String, dynamic> _$$_ContactServiceEntityToJson(
         _$_ContactServiceEntity instance) =>
     <String, dynamic>{
-      'iconUrl': instance.iconUrl,
+      'service': _$ContactServiceEnumMap[instance.service]!,
       'url': instance.url,
     };
+
+const _$ContactServiceEnumMap = {
+  ContactService.twitter: 'twitter',
+  ContactService.facebook: 'facebook',
+  ContactService.github: 'github',
+  ContactService.qiita: 'qiita',
+  ContactService.stackoverflow: 'stackoverflow',
+  ContactService.zenn: 'zenn',
+};

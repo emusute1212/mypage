@@ -10,7 +10,8 @@ class PrivateCreatedServiceEntity with _$PrivateCreatedServiceEntity {
   const factory PrivateCreatedServiceEntity({
     required String title,
     required String detail,
-    required LinkEntity link,
+    required LinkEntity? link,
+    required List<String> skills,
   }) = _PrivateCreatedServiceEntity;
 
   factory PrivateCreatedServiceEntity.fromJson(Map<String, Object?> json) =>

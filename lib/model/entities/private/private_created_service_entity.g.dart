@@ -11,7 +11,11 @@ _$_PrivateCreatedServiceEntity _$$_PrivateCreatedServiceEntityFromJson(
     _$_PrivateCreatedServiceEntity(
       title: json['title'] as String,
       detail: json['detail'] as String,
-      link: LinkEntity.fromJson(json['link'] as Map<String, dynamic>),
+      link: json['link'] == null
+          ? null
+          : LinkEntity.fromJson(json['link'] as Map<String, dynamic>),
+      skills:
+          (json['skills'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$$_PrivateCreatedServiceEntityToJson(
@@ -20,4 +24,5 @@ Map<String, dynamic> _$$_PrivateCreatedServiceEntityToJson(
       'title': instance.title,
       'detail': instance.detail,
       'link': instance.link,
+      'skills': instance.skills,
     };

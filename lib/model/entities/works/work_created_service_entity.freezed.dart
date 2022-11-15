@@ -23,7 +23,8 @@ WorkCreatedServiceEntity _$WorkCreatedServiceEntityFromJson(
 mixin _$WorkCreatedServiceEntity {
   String get title => throw _privateConstructorUsedError;
   String get detail => throw _privateConstructorUsedError;
-  LinkEntity get link => throw _privateConstructorUsedError;
+  LinkEntity? get link => throw _privateConstructorUsedError;
+  List<String> get skills => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,9 +38,10 @@ abstract class $WorkCreatedServiceEntityCopyWith<$Res> {
           $Res Function(WorkCreatedServiceEntity) then) =
       _$WorkCreatedServiceEntityCopyWithImpl<$Res, WorkCreatedServiceEntity>;
   @useResult
-  $Res call({String title, String detail, LinkEntity link});
+  $Res call(
+      {String title, String detail, LinkEntity? link, List<String> skills});
 
-  $LinkEntityCopyWith<$Res> get link;
+  $LinkEntityCopyWith<$Res>? get link;
 }
 
 /// @nodoc
@@ -58,7 +60,8 @@ class _$WorkCreatedServiceEntityCopyWithImpl<$Res,
   $Res call({
     Object? title = null,
     Object? detail = null,
-    Object? link = null,
+    Object? link = freezed,
+    Object? skills = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -69,17 +72,25 @@ class _$WorkCreatedServiceEntityCopyWithImpl<$Res,
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as String,
-      link: null == link
+      link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as LinkEntity,
+              as LinkEntity?,
+      skills: null == skills
+          ? _value.skills
+          : skills // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LinkEntityCopyWith<$Res> get link {
-    return $LinkEntityCopyWith<$Res>(_value.link, (value) {
+  $LinkEntityCopyWith<$Res>? get link {
+    if (_value.link == null) {
+      return null;
+    }
+
+    return $LinkEntityCopyWith<$Res>(_value.link!, (value) {
       return _then(_value.copyWith(link: value) as $Val);
     });
   }
@@ -94,10 +105,11 @@ abstract class _$$_WorkCreatedServiceEntityCopyWith<$Res>
       __$$_WorkCreatedServiceEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, String detail, LinkEntity link});
+  $Res call(
+      {String title, String detail, LinkEntity? link, List<String> skills});
 
   @override
-  $LinkEntityCopyWith<$Res> get link;
+  $LinkEntityCopyWith<$Res>? get link;
 }
 
 /// @nodoc
@@ -114,7 +126,8 @@ class __$$_WorkCreatedServiceEntityCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? detail = null,
-    Object? link = null,
+    Object? link = freezed,
+    Object? skills = null,
   }) {
     return _then(_$_WorkCreatedServiceEntity(
       title: null == title
@@ -125,10 +138,14 @@ class __$$_WorkCreatedServiceEntityCopyWithImpl<$Res>
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as String,
-      link: null == link
+      link: freezed == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as LinkEntity,
+              as LinkEntity?,
+      skills: null == skills
+          ? _value._skills
+          : skills // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -137,7 +154,11 @@ class __$$_WorkCreatedServiceEntityCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_WorkCreatedServiceEntity implements _WorkCreatedServiceEntity {
   const _$_WorkCreatedServiceEntity(
-      {required this.title, required this.detail, required this.link});
+      {required this.title,
+      required this.detail,
+      this.link,
+      required final List<String> skills})
+      : _skills = skills;
 
   factory _$_WorkCreatedServiceEntity.fromJson(Map<String, dynamic> json) =>
       _$$_WorkCreatedServiceEntityFromJson(json);
@@ -147,11 +168,17 @@ class _$_WorkCreatedServiceEntity implements _WorkCreatedServiceEntity {
   @override
   final String detail;
   @override
-  final LinkEntity link;
+  final LinkEntity? link;
+  final List<String> _skills;
+  @override
+  List<String> get skills {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_skills);
+  }
 
   @override
   String toString() {
-    return 'WorkCreatedServiceEntity(title: $title, detail: $detail, link: $link)';
+    return 'WorkCreatedServiceEntity(title: $title, detail: $detail, link: $link, skills: $skills)';
   }
 
   @override
@@ -161,12 +188,14 @@ class _$_WorkCreatedServiceEntity implements _WorkCreatedServiceEntity {
             other is _$_WorkCreatedServiceEntity &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.detail, detail) || other.detail == detail) &&
-            (identical(other.link, link) || other.link == link));
+            (identical(other.link, link) || other.link == link) &&
+            const DeepCollectionEquality().equals(other._skills, _skills));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, detail, link);
+  int get hashCode => Object.hash(runtimeType, title, detail, link,
+      const DeepCollectionEquality().hash(_skills));
 
   @JsonKey(ignore: true)
   @override
@@ -187,7 +216,8 @@ abstract class _WorkCreatedServiceEntity implements WorkCreatedServiceEntity {
   const factory _WorkCreatedServiceEntity(
       {required final String title,
       required final String detail,
-      required final LinkEntity link}) = _$_WorkCreatedServiceEntity;
+      final LinkEntity? link,
+      required final List<String> skills}) = _$_WorkCreatedServiceEntity;
 
   factory _WorkCreatedServiceEntity.fromJson(Map<String, dynamic> json) =
       _$_WorkCreatedServiceEntity.fromJson;
@@ -197,7 +227,9 @@ abstract class _WorkCreatedServiceEntity implements WorkCreatedServiceEntity {
   @override
   String get detail;
   @override
-  LinkEntity get link;
+  LinkEntity? get link;
+  @override
+  List<String> get skills;
   @override
   @JsonKey(ignore: true)
   _$$_WorkCreatedServiceEntityCopyWith<_$_WorkCreatedServiceEntity>

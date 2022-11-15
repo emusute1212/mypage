@@ -24,7 +24,7 @@ class LinkComponent extends HookConsumerWidget {
 
   Widget _getLinkContent() {
     return entity.imageUrl != null
-        ? Image.asset(
+        ? Image.network(
             entity.imageUrl!,
             fit: BoxFit.cover,
           )

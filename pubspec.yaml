@@ -55,6 +55,12 @@ dependencies:
   # UrlLauncher
   url_launcher: ^6.1.6
 
+  # font awesome flutter
+  font_awesome_flutter: ^10.2.1
+
+  # flutter svg
+  flutter_svg: ^1.1.6
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -113,3 +119,5 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - images/icons/
+    - images/service_favicon/
+    - images/top_image/

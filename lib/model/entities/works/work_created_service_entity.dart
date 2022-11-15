@@ -10,7 +10,8 @@ class WorkCreatedServiceEntity with _$WorkCreatedServiceEntity {
   const factory WorkCreatedServiceEntity({
     required String title,
     required String detail,
-    required LinkEntity link,
+    LinkEntity? link,
+    required List<String> skills,
   }) = _WorkCreatedServiceEntity;
 
   factory WorkCreatedServiceEntity.fromJson(Map<String, Object?> json) =>

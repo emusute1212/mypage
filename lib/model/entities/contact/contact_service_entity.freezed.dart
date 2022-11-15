@@ -20,7 +20,7 @@ ContactServiceEntity _$ContactServiceEntityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ContactServiceEntity {
-  String get iconUrl => throw _privateConstructorUsedError;
+  ContactService get service => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ abstract class $ContactServiceEntityCopyWith<$Res> {
           $Res Function(ContactServiceEntity) then) =
       _$ContactServiceEntityCopyWithImpl<$Res, ContactServiceEntity>;
   @useResult
-  $Res call({String iconUrl, String url});
+  $Res call({ContactService service, String url});
 }
 
 /// @nodoc
@@ -52,14 +52,14 @@ class _$ContactServiceEntityCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? iconUrl = null,
+    Object? service = null,
     Object? url = null,
   }) {
     return _then(_value.copyWith(
-      iconUrl: null == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+      service: null == service
+          ? _value.service
+          : service // ignore: cast_nullable_to_non_nullable
+              as ContactService,
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -76,7 +76,7 @@ abstract class _$$_ContactServiceEntityCopyWith<$Res>
       __$$_ContactServiceEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String iconUrl, String url});
+  $Res call({ContactService service, String url});
 }
 
 /// @nodoc
@@ -90,14 +90,14 @@ class __$$_ContactServiceEntityCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? iconUrl = null,
+    Object? service = null,
     Object? url = null,
   }) {
     return _then(_$_ContactServiceEntity(
-      iconUrl: null == iconUrl
-          ? _value.iconUrl
-          : iconUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+      service: null == service
+          ? _value.service
+          : service // ignore: cast_nullable_to_non_nullable
+              as ContactService,
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -109,19 +109,19 @@ class __$$_ContactServiceEntityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContactServiceEntity implements _ContactServiceEntity {
-  const _$_ContactServiceEntity({required this.iconUrl, required this.url});
+  const _$_ContactServiceEntity({required this.service, required this.url});
 
   factory _$_ContactServiceEntity.fromJson(Map<String, dynamic> json) =>
       _$$_ContactServiceEntityFromJson(json);
 
   @override
-  final String iconUrl;
+  final ContactService service;
   @override
   final String url;
 
   @override
   String toString() {
-    return 'ContactServiceEntity(iconUrl: $iconUrl, url: $url)';
+    return 'ContactServiceEntity(service: $service, url: $url)';
   }
 
   @override
@@ -129,13 +129,13 @@ class _$_ContactServiceEntity implements _ContactServiceEntity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ContactServiceEntity &&
-            (identical(other.iconUrl, iconUrl) || other.iconUrl == iconUrl) &&
+            (identical(other.service, service) || other.service == service) &&
             (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, iconUrl, url);
+  int get hashCode => Object.hash(runtimeType, service, url);
 
   @JsonKey(ignore: true)
   @override
@@ -154,14 +154,14 @@ class _$_ContactServiceEntity implements _ContactServiceEntity {
 
 abstract class _ContactServiceEntity implements ContactServiceEntity {
   const factory _ContactServiceEntity(
-      {required final String iconUrl,
+      {required final ContactService service,
       required final String url}) = _$_ContactServiceEntity;
 
   factory _ContactServiceEntity.fromJson(Map<String, dynamic> json) =
       _$_ContactServiceEntity.fromJson;
 
   @override
-  String get iconUrl;
+  ContactService get service;
   @override
   String get url;
   @override

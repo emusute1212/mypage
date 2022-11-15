@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/model/entities/private/private_created_service_entity.dart';
-import 'package:mypage/ui/common/link_component.dart';
+import 'package:mypage/ui/common/link/link_component.dart';
+import 'package:mypage/ui/common/skills/skill_list_component.dart';
 
 class PrivateServiceComponent extends HookConsumerWidget {
   const PrivateServiceComponent({
@@ -17,8 +18,11 @@ class PrivateServiceComponent extends HookConsumerWidget {
       children: [
         Text(service.title),
         Text(service.detail),
-        LinkComponent(entity: service.link),
-      ],
+        service.link != null ? LinkComponent(entity: service.link!) : null,
+        SkillListComponent(
+          techList: service.skills,
+        ),
+      ].whereType<Widget>().toList(),
     );
   }
 }

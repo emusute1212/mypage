@@ -6,7 +6,7 @@ part 'link_entity.g.dart';
 @freezed
 class LinkEntity with _$LinkEntity {
   const factory LinkEntity({
-    required String? imageUrl,
+    String? imageUrl,
     required String url,
   }) = _LinkEntity;
 

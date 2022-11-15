@@ -108,7 +108,7 @@ class __$$_LinkEntityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LinkEntity implements _LinkEntity {
-  const _$_LinkEntity({required this.imageUrl, required this.url});
+  const _$_LinkEntity({this.imageUrl, required this.url});
 
   factory _$_LinkEntity.fromJson(Map<String, dynamic> json) =>
       _$$_LinkEntityFromJson(json);
@@ -153,8 +153,7 @@ class _$_LinkEntity implements _LinkEntity {
 
 abstract class _LinkEntity implements LinkEntity {
   const factory _LinkEntity(
-      {required final String? imageUrl,
-      required final String url}) = _$_LinkEntity;
+      {final String? imageUrl, required final String url}) = _$_LinkEntity;
 
   factory _LinkEntity.fromJson(Map<String, dynamic> json) =
       _$_LinkEntity.fromJson;

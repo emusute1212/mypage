@@ -24,8 +24,8 @@ mixin _$IntroductionEntity {
   TopicEntity get from => throw _privateConstructorUsedError;
   TopicEntity get likes => throw _privateConstructorUsedError;
   List<CareerEntity> get resume => throw _privateConstructorUsedError;
-  List<TechEntity> get mainSkills => throw _privateConstructorUsedError;
-  List<TechEntity> get subSkills => throw _privateConstructorUsedError;
+  List<String> get mainSkills => throw _privateConstructorUsedError;
+  List<String> get subSkills => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,8 +44,8 @@ abstract class $IntroductionEntityCopyWith<$Res> {
       TopicEntity from,
       TopicEntity likes,
       List<CareerEntity> resume,
-      List<TechEntity> mainSkills,
-      List<TechEntity> subSkills});
+      List<String> mainSkills,
+      List<String> subSkills});
 
   $TopicEntityCopyWith<$Res> get from;
   $TopicEntityCopyWith<$Res> get likes;
@@ -91,11 +91,11 @@ class _$IntroductionEntityCopyWithImpl<$Res, $Val extends IntroductionEntity>
       mainSkills: null == mainSkills
           ? _value.mainSkills
           : mainSkills // ignore: cast_nullable_to_non_nullable
-              as List<TechEntity>,
+              as List<String>,
       subSkills: null == subSkills
           ? _value.subSkills
           : subSkills // ignore: cast_nullable_to_non_nullable
-              as List<TechEntity>,
+              as List<String>,
     ) as $Val);
   }
 
@@ -129,8 +129,8 @@ abstract class _$$_IntroductionEntityCopyWith<$Res>
       TopicEntity from,
       TopicEntity likes,
       List<CareerEntity> resume,
-      List<TechEntity> mainSkills,
-      List<TechEntity> subSkills});
+      List<String> mainSkills,
+      List<String> subSkills});
 
   @override
   $TopicEntityCopyWith<$Res> get from;
@@ -176,11 +176,11 @@ class __$$_IntroductionEntityCopyWithImpl<$Res>
       mainSkills: null == mainSkills
           ? _value._mainSkills
           : mainSkills // ignore: cast_nullable_to_non_nullable
-              as List<TechEntity>,
+              as List<String>,
       subSkills: null == subSkills
           ? _value._subSkills
           : subSkills // ignore: cast_nullable_to_non_nullable
-              as List<TechEntity>,
+              as List<String>,
     ));
   }
 }
@@ -193,8 +193,8 @@ class _$_IntroductionEntity implements _IntroductionEntity {
       required this.from,
       required this.likes,
       required final List<CareerEntity> resume,
-      required final List<TechEntity> mainSkills,
-      required final List<TechEntity> subSkills})
+      required final List<String> mainSkills,
+      required final List<String> subSkills})
       : _resume = resume,
         _mainSkills = mainSkills,
         _subSkills = subSkills;
@@ -215,16 +215,16 @@ class _$_IntroductionEntity implements _IntroductionEntity {
     return EqualUnmodifiableListView(_resume);
   }
 
-  final List<TechEntity> _mainSkills;
+  final List<String> _mainSkills;
   @override
-  List<TechEntity> get mainSkills {
+  List<String> get mainSkills {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_mainSkills);
   }
 
-  final List<TechEntity> _subSkills;
+  final List<String> _subSkills;
   @override
-  List<TechEntity> get subSkills {
+  List<String> get subSkills {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_subSkills);
   }
@@ -282,8 +282,8 @@ abstract class _IntroductionEntity implements IntroductionEntity {
       required final TopicEntity from,
       required final TopicEntity likes,
       required final List<CareerEntity> resume,
-      required final List<TechEntity> mainSkills,
-      required final List<TechEntity> subSkills}) = _$_IntroductionEntity;
+      required final List<String> mainSkills,
+      required final List<String> subSkills}) = _$_IntroductionEntity;
 
   factory _IntroductionEntity.fromJson(Map<String, dynamic> json) =
       _$_IntroductionEntity.fromJson;
@@ -297,9 +297,9 @@ abstract class _IntroductionEntity implements IntroductionEntity {
   @override
   List<CareerEntity> get resume;
   @override
-  List<TechEntity> get mainSkills;
+  List<String> get mainSkills;
   @override
-  List<TechEntity> get subSkills;
+  List<String> get subSkills;
   @override
   @JsonKey(ignore: true)
   _$$_IntroductionEntityCopyWith<_$_IntroductionEntity> get copyWith =>

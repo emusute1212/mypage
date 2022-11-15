@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:mypage/ui/common/skills/skill_list_component.dart';
 import 'package:mypage/ui/introduction/introduction_view_model.dart';
 import 'package:mypage/ui/introduction/resume/resume_component.dart';
-import 'package:mypage/ui/introduction/skills/skill_list_component.dart';
 import 'package:mypage/ui/introduction/state/introduction_state.dart';
 
 class IntroductionPage extends HookConsumerWidget {
