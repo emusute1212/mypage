@@ -29,13 +29,22 @@ class App extends HookConsumerWidget {
     }, const []);
     return MaterialApp(
       title: "Yosuke Miyanishi",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: state.isDarkMode ? ThemeMode.dark : ThemeMode.light,
       home: Builder(builder: (context) {
         return Scaffold(
           appBar: AppBar(
             title: Text(headerTitle),
+            actions: [
+              Switch.adaptive(
+                value: state.isDarkMode,
+                onChanged: (value) async {
+                  viewModel.onChangeThemeMode(value);
+                },
+                activeColor: state.isDarkMode ? Colors.white : Colors.black,
+              ),
+            ],
           ),
           drawerEdgeDragWidth: 0,
           drawer: Drawer(

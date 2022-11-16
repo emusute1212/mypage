@@ -22,6 +22,7 @@ AppState _$AppStateFromJson(Map<String, dynamic> json) {
 mixin _$AppState {
   List<Contents> get contentList => throw _privateConstructorUsedError;
   Contents get currentContent => throw _privateConstructorUsedError;
+  bool get isDarkMode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +35,8 @@ abstract class $AppStateCopyWith<$Res> {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
       _$AppStateCopyWithImpl<$Res, AppState>;
   @useResult
-  $Res call({List<Contents> contentList, Contents currentContent});
+  $Res call(
+      {List<Contents> contentList, Contents currentContent, bool isDarkMode});
 }
 
 /// @nodoc
@@ -52,6 +54,7 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   $Res call({
     Object? contentList = null,
     Object? currentContent = null,
+    Object? isDarkMode = null,
   }) {
     return _then(_value.copyWith(
       contentList: null == contentList
@@ -62,6 +65,10 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
           ? _value.currentContent
           : currentContent // ignore: cast_nullable_to_non_nullable
               as Contents,
+      isDarkMode: null == isDarkMode
+          ? _value.isDarkMode
+          : isDarkMode // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -73,7 +80,8 @@ abstract class _$$_AppStateCopyWith<$Res> implements $AppStateCopyWith<$Res> {
       __$$_AppStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Contents> contentList, Contents currentContent});
+  $Res call(
+      {List<Contents> contentList, Contents currentContent, bool isDarkMode});
 }
 
 /// @nodoc
@@ -89,6 +97,7 @@ class __$$_AppStateCopyWithImpl<$Res>
   $Res call({
     Object? contentList = null,
     Object? currentContent = null,
+    Object? isDarkMode = null,
   }) {
     return _then(_$_AppState(
       contentList: null == contentList
@@ -99,6 +108,10 @@ class __$$_AppStateCopyWithImpl<$Res>
           ? _value.currentContent
           : currentContent // ignore: cast_nullable_to_non_nullable
               as Contents,
+      isDarkMode: null == isDarkMode
+          ? _value.isDarkMode
+          : isDarkMode // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -107,7 +120,9 @@ class __$$_AppStateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AppState with DiagnosticableTreeMixin implements _AppState {
   const _$_AppState(
-      {required final List<Contents> contentList, required this.currentContent})
+      {required final List<Contents> contentList,
+      required this.currentContent,
+      required this.isDarkMode})
       : _contentList = contentList;
 
   factory _$_AppState.fromJson(Map<String, dynamic> json) =>
@@ -122,10 +137,12 @@ class _$_AppState with DiagnosticableTreeMixin implements _AppState {
 
   @override
   final Contents currentContent;
+  @override
+  final bool isDarkMode;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AppState(contentList: $contentList, currentContent: $currentContent)';
+    return 'AppState(contentList: $contentList, currentContent: $currentContent, isDarkMode: $isDarkMode)';
   }
 
   @override
@@ -134,7 +151,8 @@ class _$_AppState with DiagnosticableTreeMixin implements _AppState {
     properties
       ..add(DiagnosticsProperty('type', 'AppState'))
       ..add(DiagnosticsProperty('contentList', contentList))
-      ..add(DiagnosticsProperty('currentContent', currentContent));
+      ..add(DiagnosticsProperty('currentContent', currentContent))
+      ..add(DiagnosticsProperty('isDarkMode', isDarkMode));
   }
 
   @override
@@ -145,13 +163,18 @@ class _$_AppState with DiagnosticableTreeMixin implements _AppState {
             const DeepCollectionEquality()
                 .equals(other._contentList, _contentList) &&
             (identical(other.currentContent, currentContent) ||
-                other.currentContent == currentContent));
+                other.currentContent == currentContent) &&
+            (identical(other.isDarkMode, isDarkMode) ||
+                other.isDarkMode == isDarkMode));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_contentList), currentContent);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_contentList),
+      currentContent,
+      isDarkMode);
 
   @JsonKey(ignore: true)
   @override
@@ -170,7 +193,8 @@ class _$_AppState with DiagnosticableTreeMixin implements _AppState {
 abstract class _AppState implements AppState {
   const factory _AppState(
       {required final List<Contents> contentList,
-      required final Contents currentContent}) = _$_AppState;
+      required final Contents currentContent,
+      required final bool isDarkMode}) = _$_AppState;
 
   factory _AppState.fromJson(Map<String, dynamic> json) = _$_AppState.fromJson;
 
@@ -178,6 +202,8 @@ abstract class _AppState implements AppState {
   List<Contents> get contentList;
   @override
   Contents get currentContent;
+  @override
+  bool get isDarkMode;
   @override
   @JsonKey(ignore: true)
   _$$_AppStateCopyWith<_$_AppState> get copyWith =>

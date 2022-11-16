@@ -13,6 +13,7 @@ class AppViewModel extends StateNotifier<AppState> {
       : super(const AppState(
           contentList: [],
           currentContent: Contents.home,
+          isDarkMode: false,
         ));
 
   void init() {
@@ -21,5 +22,9 @@ class AppViewModel extends StateNotifier<AppState> {
 
   void onTapContent(Contents content) {
     state = state.copyWith(currentContent: content);
+  }
+
+  void onChangeThemeMode(bool isDarkMode) {
+    state = state.copyWith(isDarkMode: isDarkMode);
   }
 }
