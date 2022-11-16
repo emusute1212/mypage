@@ -25,19 +25,39 @@ class HomePage extends HookConsumerWidget {
             images: state.entity.icons
                 .map((e) => ClipRRect(
                       borderRadius:
-                          const BorderRadius.all(Radius.circular(100)),
+                          const BorderRadius.all(Radius.circular(200)),
                       child: Image.asset(e),
                     ))
                 .toList(),
             visibleDuration: 4000,
-            width: 100,
-            height: 100,
+            width: 300,
+            height: 300,
           ),
-          Text(
-            state.entity.name,
+          Container(
+            margin: const EdgeInsets.only(
+              top: 24,
+            ),
+            child: Text(
+              state.entity.name,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
-          Text(
-            state.entity.message,
+          Container(
+            margin: const EdgeInsets.only(
+              top: 24,
+              bottom: 100, // 若干上寄りにする
+            ),
+            child: Text(
+              state.entity.message,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 20,
+              ),
+            ),
           ),
         ],
       ),

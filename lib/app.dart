@@ -50,18 +50,26 @@ class App extends HookConsumerWidget {
           drawer: Drawer(
             child: ListView(
               children: state.contentList
-                  .map((e) =>
-                  ListTile(
-                    title: Text(e.displayName),
-                    onTap: () {
-                      viewModel.onTapContent(e);
-                      Navigator.pop(context);
-                    },
-                  ))
+                  .map((e) => ListTile(
+                        title: Text(e.displayName),
+                        onTap: () {
+                          viewModel.onTapContent(e);
+                          Navigator.pop(context);
+                        },
+                      ))
                   .toList(),
             ),
           ),
-          body: _getCurrentWidget(state.currentContent),
+          body: LayoutBuilder(
+            builder: (context, constraints) => SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                child: Center(
+                  child: _getCurrentWidget(state.currentContent),
+                ),
+              ),
+            ),
+          ),
         );
       }),
     );
