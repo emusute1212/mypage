@@ -19,14 +19,12 @@ class WorkPage extends HookConsumerWidget {
       Future.microtask(() => viewModel.init());
       return null;
     }, const []);
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Image.network(state.entity.topImage),
-          ServiceListComponent(services: state.entity.services)
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Image.network(state.entity.topImage),
+        ServiceListComponent(services: state.entity.services)
+      ],
     );
   }
 }

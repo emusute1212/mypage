@@ -11,6 +11,11 @@ class SkillListComponent extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Text(techList.join("/"));
+    return Text(
+      techList.join(" / "),
+      style: const TextStyle(
+        fontSize: 16,
+      ),
+    );
   }
 }

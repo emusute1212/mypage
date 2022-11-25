@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/ui/common/skills/skill_list_component.dart';
+import 'package:mypage/ui/introduction/component/title_and_contents_component.dart';
+import 'package:mypage/ui/introduction/component/topic_component.dart';
 import 'package:mypage/ui/introduction/introduction_view_model.dart';
 import 'package:mypage/ui/introduction/resume/resume_component.dart';
 import 'package:mypage/ui/introduction/state/introduction_state.dart';
@@ -19,25 +21,60 @@ class IntroductionPage extends HookConsumerWidget {
       Future.microtask(() => viewModel.init());
       return null;
     }, const []);
-    return Center(
+    return Padding(
+      padding: const EdgeInsets.only(
+        right: 16.0,
+        left: 16.0,
+        bottom: 32.0,
+      ),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(state.entity.topImage),
-          Text("出身"),
-          Text(state.entity.from.topic),
-          Text(state.entity.from.detail),
-          Text("趣味"),
-          Text(state.entity.likes.topic),
-          Text(state.entity.likes.detail),
-          ResumeComponent(
-            careerEntityList: state.entity.resume,
+          Image.network(state.entity.topImage),
+          const SizedBox(
+            height: 24,
+          ), // margin
+          TitleAndContentsComponent(
+            title: "出身",
+            widget: TopicComponent(
+              topicEntity: state.entity.from,
+            ),
           ),
-          SkillListComponent(
-            techList: state.entity.mainSkills,
+          const SizedBox(
+            height: 24,
+          ), // margin
+          TitleAndContentsComponent(
+            title: "趣味",
+            widget: TopicComponent(
+              topicEntity: state.entity.likes,
+            ),
           ),
-          SkillListComponent(
-            techList: state.entity.subSkills,
+          const SizedBox(
+            height: 24,
+          ), // margin
+          TitleAndContentsComponent(
+            title: "経歴",
+            widget: ResumeComponent(
+              careerEntityList: state.entity.resume,
+            ),
+          ),
+          const SizedBox(
+            height: 24,
+          ), // margin
+          TitleAndContentsComponent(
+            title: "メインスキル",
+            widget: SkillListComponent(
+              techList: state.entity.mainSkills,
+            ),
+          ),
+          const SizedBox(
+            height: 24,
+          ), // margin
+          TitleAndContentsComponent(
+            title: "サブスキル",
+            widget: SkillListComponent(
+              techList: state.entity.subSkills,
+            ),
           ),
         ],
       ),

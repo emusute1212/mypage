@@ -65,7 +65,10 @@ class App extends HookConsumerWidget {
               child: ConstrainedBox(
                 constraints: BoxConstraints(minHeight: constraints.maxHeight),
                 child: Center(
-                  child: _getCurrentWidget(state.currentContent),
+                  child: SizedBox(
+                    width: 800,
+                    child: _getCurrentWidget(state.currentContent),
+                  ),
                 ),
               ),
             ),

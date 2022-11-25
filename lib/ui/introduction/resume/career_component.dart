@@ -12,11 +12,29 @@ class CareerComponent extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Card(
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("${careerEntity.date.year}/${careerEntity.date.month}"),
-          Text(careerEntity.detail),
+          Padding(
+            padding: const EdgeInsets.only(
+              bottom: 4.0,
+            ),
+            child: Text(
+              "${careerEntity.date.year}年${careerEntity.date.month}月",
+              style: const TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          ),
+          Text(
+            careerEntity.detail,
+            style: const TextStyle(
+              fontSize: 16,
+              height: 1.4,
+            ),
+          )
         ],
       ),
     );
