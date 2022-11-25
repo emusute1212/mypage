@@ -62,13 +62,10 @@ class App extends HookConsumerWidget {
           ),
           body: LayoutBuilder(
             builder: (context, constraints) => SingleChildScrollView(
-              child: ConstrainedBox(
-                constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                child: Center(
-                  child: SizedBox(
-                    width: 800,
-                    child: _getCurrentWidget(state.currentContent),
-                  ),
+              child: Center(
+                child: SizedBox(
+                  width: 800,
+                  child: _getCurrentWidget(state.currentContent),
                 ),
               ),
             ),

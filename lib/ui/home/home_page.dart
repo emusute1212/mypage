@@ -17,7 +17,13 @@ class HomePage extends HookConsumerWidget {
       Future.microtask(() => viewModel.init());
       return null;
     }, const []);
-    return Center(
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 64.0,
+        left: 8.0,
+        right: 8.0,
+        bottom: 64.0,
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
