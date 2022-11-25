@@ -4,7 +4,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/model/entities/contents.dart';
 import 'package:mypage/ui/app/app_view_model.dart';
 import 'package:mypage/ui/app/state/app_state.dart';
-import 'package:mypage/ui/contact/contact_page.dart';
 import 'package:mypage/ui/home/home_page.dart';
 import 'package:mypage/ui/introduction/introduction_page.dart';
 import 'package:mypage/ui/private/private_page.dart';
@@ -85,8 +84,6 @@ class App extends HookConsumerWidget {
         return const WorkPage();
       case Contents.private:
         return const PrivatePage();
-      case Contents.contact:
-        return const ContactPage();
     }
   }
 }

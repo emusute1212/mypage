@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:mypage/ui/home/component/contact_service_list_component.dart';
 import 'package:mypage/ui/home/cross_fade_image.dart';
 import 'package:mypage/ui/home/home_view_model.dart';
 import 'package:mypage/ui/home/state/home_state.dart';
@@ -55,7 +56,7 @@ class HomePage extends HookConsumerWidget {
           Container(
             margin: const EdgeInsets.only(
               top: 24,
-              bottom: 100, // 若干上寄りにする
+              bottom: 32
             ),
             child: Text(
               state.entity.message,
@@ -65,6 +66,9 @@ class HomePage extends HookConsumerWidget {
               ),
             ),
           ),
+          ContactServiceListComponent(
+            contactServiceList: state.entity.contracts,
+          )
         ],
       ),
     );

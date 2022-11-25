@@ -16,6 +16,7 @@ class HomeViewModel extends StateNotifier<HomeState> {
             icons: [],
             name: "",
             message: "",
+            contracts: [],
           ),
         ));
 

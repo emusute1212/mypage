@@ -23,6 +23,8 @@ mixin _$HomeEntity {
   List<String> get icons => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get message => throw _privateConstructorUsedError;
+  List<ContactServiceEntity> get contracts =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +38,11 @@ abstract class $HomeEntityCopyWith<$Res> {
           HomeEntity value, $Res Function(HomeEntity) then) =
       _$HomeEntityCopyWithImpl<$Res, HomeEntity>;
   @useResult
-  $Res call({List<String> icons, String name, String message});
+  $Res call(
+      {List<String> icons,
+      String name,
+      String message,
+      List<ContactServiceEntity> contracts});
 }
 
 /// @nodoc
@@ -55,6 +61,7 @@ class _$HomeEntityCopyWithImpl<$Res, $Val extends HomeEntity>
     Object? icons = null,
     Object? name = null,
     Object? message = null,
+    Object? contracts = null,
   }) {
     return _then(_value.copyWith(
       icons: null == icons
@@ -69,6 +76,10 @@ class _$HomeEntityCopyWithImpl<$Res, $Val extends HomeEntity>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+      contracts: null == contracts
+          ? _value.contracts
+          : contracts // ignore: cast_nullable_to_non_nullable
+              as List<ContactServiceEntity>,
     ) as $Val);
   }
 }
@@ -81,7 +92,11 @@ abstract class _$$_HomeEntityCopyWith<$Res>
       __$$_HomeEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<String> icons, String name, String message});
+  $Res call(
+      {List<String> icons,
+      String name,
+      String message,
+      List<ContactServiceEntity> contracts});
 }
 
 /// @nodoc
@@ -98,6 +113,7 @@ class __$$_HomeEntityCopyWithImpl<$Res>
     Object? icons = null,
     Object? name = null,
     Object? message = null,
+    Object? contracts = null,
   }) {
     return _then(_$_HomeEntity(
       icons: null == icons
@@ -112,6 +128,10 @@ class __$$_HomeEntityCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+      contracts: null == contracts
+          ? _value._contracts
+          : contracts // ignore: cast_nullable_to_non_nullable
+              as List<ContactServiceEntity>,
     ));
   }
 }
@@ -122,8 +142,10 @@ class _$_HomeEntity implements _HomeEntity {
   const _$_HomeEntity(
       {required final List<String> icons,
       required this.name,
-      required this.message})
-      : _icons = icons;
+      required this.message,
+      required final List<ContactServiceEntity> contracts})
+      : _icons = icons,
+        _contracts = contracts;
 
   factory _$_HomeEntity.fromJson(Map<String, dynamic> json) =>
       _$$_HomeEntityFromJson(json);
@@ -139,10 +161,16 @@ class _$_HomeEntity implements _HomeEntity {
   final String name;
   @override
   final String message;
+  final List<ContactServiceEntity> _contracts;
+  @override
+  List<ContactServiceEntity> get contracts {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_contracts);
+  }
 
   @override
   String toString() {
-    return 'HomeEntity(icons: $icons, name: $name, message: $message)';
+    return 'HomeEntity(icons: $icons, name: $name, message: $message, contracts: $contracts)';
   }
 
   @override
@@ -152,13 +180,19 @@ class _$_HomeEntity implements _HomeEntity {
             other is _$_HomeEntity &&
             const DeepCollectionEquality().equals(other._icons, _icons) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.message, message) || other.message == message) &&
+            const DeepCollectionEquality()
+                .equals(other._contracts, _contracts));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_icons), name, message);
+      runtimeType,
+      const DeepCollectionEquality().hash(_icons),
+      name,
+      message,
+      const DeepCollectionEquality().hash(_contracts));
 
   @JsonKey(ignore: true)
   @override
@@ -178,7 +212,8 @@ abstract class _HomeEntity implements HomeEntity {
   const factory _HomeEntity(
       {required final List<String> icons,
       required final String name,
-      required final String message}) = _$_HomeEntity;
+      required final String message,
+      required final List<ContactServiceEntity> contracts}) = _$_HomeEntity;
 
   factory _HomeEntity.fromJson(Map<String, dynamic> json) =
       _$_HomeEntity.fromJson;
@@ -189,6 +224,8 @@ abstract class _HomeEntity implements HomeEntity {
   String get name;
   @override
   String get message;
+  @override
+  List<ContactServiceEntity> get contracts;
   @override
   @JsonKey(ignore: true)
   _$$_HomeEntityCopyWith<_$_HomeEntity> get copyWith =>

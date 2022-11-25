@@ -11,6 +11,9 @@ _$_HomeEntity _$$_HomeEntityFromJson(Map<String, dynamic> json) =>
       icons: (json['icons'] as List<dynamic>).map((e) => e as String).toList(),
       name: json['name'] as String,
       message: json['message'] as String,
+      contracts: (json['contracts'] as List<dynamic>)
+          .map((e) => ContactServiceEntity.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_HomeEntityToJson(_$_HomeEntity instance) =>
@@ -18,4 +21,5 @@ Map<String, dynamic> _$$_HomeEntityToJson(_$_HomeEntity instance) =>
       'icons': instance.icons,
       'name': instance.name,
       'message': instance.message,
+      'contracts': instance.contracts,
     };

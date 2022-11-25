@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:mypage/model/entities/contact/contact_service_entity.dart';
-import 'package:mypage/ui/contact/component/contact_service_component.dart';
+import 'package:mypage/model/entities/home/services/contact_service_entity.dart';
+import 'package:mypage/ui/home/component/contact_service_component.dart';
 
 class ContactServiceListComponent extends HookConsumerWidget {
   const ContactServiceListComponent({Key? key, required this.contactServiceList})
