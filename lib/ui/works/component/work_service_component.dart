@@ -35,7 +35,7 @@ class WorkServiceComponent extends HookConsumerWidget {
         ),
         service.link != null ? LinkComponent(entity: service.link!) : null,
         const SizedBox(
-          height: 16,
+          height: 8,
         ), // margin
         const Text(
           "使用技術",
@@ -49,6 +49,9 @@ class WorkServiceComponent extends HookConsumerWidget {
         ), // margin
         SkillListComponent(
           techList: service.skills,
+        ),
+        const SizedBox(
+          height: 32,
         ),
       ].whereType<Widget>().toList(),
     );

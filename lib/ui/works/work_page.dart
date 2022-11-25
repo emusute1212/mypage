@@ -25,18 +25,15 @@ class WorkPage extends HookConsumerWidget {
         left: 16.0,
         bottom: 32.0,
       ),
-      child: Align(
-        alignment: Alignment.topCenter,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.network(state.entity.topImage),
-            const SizedBox(
-              height: 24,
-            ), // margin
-            ServiceListComponent(services: state.entity.services),
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.network(state.entity.topImage),
+          const SizedBox(
+            height: 24,
+          ), // margin
+          ServiceListComponent(services: state.entity.services),
+        ],
       ),
     );
   }

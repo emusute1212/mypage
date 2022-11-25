@@ -19,12 +19,22 @@ class PrivatePage extends HookConsumerWidget {
       Future.microtask(() => viewModel.init());
       return null;
     }, const []);
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Image.network(state.entity.topImage),
-        ServiceListComponent(services: state.entity.services)
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(
+        right: 16.0,
+        left: 16.0,
+        bottom: 32.0,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image.network(state.entity.topImage),
+          const SizedBox(
+            height: 24,
+          ), // margin
+          ServiceListComponent(services: state.entity.services)
+        ],
+      ),
     );
   }
 }

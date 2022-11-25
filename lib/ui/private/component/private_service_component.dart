@@ -16,11 +16,42 @@ class PrivateServiceComponent extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       children: [
-        Text(service.title),
-        Text(service.detail),
+        Text(
+          service.title,
+          style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Text(
+          service.detail,
+          style: const TextStyle(
+            fontSize: 16,
+            height: 1.4,
+          ),
+        ),
         service.link != null ? LinkComponent(entity: service.link!) : null,
+        const SizedBox(
+          height: 8,
+        ), // margin
+        const Text(
+          "使用技術",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(
+          height: 8,
+        ), // margin
         SkillListComponent(
           techList: service.skills,
+        ),
+        const SizedBox(
+          height: 32,
         ),
       ].whereType<Widget>().toList(),
     );
