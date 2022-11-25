@@ -32,7 +32,8 @@ class PrivatePage extends HookConsumerWidget {
           const SizedBox(
             height: 24,
           ), // margin
-          ServiceListComponent(services: state.entity.services)
+          ServiceListComponent(services: state.entity.services),
+          const Text("Google Play および Google Play ロゴは、Google LLC の商標です。")
         ],
       ),
     );
