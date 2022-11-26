@@ -19,21 +19,14 @@ class ContactServiceComponent extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isHover = useState(false);
-    return GestureDetector(
-      onTap: () {
-        _launchUrl(contactService.url);
-      },
-      child: MouseRegion(
-        onEnter: (_) => isHover.value = true,
-        onExit: (_) => isHover.value = false,
-        child: Container(
-          margin: const EdgeInsets.all(8.0),
-          child: SizedBox(
-            width: 24,
-            height: 24,
-            child: _getFontAwesomeIcon(contactService.service, isHover.value),
-          ),
-        ),
+    return MouseRegion(
+      onEnter: (_) => isHover.value = true,
+      onExit: (_) => isHover.value = false,
+      child: IconButton(
+        icon: _getFontAwesomeIcon(contactService.service, isHover.value),
+        onPressed: () {
+          _launchUrl(contactService.url);
+        },
       ),
     );
   }
