@@ -3,7 +3,7 @@ enum Contents {
   introduction("Introduction"),
   work("Work"),
   private("Private"),
-  license("License");
+  legal("Legal");
 
   final String displayName;
   const Contents(this.displayName);

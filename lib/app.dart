@@ -84,7 +84,7 @@ class App extends HookConsumerWidget {
         return const WorkPage();
       case Contents.private:
         return const PrivatePage();
-      case Contents.license:
+      case Contents.legal:
         return const AboutListTile(
           icon: Icon(Icons.info),
           applicationName: "My Page",
