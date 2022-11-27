@@ -28,7 +28,7 @@ class PrivatePage extends HookConsumerWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.network(state.entity.topImage),
+          Image.asset(state.entity.topImage),
           const SizedBox(
             height: 24,
           ), // margin
