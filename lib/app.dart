@@ -38,12 +38,17 @@ class App extends HookConsumerWidget {
           appBar: AppBar(
             title: Text(headerTitle),
             actions: [
-              Switch.adaptive(
-                value: state.isDarkMode,
-                onChanged: (value) async {
-                  viewModel.onChangeThemeMode(value);
-                },
-                activeColor: state.isDarkMode ? Colors.white : Colors.black,
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 8.0,
+                ),
+                child: Switch.adaptive(
+                  value: state.isDarkMode,
+                  onChanged: (value) async {
+                    viewModel.onChangeThemeMode(value);
+                  },
+                  activeColor: state.isDarkMode ? Colors.white : Colors.black,
+                ),
               ),
             ],
           ),
