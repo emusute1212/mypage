@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -8,6 +9,7 @@ import 'package:mypage/ui/home/home_page.dart';
 import 'package:mypage/ui/introduction/introduction_page.dart';
 import 'package:mypage/ui/private/private_page.dart';
 import 'package:mypage/ui/works/work_page.dart';
+import 'package:mypage/util/firebase_analytics_utils.dart';
 
 class App extends HookConsumerWidget {
   const App({
@@ -50,10 +52,13 @@ class App extends HookConsumerWidget {
             child: ListView(
               children: state.contentList
                   .map((e) => ListTile(
-                        title: Text(e.displayName),
-                        onTap: () {
-                          viewModel.onTapContent(e);
-                          Navigator.pop(context);
+                title: Text(e.displayName),
+                        onTap: () async {
+                          FirebaseAnalyticsUtils.withSendAnalytics(
+                              "menu", e.displayName, () {
+                            viewModel.onTapContent(e);
+                            Navigator.pop(context);
+                          });
                         },
                       ))
                   .toList(),

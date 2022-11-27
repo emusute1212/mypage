@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/model/entities/home/services/contact_service.dart';
 import 'package:mypage/model/entities/home/services/contact_service_entity.dart';
+import 'package:mypage/util/firebase_analytics_utils.dart';
 import 'package:mypage/util/string_ext.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -25,7 +26,10 @@ class ContactServiceComponent extends HookConsumerWidget {
       child: IconButton(
         icon: _getFontAwesomeIcon(contactService.service, isHover.value),
         onPressed: () {
-          _launchUrl(contactService.url);
+          FirebaseAnalyticsUtils.withSendAnalytics(
+              "other_content", contactService.service.name, () {
+            _launchUrl(contactService.url);
+          });
         },
       ),
     );
