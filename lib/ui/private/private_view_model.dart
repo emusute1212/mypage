@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/model/entities/private/private_entity.dart';
-import 'package:mypage/model/repository/Private_repository.dart';
+import 'package:mypage/model/repository/private_repository.dart';
 import 'package:mypage/ui/private/state/private_state.dart';
 
 final privateViewModelProvider = StateNotifierProvider<PrivateViewModel, PrivateState>(
