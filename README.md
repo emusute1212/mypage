@@ -1,19 +1,16 @@
-# gatsby-starter-dimension
+# mypage
 
-**This is a starter for Gatsby.js V2.**
+My profile page.
 
-**The older V1 version of this starter can be found on the v1 branch:**
+## Getting Started
 
-Gatsby.js V2 starter based on the Dimension site template, designed by HTML5 UP. Check out https://codebushi.com/gatsby-starters-and-themes/ for more Gatsby starters and templates.
+This project is a starting point for a Flutter application.
 
-## Preview
+A few resources to get you started if this is your first Flutter project:
 
-https://gatsby-dimension.surge.sh/
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-## Installation
-
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-<br/>
-`gatsby new gatsby-starter-dimension https://github.com/codebushi/gatsby-starter-dimension`
-
-Run `gatsby develop` in the terminal to start the dev site.
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
