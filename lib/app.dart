@@ -1,6 +1,6 @@
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/model/entities/contents.dart';
 import 'package:mypage/ui/app/app_view_model.dart';
@@ -30,8 +30,18 @@ class App extends HookConsumerWidget {
     }, const []);
     return MaterialApp(
       title: "Yosuke Miyanishi",
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      theme: ThemeData(
+        textTheme: GoogleFonts.notoSansTextTheme(
+          ThemeData(brightness: Brightness.light).textTheme,
+        ),
+        brightness: Brightness.light,
+      ),
+      darkTheme: ThemeData(
+        textTheme: GoogleFonts.notoSansTextTheme(
+          ThemeData(brightness: Brightness.dark).textTheme,
+        ),
+        brightness: Brightness.dark,
+      ),
       themeMode: state.isDarkMode ? ThemeMode.dark : ThemeMode.light,
       home: Builder(builder: (context) {
         return Scaffold(
