@@ -24,7 +24,7 @@ class ContactServiceComponent extends HookConsumerWidget {
       onEnter: (_) => isHover.value = true,
       onExit: (_) => isHover.value = false,
       child: IconButton(
-        icon: _getFontAwesomeIcon(contactService.service, isHover.value),
+        icon: _getFontAwesomeIcon(contactService.service, 20, isHover.value),
         onPressed: () {
           FirebaseAnalyticsUtils.withSendAnalytics(
               "other_content", contactService.service.name, () {
@@ -35,37 +35,44 @@ class ContactServiceComponent extends HookConsumerWidget {
     );
   }
 
-  Widget _getFontAwesomeIcon(ContactService service, bool isHover) {
+  Widget _getFontAwesomeIcon(
+      ContactService service, double size, bool isHover) {
     switch (service) {
       case ContactService.twitter:
         return FaIcon(
           FontAwesomeIcons.twitter,
           color: isHover ? Colors.blue : Colors.grey,
+          size: size,
         );
       case ContactService.facebook:
         return FaIcon(
           FontAwesomeIcons.facebook,
           color: isHover ? Colors.blueAccent : Colors.grey,
+          size: size,
         );
       case ContactService.github:
         return FaIcon(
           FontAwesomeIcons.github,
           color: isHover ? Colors.black : Colors.grey,
+          size: size,
         );
       case ContactService.qiita:
         return Image.asset(
           "images/service_favicon/qiita.png",
           color: isHover ? Colors.green : Colors.grey,
+          width: size,
         );
       case ContactService.stackoverflow:
         return FaIcon(
           FontAwesomeIcons.stackOverflow,
           color: isHover ? Colors.orange : Colors.grey,
+          size: size,
         );
       case ContactService.zenn:
         return SvgPicture.asset(
           "images/service_favicon/zenn.svg",
           color: isHover ? Colors.lightBlue : Colors.grey,
+          width: size,
         );
     }
   }
