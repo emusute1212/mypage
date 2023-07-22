@@ -21,6 +21,7 @@ CareerEntity _$CareerEntityFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CareerEntity {
   DateTime get date => throw _privateConstructorUsedError;
+  String get where => throw _privateConstructorUsedError;
   String get detail => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +36,7 @@ abstract class $CareerEntityCopyWith<$Res> {
           CareerEntity value, $Res Function(CareerEntity) then) =
       _$CareerEntityCopyWithImpl<$Res, CareerEntity>;
   @useResult
-  $Res call({DateTime date, String detail});
+  $Res call({DateTime date, String where, String detail});
 }
 
 /// @nodoc
@@ -52,6 +53,7 @@ class _$CareerEntityCopyWithImpl<$Res, $Val extends CareerEntity>
   @override
   $Res call({
     Object? date = null,
+    Object? where = null,
     Object? detail = null,
   }) {
     return _then(_value.copyWith(
@@ -59,6 +61,10 @@ class _$CareerEntityCopyWithImpl<$Res, $Val extends CareerEntity>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      where: null == where
+          ? _value.where
+          : where // ignore: cast_nullable_to_non_nullable
+              as String,
       detail: null == detail
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
@@ -75,7 +81,7 @@ abstract class _$$_CareerEntityCopyWith<$Res>
       __$$_CareerEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({DateTime date, String detail});
+  $Res call({DateTime date, String where, String detail});
 }
 
 /// @nodoc
@@ -90,6 +96,7 @@ class __$$_CareerEntityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? date = null,
+    Object? where = null,
     Object? detail = null,
   }) {
     return _then(_$_CareerEntity(
@@ -97,6 +104,10 @@ class __$$_CareerEntityCopyWithImpl<$Res>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      where: null == where
+          ? _value.where
+          : where // ignore: cast_nullable_to_non_nullable
+              as String,
       detail: null == detail
           ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
@@ -108,7 +119,8 @@ class __$$_CareerEntityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CareerEntity implements _CareerEntity {
-  const _$_CareerEntity({required this.date, required this.detail});
+  const _$_CareerEntity(
+      {required this.date, required this.where, required this.detail});
 
   factory _$_CareerEntity.fromJson(Map<String, dynamic> json) =>
       _$$_CareerEntityFromJson(json);
@@ -116,11 +128,13 @@ class _$_CareerEntity implements _CareerEntity {
   @override
   final DateTime date;
   @override
+  final String where;
+  @override
   final String detail;
 
   @override
   String toString() {
-    return 'CareerEntity(date: $date, detail: $detail)';
+    return 'CareerEntity(date: $date, where: $where, detail: $detail)';
   }
 
   @override
@@ -129,12 +143,13 @@ class _$_CareerEntity implements _CareerEntity {
         (other.runtimeType == runtimeType &&
             other is _$_CareerEntity &&
             (identical(other.date, date) || other.date == date) &&
+            (identical(other.where, where) || other.where == where) &&
             (identical(other.detail, detail) || other.detail == detail));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date, detail);
+  int get hashCode => Object.hash(runtimeType, date, where, detail);
 
   @JsonKey(ignore: true)
   @override
@@ -153,6 +168,7 @@ class _$_CareerEntity implements _CareerEntity {
 abstract class _CareerEntity implements CareerEntity {
   const factory _CareerEntity(
       {required final DateTime date,
+      required final String where,
       required final String detail}) = _$_CareerEntity;
 
   factory _CareerEntity.fromJson(Map<String, dynamic> json) =
@@ -160,6 +176,8 @@ abstract class _CareerEntity implements CareerEntity {
 
   @override
   DateTime get date;
+  @override
+  String get where;
   @override
   String get detail;
   @override

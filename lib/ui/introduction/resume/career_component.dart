@@ -28,13 +28,25 @@ class CareerComponent extends HookConsumerWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(
+              bottom: 4.0,
+            ),
+            child: Text(
+              careerEntity.where,
+              style: const TextStyle(
+                fontSize: 16,
+                height: 1.4,
+              ),
+            ),
+          ),
           Text(
             careerEntity.detail,
             style: const TextStyle(
-              fontSize: 16,
+              fontSize: 12,
               height: 1.4,
             ),
-          )
+          ),
         ],
       ),
     );

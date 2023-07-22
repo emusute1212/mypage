@@ -7,6 +7,7 @@ part 'career_entity.g.dart';
 class CareerEntity with _$CareerEntity {
   const factory CareerEntity({
     required DateTime date,
+    required String where,
     required String detail,
   }) = _CareerEntity;
 
