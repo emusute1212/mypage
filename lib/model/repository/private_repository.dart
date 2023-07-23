@@ -27,12 +27,13 @@ class PrivateRepository {
           ],
         ),
         PrivateCreatedServiceEntity(
-          title: "LifecycleLogger",
-          detail: "Androidのライフサイクルをロギングするライブラリ。\n"
-    "Daggerや独自のBaseActivityなどを用いても利用可能。\n"
-    "ログを残したいActivityやFragmentのLifecycleOwnerをbindに渡せば、勝手にログを残してくれるというライブラリ。",
+          title: "memotte",
+          detail: "ワンスライドでサクッとメモを取ることができるアプリ。\n"
+    "日記やメモ帳、ノートや買い物リストなど、いろんなメモに有効活用できます！！\n"
+    "忙しい時でもサクッとメモが取れる、というところをメインコンセプトとして開発しました。",
           link: LinkEntity(
-            url: "https://github.com/emusute1212/LifecycleLogger",
+            imageUrl: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+            url: "https://play.google.com/store/apps/details?id=io.github.emusute1212.memotte",
           ),
           skills: [
             "Kotlin",

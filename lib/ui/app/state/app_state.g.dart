@@ -27,4 +27,5 @@ const _$ContentsEnumMap = {
   Contents.introduction: 'introduction',
   Contents.work: 'work',
   Contents.private: 'private',
+  Contents.legal: 'legal',
 };

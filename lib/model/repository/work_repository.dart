@@ -1,5 +1,4 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:mypage/model/entities/link_entity.dart';
 import 'package:mypage/model/entities/works/work_created_service_entity.dart';
 import 'package:mypage/model/entities/works/work_entity.dart';
 
@@ -11,19 +10,28 @@ class WorkRepository {
       topImage: "images/top_image/work_image.jpeg",
       services: [
         WorkCreatedServiceEntity(
-          title: "タブレット学習サービス開発",
-          detail: "都内の企業にてタブレット専用のアプリ開発を行なっており、"
-              "クライアントサイドを担当しています。\n"
-              "タブレット専用のアプリというのはKIOSKアプリのような物をイメージしていただけるとわかりやすいと思います。"
-              "タブレット自体はAndroidを用いているので、基本的にAndroidアプリの開発を行なっております。\n\n"
-              "業務内容としては、新機能の実装・メンテナンスなどをメインに行なっております。\n"
-              "また、タブレット専用アプリなので、ホームアプリや設定などの低レイヤアプリの実装も行なっております。",
+          title: "ライブストリーミングサービスの開発",
+          detail: "PocochaのAndroidエンジニアとして、2023/7月よりJoin。\n"
+              "現時点（2023/7）では、オンボーディング機関なのでまだ開発には従事していないですが、\n"
+              "サービスの商品力強化、及び価値提供に最大限貢献できることを目指しています！\n",
+          skills: [
+            "Kotlin",
+            "Android",
+          ],
+        ),
+        WorkCreatedServiceEntity(
+          title: "タブレットを利用した家庭学習サービス",
+          detail: "タブレットを利用した家庭学習サービスのクライアントサイドを担当。\n"
+              "タブレットはタブレット対応アプリとかではなく、専用端末になっています。\n"
+              "なので、KIOSKアプリのような物をイメージしていただけるとわかりやすいと思います。\n"
+              "タブレット自体はAndroid端末で、一般的なAndroidアプリの開発からプリインアプリ郡の開発など、幅広く携わりました。\n"
+              "他にもPOやEMといったマネジメントに近い業務も行っていました。",
           skills: [
             "Kotlin",
             "Android",
             "Python",
             "HTML+CSS or SCSS+JS or TS",
-            "Git and GitLab",
+            "GAS",
           ],
         ),
       ],
