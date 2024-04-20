@@ -1,10 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mypage/app.dart';
 import 'package:mypage/firebase_options.dart';
 
 void main() async {
+  setUrlStrategy(PathUrlStrategy());
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
