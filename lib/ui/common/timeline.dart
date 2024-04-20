@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // https://stackoverflow.com/questions/49635381/flutter-create-a-timeline-ui
 class Timeline extends StatelessWidget {
   const Timeline({
-    Key? key,
+    super.key,
     required this.children,
     this.indicators,
     this.isLeftAligned = true,
@@ -26,8 +26,7 @@ class Timeline extends StatelessWidget {
   })  : itemCount = children.length,
         assert(itemGap >= 0),
         assert(lineGap >= 0),
-        assert(indicators == null || children.length == indicators.length),
-        super(key: key);
+        assert(indicators == null || children.length == indicators.length);
 
   final List<Widget> children;
   final double itemGap;

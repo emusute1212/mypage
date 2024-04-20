@@ -3,9 +3,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class SkillListComponent extends HookConsumerWidget {
   const SkillListComponent({
-    Key? key,
+    super.key,
     required this.techList,
-  }) : super(key: key);
+  });
 
   final List<String> techList;
 

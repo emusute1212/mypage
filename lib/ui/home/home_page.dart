@@ -7,7 +7,7 @@ import 'package:mypage/ui/home/home_view_model.dart';
 import 'package:mypage/ui/home/state/home_state.dart';
 
 class HomePage extends HookConsumerWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

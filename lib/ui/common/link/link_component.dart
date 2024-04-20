@@ -7,10 +7,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 class LinkComponent extends HookConsumerWidget {
   const LinkComponent({
-    Key? key,
+    super.key,
     required this.entity,
     this.imageWidth = 200.0,
-  }) : super(key: key);
+  });
 
   final LinkEntity entity;
   final double imageWidth;

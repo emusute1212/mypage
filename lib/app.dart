@@ -13,9 +13,9 @@ import 'package:mypage/util/firebase_analytics_utils.dart';
 
 class App extends HookConsumerWidget {
   const App({
-    Key? key,
+    super.key,
     required this.headerTitle,
-  }) : super(key: key);
+  });
 
   final String headerTitle;
 

@@ -3,10 +3,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class TitleAndContentsComponent extends HookConsumerWidget {
   const TitleAndContentsComponent({
-    Key? key,
+    super.key,
     required this.title,
     required this.widget,
-  }) : super(key: key);
+  });
 
   final String title;
   final Widget widget;

@@ -11,9 +11,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ContactServiceComponent extends HookConsumerWidget {
   const ContactServiceComponent({
-    Key? key,
+    super.key,
     required this.contactService,
-  }) : super(key: key);
+  });
 
   final ContactServiceEntity contactService;
 

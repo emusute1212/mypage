@@ -7,8 +7,8 @@ import 'package:mypage/ui/private/state/private_state.dart';
 
 class PrivatePage extends HookConsumerWidget {
   const PrivatePage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

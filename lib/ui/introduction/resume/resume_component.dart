@@ -6,9 +6,9 @@ import 'package:mypage/ui/introduction/resume/career_component.dart';
 
 class ResumeComponent extends HookConsumerWidget {
   const ResumeComponent({
-    Key? key,
+    super.key,
     required this.careerEntityList,
-  }) : super(key: key);
+  });
 
   final List<CareerEntity> careerEntityList;
 
