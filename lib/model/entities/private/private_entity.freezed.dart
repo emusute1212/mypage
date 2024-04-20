@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'private_entity.dart';
 
@@ -12,7 +12,7 @@ part of 'private_entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PrivateEntity _$PrivateEntityFromJson(Map<String, dynamic> json) {
   return _PrivateEntity.fromJson(json);
@@ -69,22 +69,22 @@ class _$PrivateEntityCopyWithImpl<$Res, $Val extends PrivateEntity>
 }
 
 /// @nodoc
-abstract class _$$_PrivateEntityCopyWith<$Res>
+abstract class _$$PrivateEntityImplCopyWith<$Res>
     implements $PrivateEntityCopyWith<$Res> {
-  factory _$$_PrivateEntityCopyWith(
-          _$_PrivateEntity value, $Res Function(_$_PrivateEntity) then) =
-      __$$_PrivateEntityCopyWithImpl<$Res>;
+  factory _$$PrivateEntityImplCopyWith(
+          _$PrivateEntityImpl value, $Res Function(_$PrivateEntityImpl) then) =
+      __$$PrivateEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String topImage, List<PrivateCreatedServiceEntity> services});
 }
 
 /// @nodoc
-class __$$_PrivateEntityCopyWithImpl<$Res>
-    extends _$PrivateEntityCopyWithImpl<$Res, _$_PrivateEntity>
-    implements _$$_PrivateEntityCopyWith<$Res> {
-  __$$_PrivateEntityCopyWithImpl(
-      _$_PrivateEntity _value, $Res Function(_$_PrivateEntity) _then)
+class __$$PrivateEntityImplCopyWithImpl<$Res>
+    extends _$PrivateEntityCopyWithImpl<$Res, _$PrivateEntityImpl>
+    implements _$$PrivateEntityImplCopyWith<$Res> {
+  __$$PrivateEntityImplCopyWithImpl(
+      _$PrivateEntityImpl _value, $Res Function(_$PrivateEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -93,7 +93,7 @@ class __$$_PrivateEntityCopyWithImpl<$Res>
     Object? topImage = null,
     Object? services = null,
   }) {
-    return _then(_$_PrivateEntity(
+    return _then(_$PrivateEntityImpl(
       topImage: null == topImage
           ? _value.topImage
           : topImage // ignore: cast_nullable_to_non_nullable
@@ -108,20 +108,21 @@ class __$$_PrivateEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PrivateEntity implements _PrivateEntity {
-  const _$_PrivateEntity(
+class _$PrivateEntityImpl implements _PrivateEntity {
+  const _$PrivateEntityImpl(
       {required this.topImage,
       required final List<PrivateCreatedServiceEntity> services})
       : _services = services;
 
-  factory _$_PrivateEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_PrivateEntityFromJson(json);
+  factory _$PrivateEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PrivateEntityImplFromJson(json);
 
   @override
   final String topImage;
   final List<PrivateCreatedServiceEntity> _services;
   @override
   List<PrivateCreatedServiceEntity> get services {
+    if (_services is EqualUnmodifiableListView) return _services;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_services);
   }
@@ -132,10 +133,10 @@ class _$_PrivateEntity implements _PrivateEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PrivateEntity &&
+            other is _$PrivateEntityImpl &&
             (identical(other.topImage, topImage) ||
                 other.topImage == topImage) &&
             const DeepCollectionEquality().equals(other._services, _services));
@@ -149,12 +150,12 @@ class _$_PrivateEntity implements _PrivateEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PrivateEntityCopyWith<_$_PrivateEntity> get copyWith =>
-      __$$_PrivateEntityCopyWithImpl<_$_PrivateEntity>(this, _$identity);
+  _$$PrivateEntityImplCopyWith<_$PrivateEntityImpl> get copyWith =>
+      __$$PrivateEntityImplCopyWithImpl<_$PrivateEntityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrivateEntityToJson(
+    return _$$PrivateEntityImplToJson(
       this,
     );
   }
@@ -164,10 +165,10 @@ abstract class _PrivateEntity implements PrivateEntity {
   const factory _PrivateEntity(
           {required final String topImage,
           required final List<PrivateCreatedServiceEntity> services}) =
-      _$_PrivateEntity;
+      _$PrivateEntityImpl;
 
   factory _PrivateEntity.fromJson(Map<String, dynamic> json) =
-      _$_PrivateEntity.fromJson;
+      _$PrivateEntityImpl.fromJson;
 
   @override
   String get topImage;
@@ -175,6 +176,6 @@ abstract class _PrivateEntity implements PrivateEntity {
   List<PrivateCreatedServiceEntity> get services;
   @override
   @JsonKey(ignore: true)
-  _$$_PrivateEntityCopyWith<_$_PrivateEntity> get copyWith =>
+  _$$PrivateEntityImplCopyWith<_$PrivateEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

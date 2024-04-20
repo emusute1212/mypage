@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'topic_entity.dart';
 
@@ -12,7 +12,7 @@ part of 'topic_entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TopicEntity _$TopicEntityFromJson(Map<String, dynamic> json) {
   return _TopicEntity.fromJson(json);
@@ -68,22 +68,22 @@ class _$TopicEntityCopyWithImpl<$Res, $Val extends TopicEntity>
 }
 
 /// @nodoc
-abstract class _$$_TopicEntityCopyWith<$Res>
+abstract class _$$TopicEntityImplCopyWith<$Res>
     implements $TopicEntityCopyWith<$Res> {
-  factory _$$_TopicEntityCopyWith(
-          _$_TopicEntity value, $Res Function(_$_TopicEntity) then) =
-      __$$_TopicEntityCopyWithImpl<$Res>;
+  factory _$$TopicEntityImplCopyWith(
+          _$TopicEntityImpl value, $Res Function(_$TopicEntityImpl) then) =
+      __$$TopicEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String topic, String detail});
 }
 
 /// @nodoc
-class __$$_TopicEntityCopyWithImpl<$Res>
-    extends _$TopicEntityCopyWithImpl<$Res, _$_TopicEntity>
-    implements _$$_TopicEntityCopyWith<$Res> {
-  __$$_TopicEntityCopyWithImpl(
-      _$_TopicEntity _value, $Res Function(_$_TopicEntity) _then)
+class __$$TopicEntityImplCopyWithImpl<$Res>
+    extends _$TopicEntityCopyWithImpl<$Res, _$TopicEntityImpl>
+    implements _$$TopicEntityImplCopyWith<$Res> {
+  __$$TopicEntityImplCopyWithImpl(
+      _$TopicEntityImpl _value, $Res Function(_$TopicEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_TopicEntityCopyWithImpl<$Res>
     Object? topic = null,
     Object? detail = null,
   }) {
-    return _then(_$_TopicEntity(
+    return _then(_$TopicEntityImpl(
       topic: null == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
@@ -107,11 +107,11 @@ class __$$_TopicEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TopicEntity implements _TopicEntity {
-  const _$_TopicEntity({required this.topic, required this.detail});
+class _$TopicEntityImpl implements _TopicEntity {
+  const _$TopicEntityImpl({required this.topic, required this.detail});
 
-  factory _$_TopicEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_TopicEntityFromJson(json);
+  factory _$TopicEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TopicEntityImplFromJson(json);
 
   @override
   final String topic;
@@ -124,10 +124,10 @@ class _$_TopicEntity implements _TopicEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TopicEntity &&
+            other is _$TopicEntityImpl &&
             (identical(other.topic, topic) || other.topic == topic) &&
             (identical(other.detail, detail) || other.detail == detail));
   }
@@ -139,12 +139,12 @@ class _$_TopicEntity implements _TopicEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TopicEntityCopyWith<_$_TopicEntity> get copyWith =>
-      __$$_TopicEntityCopyWithImpl<_$_TopicEntity>(this, _$identity);
+  _$$TopicEntityImplCopyWith<_$TopicEntityImpl> get copyWith =>
+      __$$TopicEntityImplCopyWithImpl<_$TopicEntityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TopicEntityToJson(
+    return _$$TopicEntityImplToJson(
       this,
     );
   }
@@ -153,10 +153,10 @@ class _$_TopicEntity implements _TopicEntity {
 abstract class _TopicEntity implements TopicEntity {
   const factory _TopicEntity(
       {required final String topic,
-      required final String detail}) = _$_TopicEntity;
+      required final String detail}) = _$TopicEntityImpl;
 
   factory _TopicEntity.fromJson(Map<String, dynamic> json) =
-      _$_TopicEntity.fromJson;
+      _$TopicEntityImpl.fromJson;
 
   @override
   String get topic;
@@ -164,6 +164,6 @@ abstract class _TopicEntity implements TopicEntity {
   String get detail;
   @override
   @JsonKey(ignore: true)
-  _$$_TopicEntityCopyWith<_$_TopicEntity> get copyWith =>
+  _$$TopicEntityImplCopyWith<_$TopicEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

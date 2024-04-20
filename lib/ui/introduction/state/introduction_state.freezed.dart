@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'introduction_state.dart';
 
@@ -12,7 +12,7 @@ part of 'introduction_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 IntroductionState _$IntroductionStateFromJson(Map<String, dynamic> json) {
   return _IntroductionState.fromJson(json);
@@ -72,11 +72,11 @@ class _$IntroductionStateCopyWithImpl<$Res, $Val extends IntroductionState>
 }
 
 /// @nodoc
-abstract class _$$_IntroductionStateCopyWith<$Res>
+abstract class _$$IntroductionStateImplCopyWith<$Res>
     implements $IntroductionStateCopyWith<$Res> {
-  factory _$$_IntroductionStateCopyWith(_$_IntroductionState value,
-          $Res Function(_$_IntroductionState) then) =
-      __$$_IntroductionStateCopyWithImpl<$Res>;
+  factory _$$IntroductionStateImplCopyWith(_$IntroductionStateImpl value,
+          $Res Function(_$IntroductionStateImpl) then) =
+      __$$IntroductionStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({IntroductionEntity entity});
@@ -86,11 +86,11 @@ abstract class _$$_IntroductionStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_IntroductionStateCopyWithImpl<$Res>
-    extends _$IntroductionStateCopyWithImpl<$Res, _$_IntroductionState>
-    implements _$$_IntroductionStateCopyWith<$Res> {
-  __$$_IntroductionStateCopyWithImpl(
-      _$_IntroductionState _value, $Res Function(_$_IntroductionState) _then)
+class __$$IntroductionStateImplCopyWithImpl<$Res>
+    extends _$IntroductionStateCopyWithImpl<$Res, _$IntroductionStateImpl>
+    implements _$$IntroductionStateImplCopyWith<$Res> {
+  __$$IntroductionStateImplCopyWithImpl(_$IntroductionStateImpl _value,
+      $Res Function(_$IntroductionStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +98,7 @@ class __$$_IntroductionStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = null,
   }) {
-    return _then(_$_IntroductionState(
+    return _then(_$IntroductionStateImpl(
       entity: null == entity
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
@@ -109,11 +109,11 @@ class __$$_IntroductionStateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_IntroductionState implements _IntroductionState {
-  const _$_IntroductionState({required this.entity});
+class _$IntroductionStateImpl implements _IntroductionState {
+  const _$IntroductionStateImpl({required this.entity});
 
-  factory _$_IntroductionState.fromJson(Map<String, dynamic> json) =>
-      _$$_IntroductionStateFromJson(json);
+  factory _$IntroductionStateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IntroductionStateImplFromJson(json);
 
   @override
   final IntroductionEntity entity;
@@ -124,10 +124,10 @@ class _$_IntroductionState implements _IntroductionState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_IntroductionState &&
+            other is _$IntroductionStateImpl &&
             (identical(other.entity, entity) || other.entity == entity));
   }
 
@@ -138,13 +138,13 @@ class _$_IntroductionState implements _IntroductionState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IntroductionStateCopyWith<_$_IntroductionState> get copyWith =>
-      __$$_IntroductionStateCopyWithImpl<_$_IntroductionState>(
+  _$$IntroductionStateImplCopyWith<_$IntroductionStateImpl> get copyWith =>
+      __$$IntroductionStateImplCopyWithImpl<_$IntroductionStateImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IntroductionStateToJson(
+    return _$$IntroductionStateImplToJson(
       this,
     );
   }
@@ -152,15 +152,15 @@ class _$_IntroductionState implements _IntroductionState {
 
 abstract class _IntroductionState implements IntroductionState {
   const factory _IntroductionState({required final IntroductionEntity entity}) =
-      _$_IntroductionState;
+      _$IntroductionStateImpl;
 
   factory _IntroductionState.fromJson(Map<String, dynamic> json) =
-      _$_IntroductionState.fromJson;
+      _$IntroductionStateImpl.fromJson;
 
   @override
   IntroductionEntity get entity;
   @override
   @JsonKey(ignore: true)
-  _$$_IntroductionStateCopyWith<_$_IntroductionState> get copyWith =>
+  _$$IntroductionStateImplCopyWith<_$IntroductionStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

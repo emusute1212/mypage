@@ -6,9 +6,9 @@ part of 'introduction_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_IntroductionEntity _$$_IntroductionEntityFromJson(
+_$IntroductionEntityImpl _$$IntroductionEntityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_IntroductionEntity(
+    _$IntroductionEntityImpl(
       topImage: json['topImage'] as String,
       from: TopicEntity.fromJson(json['from'] as Map<String, dynamic>),
       likes: TopicEntity.fromJson(json['likes'] as Map<String, dynamic>),
@@ -22,8 +22,8 @@ _$_IntroductionEntity _$$_IntroductionEntityFromJson(
           (json['subSkills'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
-Map<String, dynamic> _$$_IntroductionEntityToJson(
-        _$_IntroductionEntity instance) =>
+Map<String, dynamic> _$$IntroductionEntityImplToJson(
+        _$IntroductionEntityImpl instance) =>
     <String, dynamic>{
       'topImage': instance.topImage,
       'from': instance.from,

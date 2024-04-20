@@ -6,11 +6,12 @@ part of 'home_state.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_HomeState _$$_HomeStateFromJson(Map<String, dynamic> json) => _$_HomeState(
+_$HomeStateImpl _$$HomeStateImplFromJson(Map<String, dynamic> json) =>
+    _$HomeStateImpl(
       entity: HomeEntity.fromJson(json['entity'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_HomeStateToJson(_$_HomeState instance) =>
+Map<String, dynamic> _$$HomeStateImplToJson(_$HomeStateImpl instance) =>
     <String, dynamic>{
       'entity': instance.entity,
     };

@@ -6,9 +6,9 @@ part of 'private_created_service_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PrivateCreatedServiceEntity _$$_PrivateCreatedServiceEntityFromJson(
+_$PrivateCreatedServiceEntityImpl _$$PrivateCreatedServiceEntityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PrivateCreatedServiceEntity(
+    _$PrivateCreatedServiceEntityImpl(
       title: json['title'] as String,
       detail: json['detail'] as String,
       link: json['link'] == null
@@ -18,8 +18,8 @@ _$_PrivateCreatedServiceEntity _$$_PrivateCreatedServiceEntityFromJson(
           (json['skills'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
-Map<String, dynamic> _$$_PrivateCreatedServiceEntityToJson(
-        _$_PrivateCreatedServiceEntity instance) =>
+Map<String, dynamic> _$$PrivateCreatedServiceEntityImplToJson(
+        _$PrivateCreatedServiceEntityImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'detail': instance.detail,

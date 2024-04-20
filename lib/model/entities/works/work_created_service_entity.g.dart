@@ -6,9 +6,9 @@ part of 'work_created_service_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_WorkCreatedServiceEntity _$$_WorkCreatedServiceEntityFromJson(
+_$WorkCreatedServiceEntityImpl _$$WorkCreatedServiceEntityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_WorkCreatedServiceEntity(
+    _$WorkCreatedServiceEntityImpl(
       title: json['title'] as String,
       detail: json['detail'] as String,
       link: json['link'] == null
@@ -18,8 +18,8 @@ _$_WorkCreatedServiceEntity _$$_WorkCreatedServiceEntityFromJson(
           (json['skills'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
-Map<String, dynamic> _$$_WorkCreatedServiceEntityToJson(
-        _$_WorkCreatedServiceEntity instance) =>
+Map<String, dynamic> _$$WorkCreatedServiceEntityImplToJson(
+        _$WorkCreatedServiceEntityImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'detail': instance.detail,

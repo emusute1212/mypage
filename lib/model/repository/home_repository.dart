@@ -24,7 +24,7 @@ class HomeRepository {
           url: "https://stackoverflow.com/users/12515014/emusute",
         ),
         ContactServiceEntity(
-          service: ContactService.twitter,
+          service: ContactService.x,
           url: "https://twitter.com/emusute1212",
         ),
         ContactServiceEntity(

@@ -6,13 +6,13 @@ part of 'topic_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TopicEntity _$$_TopicEntityFromJson(Map<String, dynamic> json) =>
-    _$_TopicEntity(
+_$TopicEntityImpl _$$TopicEntityImplFromJson(Map<String, dynamic> json) =>
+    _$TopicEntityImpl(
       topic: json['topic'] as String,
       detail: json['detail'] as String,
     );
 
-Map<String, dynamic> _$$_TopicEntityToJson(_$_TopicEntity instance) =>
+Map<String, dynamic> _$$TopicEntityImplToJson(_$TopicEntityImpl instance) =>
     <String, dynamic>{
       'topic': instance.topic,
       'detail': instance.detail,

@@ -6,13 +6,13 @@ part of 'link_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LinkEntity _$$_LinkEntityFromJson(Map<String, dynamic> json) =>
-    _$_LinkEntity(
+_$LinkEntityImpl _$$LinkEntityImplFromJson(Map<String, dynamic> json) =>
+    _$LinkEntityImpl(
       imageUrl: json['imageUrl'] as String?,
       url: json['url'] as String,
     );
 
-Map<String, dynamic> _$$_LinkEntityToJson(_$_LinkEntity instance) =>
+Map<String, dynamic> _$$LinkEntityImplToJson(_$LinkEntityImpl instance) =>
     <String, dynamic>{
       'imageUrl': instance.imageUrl,
       'url': instance.url,

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'introduction_entity.dart';
 
@@ -12,7 +12,7 @@ part of 'introduction_entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 IntroductionEntity _$IntroductionEntityFromJson(Map<String, dynamic> json) {
   return _IntroductionEntity.fromJson(json);
@@ -117,11 +117,11 @@ class _$IntroductionEntityCopyWithImpl<$Res, $Val extends IntroductionEntity>
 }
 
 /// @nodoc
-abstract class _$$_IntroductionEntityCopyWith<$Res>
+abstract class _$$IntroductionEntityImplCopyWith<$Res>
     implements $IntroductionEntityCopyWith<$Res> {
-  factory _$$_IntroductionEntityCopyWith(_$_IntroductionEntity value,
-          $Res Function(_$_IntroductionEntity) then) =
-      __$$_IntroductionEntityCopyWithImpl<$Res>;
+  factory _$$IntroductionEntityImplCopyWith(_$IntroductionEntityImpl value,
+          $Res Function(_$IntroductionEntityImpl) then) =
+      __$$IntroductionEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -139,11 +139,11 @@ abstract class _$$_IntroductionEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_IntroductionEntityCopyWithImpl<$Res>
-    extends _$IntroductionEntityCopyWithImpl<$Res, _$_IntroductionEntity>
-    implements _$$_IntroductionEntityCopyWith<$Res> {
-  __$$_IntroductionEntityCopyWithImpl(
-      _$_IntroductionEntity _value, $Res Function(_$_IntroductionEntity) _then)
+class __$$IntroductionEntityImplCopyWithImpl<$Res>
+    extends _$IntroductionEntityCopyWithImpl<$Res, _$IntroductionEntityImpl>
+    implements _$$IntroductionEntityImplCopyWith<$Res> {
+  __$$IntroductionEntityImplCopyWithImpl(_$IntroductionEntityImpl _value,
+      $Res Function(_$IntroductionEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -156,7 +156,7 @@ class __$$_IntroductionEntityCopyWithImpl<$Res>
     Object? mainSkills = null,
     Object? subSkills = null,
   }) {
-    return _then(_$_IntroductionEntity(
+    return _then(_$IntroductionEntityImpl(
       topImage: null == topImage
           ? _value.topImage
           : topImage // ignore: cast_nullable_to_non_nullable
@@ -187,8 +187,8 @@ class __$$_IntroductionEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_IntroductionEntity implements _IntroductionEntity {
-  const _$_IntroductionEntity(
+class _$IntroductionEntityImpl implements _IntroductionEntity {
+  const _$IntroductionEntityImpl(
       {required this.topImage,
       required this.from,
       required this.likes,
@@ -199,8 +199,8 @@ class _$_IntroductionEntity implements _IntroductionEntity {
         _mainSkills = mainSkills,
         _subSkills = subSkills;
 
-  factory _$_IntroductionEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_IntroductionEntityFromJson(json);
+  factory _$IntroductionEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IntroductionEntityImplFromJson(json);
 
   @override
   final String topImage;
@@ -211,6 +211,7 @@ class _$_IntroductionEntity implements _IntroductionEntity {
   final List<CareerEntity> _resume;
   @override
   List<CareerEntity> get resume {
+    if (_resume is EqualUnmodifiableListView) return _resume;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_resume);
   }
@@ -218,6 +219,7 @@ class _$_IntroductionEntity implements _IntroductionEntity {
   final List<String> _mainSkills;
   @override
   List<String> get mainSkills {
+    if (_mainSkills is EqualUnmodifiableListView) return _mainSkills;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_mainSkills);
   }
@@ -225,6 +227,7 @@ class _$_IntroductionEntity implements _IntroductionEntity {
   final List<String> _subSkills;
   @override
   List<String> get subSkills {
+    if (_subSkills is EqualUnmodifiableListView) return _subSkills;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_subSkills);
   }
@@ -235,10 +238,10 @@ class _$_IntroductionEntity implements _IntroductionEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_IntroductionEntity &&
+            other is _$IntroductionEntityImpl &&
             (identical(other.topImage, topImage) ||
                 other.topImage == topImage) &&
             (identical(other.from, from) || other.from == from) &&
@@ -264,13 +267,13 @@ class _$_IntroductionEntity implements _IntroductionEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IntroductionEntityCopyWith<_$_IntroductionEntity> get copyWith =>
-      __$$_IntroductionEntityCopyWithImpl<_$_IntroductionEntity>(
+  _$$IntroductionEntityImplCopyWith<_$IntroductionEntityImpl> get copyWith =>
+      __$$IntroductionEntityImplCopyWithImpl<_$IntroductionEntityImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IntroductionEntityToJson(
+    return _$$IntroductionEntityImplToJson(
       this,
     );
   }
@@ -283,10 +286,10 @@ abstract class _IntroductionEntity implements IntroductionEntity {
       required final TopicEntity likes,
       required final List<CareerEntity> resume,
       required final List<String> mainSkills,
-      required final List<String> subSkills}) = _$_IntroductionEntity;
+      required final List<String> subSkills}) = _$IntroductionEntityImpl;
 
   factory _IntroductionEntity.fromJson(Map<String, dynamic> json) =
-      _$_IntroductionEntity.fromJson;
+      _$IntroductionEntityImpl.fromJson;
 
   @override
   String get topImage;
@@ -302,6 +305,6 @@ abstract class _IntroductionEntity implements IntroductionEntity {
   List<String> get subSkills;
   @override
   @JsonKey(ignore: true)
-  _$$_IntroductionEntityCopyWith<_$_IntroductionEntity> get copyWith =>
+  _$$IntroductionEntityImplCopyWith<_$IntroductionEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

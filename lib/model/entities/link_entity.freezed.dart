@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'link_entity.dart';
 
@@ -12,7 +12,7 @@ part of 'link_entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LinkEntity _$LinkEntityFromJson(Map<String, dynamic> json) {
   return _LinkEntity.fromJson(json);
@@ -68,22 +68,22 @@ class _$LinkEntityCopyWithImpl<$Res, $Val extends LinkEntity>
 }
 
 /// @nodoc
-abstract class _$$_LinkEntityCopyWith<$Res>
+abstract class _$$LinkEntityImplCopyWith<$Res>
     implements $LinkEntityCopyWith<$Res> {
-  factory _$$_LinkEntityCopyWith(
-          _$_LinkEntity value, $Res Function(_$_LinkEntity) then) =
-      __$$_LinkEntityCopyWithImpl<$Res>;
+  factory _$$LinkEntityImplCopyWith(
+          _$LinkEntityImpl value, $Res Function(_$LinkEntityImpl) then) =
+      __$$LinkEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? imageUrl, String url});
 }
 
 /// @nodoc
-class __$$_LinkEntityCopyWithImpl<$Res>
-    extends _$LinkEntityCopyWithImpl<$Res, _$_LinkEntity>
-    implements _$$_LinkEntityCopyWith<$Res> {
-  __$$_LinkEntityCopyWithImpl(
-      _$_LinkEntity _value, $Res Function(_$_LinkEntity) _then)
+class __$$LinkEntityImplCopyWithImpl<$Res>
+    extends _$LinkEntityCopyWithImpl<$Res, _$LinkEntityImpl>
+    implements _$$LinkEntityImplCopyWith<$Res> {
+  __$$LinkEntityImplCopyWithImpl(
+      _$LinkEntityImpl _value, $Res Function(_$LinkEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_LinkEntityCopyWithImpl<$Res>
     Object? imageUrl = freezed,
     Object? url = null,
   }) {
-    return _then(_$_LinkEntity(
+    return _then(_$LinkEntityImpl(
       imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -107,11 +107,11 @@ class __$$_LinkEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LinkEntity implements _LinkEntity {
-  const _$_LinkEntity({this.imageUrl, required this.url});
+class _$LinkEntityImpl implements _LinkEntity {
+  const _$LinkEntityImpl({this.imageUrl, required this.url});
 
-  factory _$_LinkEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_LinkEntityFromJson(json);
+  factory _$LinkEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LinkEntityImplFromJson(json);
 
   @override
   final String? imageUrl;
@@ -124,10 +124,10 @@ class _$_LinkEntity implements _LinkEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LinkEntity &&
+            other is _$LinkEntityImpl &&
             (identical(other.imageUrl, imageUrl) ||
                 other.imageUrl == imageUrl) &&
             (identical(other.url, url) || other.url == url));
@@ -140,12 +140,12 @@ class _$_LinkEntity implements _LinkEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LinkEntityCopyWith<_$_LinkEntity> get copyWith =>
-      __$$_LinkEntityCopyWithImpl<_$_LinkEntity>(this, _$identity);
+  _$$LinkEntityImplCopyWith<_$LinkEntityImpl> get copyWith =>
+      __$$LinkEntityImplCopyWithImpl<_$LinkEntityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LinkEntityToJson(
+    return _$$LinkEntityImplToJson(
       this,
     );
   }
@@ -153,10 +153,10 @@ class _$_LinkEntity implements _LinkEntity {
 
 abstract class _LinkEntity implements LinkEntity {
   const factory _LinkEntity(
-      {final String? imageUrl, required final String url}) = _$_LinkEntity;
+      {final String? imageUrl, required final String url}) = _$LinkEntityImpl;
 
   factory _LinkEntity.fromJson(Map<String, dynamic> json) =
-      _$_LinkEntity.fromJson;
+      _$LinkEntityImpl.fromJson;
 
   @override
   String? get imageUrl;
@@ -164,6 +164,6 @@ abstract class _LinkEntity implements LinkEntity {
   String get url;
   @override
   @JsonKey(ignore: true)
-  _$$_LinkEntityCopyWith<_$_LinkEntity> get copyWith =>
+  _$$LinkEntityImplCopyWith<_$LinkEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

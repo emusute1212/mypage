@@ -1,5 +1,5 @@
 enum ContactService {
-  twitter,
+  x,
   facebook,
   github,
   qiita,
