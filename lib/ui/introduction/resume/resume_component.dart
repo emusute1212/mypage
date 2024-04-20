@@ -19,8 +19,8 @@ class ResumeComponent extends HookConsumerWidget {
       child: Timeline(
         indicatorSize: 20,
         lineGap: 0,
-        lineColor: Colors.blue,
-        indicatorColor: Colors.blue,
+        lineColor: Colors.grey,
+        indicatorColor: Colors.grey,
         children: careerEntityList
             .map((e) => CareerComponent(
                   careerEntity: e,

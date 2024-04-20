@@ -46,6 +46,7 @@ class App extends HookConsumerWidget {
       home: Builder(builder: (context) {
         return Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.grey.shade500.withAlpha(50),
             title: Text(headerTitle),
             actions: [
               Padding(
@@ -53,6 +54,20 @@ class App extends HookConsumerWidget {
                   right: 8.0,
                 ),
                 child: Switch.adaptive(
+                  thumbIcon: MaterialStateProperty.resolveWith<Icon?>(
+                      (Set<MaterialState> states) {
+                    if (states.contains(MaterialState.selected)) {
+                      return Icon(
+                        Icons.dark_mode,
+                        color: Colors.blue.shade800,
+                      );
+                    } else {
+                      return const Icon(
+                        Icons.light_mode,
+                        color: Colors.orange,
+                      );
+                    }
+                  }),
                   value: state.isDarkMode,
                   onChanged: (value) async {
                     viewModel.onChangeThemeMode(value);
@@ -67,7 +82,7 @@ class App extends HookConsumerWidget {
             child: ListView(
               children: state.contentList
                   .map((e) => ListTile(
-                title: Text(e.displayName),
+                        title: Text(e.displayName),
                         onTap: () async {
                           FirebaseAnalyticsUtils.withSendAnalytics(
                               "menu", e.displayName, () {
