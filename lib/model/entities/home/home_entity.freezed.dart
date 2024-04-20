@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'home_entity.dart';
 
@@ -12,7 +12,7 @@ part of 'home_entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HomeEntity _$HomeEntityFromJson(Map<String, dynamic> json) {
   return _HomeEntity.fromJson(json);
@@ -85,11 +85,11 @@ class _$HomeEntityCopyWithImpl<$Res, $Val extends HomeEntity>
 }
 
 /// @nodoc
-abstract class _$$_HomeEntityCopyWith<$Res>
+abstract class _$$HomeEntityImplCopyWith<$Res>
     implements $HomeEntityCopyWith<$Res> {
-  factory _$$_HomeEntityCopyWith(
-          _$_HomeEntity value, $Res Function(_$_HomeEntity) then) =
-      __$$_HomeEntityCopyWithImpl<$Res>;
+  factory _$$HomeEntityImplCopyWith(
+          _$HomeEntityImpl value, $Res Function(_$HomeEntityImpl) then) =
+      __$$HomeEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -100,11 +100,11 @@ abstract class _$$_HomeEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_HomeEntityCopyWithImpl<$Res>
-    extends _$HomeEntityCopyWithImpl<$Res, _$_HomeEntity>
-    implements _$$_HomeEntityCopyWith<$Res> {
-  __$$_HomeEntityCopyWithImpl(
-      _$_HomeEntity _value, $Res Function(_$_HomeEntity) _then)
+class __$$HomeEntityImplCopyWithImpl<$Res>
+    extends _$HomeEntityCopyWithImpl<$Res, _$HomeEntityImpl>
+    implements _$$HomeEntityImplCopyWith<$Res> {
+  __$$HomeEntityImplCopyWithImpl(
+      _$HomeEntityImpl _value, $Res Function(_$HomeEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +115,7 @@ class __$$_HomeEntityCopyWithImpl<$Res>
     Object? message = null,
     Object? contracts = null,
   }) {
-    return _then(_$_HomeEntity(
+    return _then(_$HomeEntityImpl(
       icons: null == icons
           ? _value._icons
           : icons // ignore: cast_nullable_to_non_nullable
@@ -138,8 +138,8 @@ class __$$_HomeEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_HomeEntity implements _HomeEntity {
-  const _$_HomeEntity(
+class _$HomeEntityImpl implements _HomeEntity {
+  const _$HomeEntityImpl(
       {required final List<String> icons,
       required this.name,
       required this.message,
@@ -147,12 +147,13 @@ class _$_HomeEntity implements _HomeEntity {
       : _icons = icons,
         _contracts = contracts;
 
-  factory _$_HomeEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_HomeEntityFromJson(json);
+  factory _$HomeEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HomeEntityImplFromJson(json);
 
   final List<String> _icons;
   @override
   List<String> get icons {
+    if (_icons is EqualUnmodifiableListView) return _icons;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_icons);
   }
@@ -164,6 +165,7 @@ class _$_HomeEntity implements _HomeEntity {
   final List<ContactServiceEntity> _contracts;
   @override
   List<ContactServiceEntity> get contracts {
+    if (_contracts is EqualUnmodifiableListView) return _contracts;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_contracts);
   }
@@ -174,10 +176,10 @@ class _$_HomeEntity implements _HomeEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HomeEntity &&
+            other is _$HomeEntityImpl &&
             const DeepCollectionEquality().equals(other._icons, _icons) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.message, message) || other.message == message) &&
@@ -197,12 +199,12 @@ class _$_HomeEntity implements _HomeEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_HomeEntityCopyWith<_$_HomeEntity> get copyWith =>
-      __$$_HomeEntityCopyWithImpl<_$_HomeEntity>(this, _$identity);
+  _$$HomeEntityImplCopyWith<_$HomeEntityImpl> get copyWith =>
+      __$$HomeEntityImplCopyWithImpl<_$HomeEntityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HomeEntityToJson(
+    return _$$HomeEntityImplToJson(
       this,
     );
   }
@@ -213,10 +215,10 @@ abstract class _HomeEntity implements HomeEntity {
       {required final List<String> icons,
       required final String name,
       required final String message,
-      required final List<ContactServiceEntity> contracts}) = _$_HomeEntity;
+      required final List<ContactServiceEntity> contracts}) = _$HomeEntityImpl;
 
   factory _HomeEntity.fromJson(Map<String, dynamic> json) =
-      _$_HomeEntity.fromJson;
+      _$HomeEntityImpl.fromJson;
 
   @override
   List<String> get icons;
@@ -228,6 +230,6 @@ abstract class _HomeEntity implements HomeEntity {
   List<ContactServiceEntity> get contracts;
   @override
   @JsonKey(ignore: true)
-  _$$_HomeEntityCopyWith<_$_HomeEntity> get copyWith =>
+  _$$HomeEntityImplCopyWith<_$HomeEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

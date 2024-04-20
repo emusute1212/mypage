@@ -6,9 +6,9 @@ import 'package:mypage/ui/introduction/resume/career_component.dart';
 
 class ResumeComponent extends HookConsumerWidget {
   const ResumeComponent({
-    Key? key,
+    super.key,
     required this.careerEntityList,
-  }) : super(key: key);
+  });
 
   final List<CareerEntity> careerEntityList;
 
@@ -19,8 +19,8 @@ class ResumeComponent extends HookConsumerWidget {
       child: Timeline(
         indicatorSize: 20,
         lineGap: 0,
-        lineColor: Colors.blue,
-        indicatorColor: Colors.blue,
+        lineColor: Colors.grey,
+        indicatorColor: Colors.grey,
         children: careerEntityList
             .map((e) => CareerComponent(
                   careerEntity: e,

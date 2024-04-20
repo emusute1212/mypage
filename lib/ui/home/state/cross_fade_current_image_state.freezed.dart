@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'cross_fade_current_image_state.dart';
 
@@ -12,7 +12,7 @@ part of 'cross_fade_current_image_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CrossFadeCurrentImageState _$CrossFadeCurrentImageStateFromJson(
     Map<String, dynamic> json) {
@@ -77,25 +77,25 @@ class _$CrossFadeCurrentImageStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CrossFadeCurrentImageStateCopyWith<$Res>
+abstract class _$$CrossFadeCurrentImageStateImplCopyWith<$Res>
     implements $CrossFadeCurrentImageStateCopyWith<$Res> {
-  factory _$$_CrossFadeCurrentImageStateCopyWith(
-          _$_CrossFadeCurrentImageState value,
-          $Res Function(_$_CrossFadeCurrentImageState) then) =
-      __$$_CrossFadeCurrentImageStateCopyWithImpl<$Res>;
+  factory _$$CrossFadeCurrentImageStateImplCopyWith(
+          _$CrossFadeCurrentImageStateImpl value,
+          $Res Function(_$CrossFadeCurrentImageStateImpl) then) =
+      __$$CrossFadeCurrentImageStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int currentImageIndex, int visibleDuration, int imageCount});
 }
 
 /// @nodoc
-class __$$_CrossFadeCurrentImageStateCopyWithImpl<$Res>
+class __$$CrossFadeCurrentImageStateImplCopyWithImpl<$Res>
     extends _$CrossFadeCurrentImageStateCopyWithImpl<$Res,
-        _$_CrossFadeCurrentImageState>
-    implements _$$_CrossFadeCurrentImageStateCopyWith<$Res> {
-  __$$_CrossFadeCurrentImageStateCopyWithImpl(
-      _$_CrossFadeCurrentImageState _value,
-      $Res Function(_$_CrossFadeCurrentImageState) _then)
+        _$CrossFadeCurrentImageStateImpl>
+    implements _$$CrossFadeCurrentImageStateImplCopyWith<$Res> {
+  __$$CrossFadeCurrentImageStateImplCopyWithImpl(
+      _$CrossFadeCurrentImageStateImpl _value,
+      $Res Function(_$CrossFadeCurrentImageStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -105,7 +105,7 @@ class __$$_CrossFadeCurrentImageStateCopyWithImpl<$Res>
     Object? visibleDuration = null,
     Object? imageCount = null,
   }) {
-    return _then(_$_CrossFadeCurrentImageState(
+    return _then(_$CrossFadeCurrentImageStateImpl(
       currentImageIndex: null == currentImageIndex
           ? _value.currentImageIndex
           : currentImageIndex // ignore: cast_nullable_to_non_nullable
@@ -124,16 +124,17 @@ class __$$_CrossFadeCurrentImageStateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CrossFadeCurrentImageState
+class _$CrossFadeCurrentImageStateImpl
     with DiagnosticableTreeMixin
     implements _CrossFadeCurrentImageState {
-  const _$_CrossFadeCurrentImageState(
+  const _$CrossFadeCurrentImageStateImpl(
       {required this.currentImageIndex,
       required this.visibleDuration,
       required this.imageCount});
 
-  factory _$_CrossFadeCurrentImageState.fromJson(Map<String, dynamic> json) =>
-      _$$_CrossFadeCurrentImageStateFromJson(json);
+  factory _$CrossFadeCurrentImageStateImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$CrossFadeCurrentImageStateImplFromJson(json);
 
   @override
   final int currentImageIndex;
@@ -158,10 +159,10 @@ class _$_CrossFadeCurrentImageState
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CrossFadeCurrentImageState &&
+            other is _$CrossFadeCurrentImageStateImpl &&
             (identical(other.currentImageIndex, currentImageIndex) ||
                 other.currentImageIndex == currentImageIndex) &&
             (identical(other.visibleDuration, visibleDuration) ||
@@ -178,13 +179,13 @@ class _$_CrossFadeCurrentImageState
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CrossFadeCurrentImageStateCopyWith<_$_CrossFadeCurrentImageState>
-      get copyWith => __$$_CrossFadeCurrentImageStateCopyWithImpl<
-          _$_CrossFadeCurrentImageState>(this, _$identity);
+  _$$CrossFadeCurrentImageStateImplCopyWith<_$CrossFadeCurrentImageStateImpl>
+      get copyWith => __$$CrossFadeCurrentImageStateImplCopyWithImpl<
+          _$CrossFadeCurrentImageStateImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CrossFadeCurrentImageStateToJson(
+    return _$$CrossFadeCurrentImageStateImplToJson(
       this,
     );
   }
@@ -195,10 +196,10 @@ abstract class _CrossFadeCurrentImageState
   const factory _CrossFadeCurrentImageState(
       {required final int currentImageIndex,
       required final int visibleDuration,
-      required final int imageCount}) = _$_CrossFadeCurrentImageState;
+      required final int imageCount}) = _$CrossFadeCurrentImageStateImpl;
 
   factory _CrossFadeCurrentImageState.fromJson(Map<String, dynamic> json) =
-      _$_CrossFadeCurrentImageState.fromJson;
+      _$CrossFadeCurrentImageStateImpl.fromJson;
 
   @override
   int get currentImageIndex;
@@ -208,6 +209,6 @@ abstract class _CrossFadeCurrentImageState
   int get imageCount;
   @override
   @JsonKey(ignore: true)
-  _$$_CrossFadeCurrentImageStateCopyWith<_$_CrossFadeCurrentImageState>
+  _$$CrossFadeCurrentImageStateImplCopyWith<_$CrossFadeCurrentImageStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

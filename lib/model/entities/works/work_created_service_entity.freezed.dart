@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'work_created_service_entity.dart';
 
@@ -12,7 +12,7 @@ part of 'work_created_service_entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 WorkCreatedServiceEntity _$WorkCreatedServiceEntityFromJson(
     Map<String, dynamic> json) {
@@ -97,12 +97,12 @@ class _$WorkCreatedServiceEntityCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_WorkCreatedServiceEntityCopyWith<$Res>
+abstract class _$$WorkCreatedServiceEntityImplCopyWith<$Res>
     implements $WorkCreatedServiceEntityCopyWith<$Res> {
-  factory _$$_WorkCreatedServiceEntityCopyWith(
-          _$_WorkCreatedServiceEntity value,
-          $Res Function(_$_WorkCreatedServiceEntity) then) =
-      __$$_WorkCreatedServiceEntityCopyWithImpl<$Res>;
+  factory _$$WorkCreatedServiceEntityImplCopyWith(
+          _$WorkCreatedServiceEntityImpl value,
+          $Res Function(_$WorkCreatedServiceEntityImpl) then) =
+      __$$WorkCreatedServiceEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -113,12 +113,13 @@ abstract class _$$_WorkCreatedServiceEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_WorkCreatedServiceEntityCopyWithImpl<$Res>
+class __$$WorkCreatedServiceEntityImplCopyWithImpl<$Res>
     extends _$WorkCreatedServiceEntityCopyWithImpl<$Res,
-        _$_WorkCreatedServiceEntity>
-    implements _$$_WorkCreatedServiceEntityCopyWith<$Res> {
-  __$$_WorkCreatedServiceEntityCopyWithImpl(_$_WorkCreatedServiceEntity _value,
-      $Res Function(_$_WorkCreatedServiceEntity) _then)
+        _$WorkCreatedServiceEntityImpl>
+    implements _$$WorkCreatedServiceEntityImplCopyWith<$Res> {
+  __$$WorkCreatedServiceEntityImplCopyWithImpl(
+      _$WorkCreatedServiceEntityImpl _value,
+      $Res Function(_$WorkCreatedServiceEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -129,7 +130,7 @@ class __$$_WorkCreatedServiceEntityCopyWithImpl<$Res>
     Object? link = freezed,
     Object? skills = null,
   }) {
-    return _then(_$_WorkCreatedServiceEntity(
+    return _then(_$WorkCreatedServiceEntityImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -152,16 +153,16 @@ class __$$_WorkCreatedServiceEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_WorkCreatedServiceEntity implements _WorkCreatedServiceEntity {
-  const _$_WorkCreatedServiceEntity(
+class _$WorkCreatedServiceEntityImpl implements _WorkCreatedServiceEntity {
+  const _$WorkCreatedServiceEntityImpl(
       {required this.title,
       required this.detail,
       this.link,
       required final List<String> skills})
       : _skills = skills;
 
-  factory _$_WorkCreatedServiceEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_WorkCreatedServiceEntityFromJson(json);
+  factory _$WorkCreatedServiceEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WorkCreatedServiceEntityImplFromJson(json);
 
   @override
   final String title;
@@ -172,6 +173,7 @@ class _$_WorkCreatedServiceEntity implements _WorkCreatedServiceEntity {
   final List<String> _skills;
   @override
   List<String> get skills {
+    if (_skills is EqualUnmodifiableListView) return _skills;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_skills);
   }
@@ -182,10 +184,10 @@ class _$_WorkCreatedServiceEntity implements _WorkCreatedServiceEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_WorkCreatedServiceEntity &&
+            other is _$WorkCreatedServiceEntityImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.detail, detail) || other.detail == detail) &&
             (identical(other.link, link) || other.link == link) &&
@@ -200,13 +202,13 @@ class _$_WorkCreatedServiceEntity implements _WorkCreatedServiceEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_WorkCreatedServiceEntityCopyWith<_$_WorkCreatedServiceEntity>
-      get copyWith => __$$_WorkCreatedServiceEntityCopyWithImpl<
-          _$_WorkCreatedServiceEntity>(this, _$identity);
+  _$$WorkCreatedServiceEntityImplCopyWith<_$WorkCreatedServiceEntityImpl>
+      get copyWith => __$$WorkCreatedServiceEntityImplCopyWithImpl<
+          _$WorkCreatedServiceEntityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_WorkCreatedServiceEntityToJson(
+    return _$$WorkCreatedServiceEntityImplToJson(
       this,
     );
   }
@@ -217,10 +219,10 @@ abstract class _WorkCreatedServiceEntity implements WorkCreatedServiceEntity {
       {required final String title,
       required final String detail,
       final LinkEntity? link,
-      required final List<String> skills}) = _$_WorkCreatedServiceEntity;
+      required final List<String> skills}) = _$WorkCreatedServiceEntityImpl;
 
   factory _WorkCreatedServiceEntity.fromJson(Map<String, dynamic> json) =
-      _$_WorkCreatedServiceEntity.fromJson;
+      _$WorkCreatedServiceEntityImpl.fromJson;
 
   @override
   String get title;
@@ -232,6 +234,6 @@ abstract class _WorkCreatedServiceEntity implements WorkCreatedServiceEntity {
   List<String> get skills;
   @override
   @JsonKey(ignore: true)
-  _$$_WorkCreatedServiceEntityCopyWith<_$_WorkCreatedServiceEntity>
+  _$$WorkCreatedServiceEntityImplCopyWith<_$WorkCreatedServiceEntityImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

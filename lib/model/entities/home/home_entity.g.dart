@@ -6,8 +6,8 @@ part of 'home_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_HomeEntity _$$_HomeEntityFromJson(Map<String, dynamic> json) =>
-    _$_HomeEntity(
+_$HomeEntityImpl _$$HomeEntityImplFromJson(Map<String, dynamic> json) =>
+    _$HomeEntityImpl(
       icons: (json['icons'] as List<dynamic>).map((e) => e as String).toList(),
       name: json['name'] as String,
       message: json['message'] as String,
@@ -16,7 +16,7 @@ _$_HomeEntity _$$_HomeEntityFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_HomeEntityToJson(_$_HomeEntity instance) =>
+Map<String, dynamic> _$$HomeEntityImplToJson(_$HomeEntityImpl instance) =>
     <String, dynamic>{
       'icons': instance.icons,
       'name': instance.name,

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'career_entity.dart';
 
@@ -12,7 +12,7 @@ part of 'career_entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CareerEntity _$CareerEntityFromJson(Map<String, dynamic> json) {
   return _CareerEntity.fromJson(json);
@@ -74,22 +74,22 @@ class _$CareerEntityCopyWithImpl<$Res, $Val extends CareerEntity>
 }
 
 /// @nodoc
-abstract class _$$_CareerEntityCopyWith<$Res>
+abstract class _$$CareerEntityImplCopyWith<$Res>
     implements $CareerEntityCopyWith<$Res> {
-  factory _$$_CareerEntityCopyWith(
-          _$_CareerEntity value, $Res Function(_$_CareerEntity) then) =
-      __$$_CareerEntityCopyWithImpl<$Res>;
+  factory _$$CareerEntityImplCopyWith(
+          _$CareerEntityImpl value, $Res Function(_$CareerEntityImpl) then) =
+      __$$CareerEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({DateTime date, String where, String detail});
 }
 
 /// @nodoc
-class __$$_CareerEntityCopyWithImpl<$Res>
-    extends _$CareerEntityCopyWithImpl<$Res, _$_CareerEntity>
-    implements _$$_CareerEntityCopyWith<$Res> {
-  __$$_CareerEntityCopyWithImpl(
-      _$_CareerEntity _value, $Res Function(_$_CareerEntity) _then)
+class __$$CareerEntityImplCopyWithImpl<$Res>
+    extends _$CareerEntityCopyWithImpl<$Res, _$CareerEntityImpl>
+    implements _$$CareerEntityImplCopyWith<$Res> {
+  __$$CareerEntityImplCopyWithImpl(
+      _$CareerEntityImpl _value, $Res Function(_$CareerEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_CareerEntityCopyWithImpl<$Res>
     Object? where = null,
     Object? detail = null,
   }) {
-    return _then(_$_CareerEntity(
+    return _then(_$CareerEntityImpl(
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -118,12 +118,12 @@ class __$$_CareerEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CareerEntity implements _CareerEntity {
-  const _$_CareerEntity(
+class _$CareerEntityImpl implements _CareerEntity {
+  const _$CareerEntityImpl(
       {required this.date, required this.where, required this.detail});
 
-  factory _$_CareerEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_CareerEntityFromJson(json);
+  factory _$CareerEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CareerEntityImplFromJson(json);
 
   @override
   final DateTime date;
@@ -138,10 +138,10 @@ class _$_CareerEntity implements _CareerEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CareerEntity &&
+            other is _$CareerEntityImpl &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.where, where) || other.where == where) &&
             (identical(other.detail, detail) || other.detail == detail));
@@ -154,12 +154,12 @@ class _$_CareerEntity implements _CareerEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CareerEntityCopyWith<_$_CareerEntity> get copyWith =>
-      __$$_CareerEntityCopyWithImpl<_$_CareerEntity>(this, _$identity);
+  _$$CareerEntityImplCopyWith<_$CareerEntityImpl> get copyWith =>
+      __$$CareerEntityImplCopyWithImpl<_$CareerEntityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CareerEntityToJson(
+    return _$$CareerEntityImplToJson(
       this,
     );
   }
@@ -169,10 +169,10 @@ abstract class _CareerEntity implements CareerEntity {
   const factory _CareerEntity(
       {required final DateTime date,
       required final String where,
-      required final String detail}) = _$_CareerEntity;
+      required final String detail}) = _$CareerEntityImpl;
 
   factory _CareerEntity.fromJson(Map<String, dynamic> json) =
-      _$_CareerEntity.fromJson;
+      _$CareerEntityImpl.fromJson;
 
   @override
   DateTime get date;
@@ -182,6 +182,6 @@ abstract class _CareerEntity implements CareerEntity {
   String get detail;
   @override
   @JsonKey(ignore: true)
-  _$$_CareerEntityCopyWith<_$_CareerEntity> get copyWith =>
+  _$$CareerEntityImplCopyWith<_$CareerEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

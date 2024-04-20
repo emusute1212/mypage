@@ -6,22 +6,22 @@ part of 'contact_service_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ContactServiceEntity _$$_ContactServiceEntityFromJson(
+_$ContactServiceEntityImpl _$$ContactServiceEntityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ContactServiceEntity(
+    _$ContactServiceEntityImpl(
       service: $enumDecode(_$ContactServiceEnumMap, json['service']),
       url: json['url'] as String,
     );
 
-Map<String, dynamic> _$$_ContactServiceEntityToJson(
-        _$_ContactServiceEntity instance) =>
+Map<String, dynamic> _$$ContactServiceEntityImplToJson(
+        _$ContactServiceEntityImpl instance) =>
     <String, dynamic>{
       'service': _$ContactServiceEnumMap[instance.service]!,
       'url': instance.url,
     };
 
 const _$ContactServiceEnumMap = {
-  ContactService.twitter: 'twitter',
+  ContactService.x: 'x',
   ContactService.facebook: 'facebook',
   ContactService.github: 'github',
   ContactService.qiita: 'qiita',

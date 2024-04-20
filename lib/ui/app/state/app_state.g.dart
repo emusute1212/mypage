@@ -6,7 +6,8 @@ part of 'app_state.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AppState _$$_AppStateFromJson(Map<String, dynamic> json) => _$_AppState(
+_$AppStateImpl _$$AppStateImplFromJson(Map<String, dynamic> json) =>
+    _$AppStateImpl(
       contentList: (json['contentList'] as List<dynamic>)
           .map((e) => $enumDecode(_$ContentsEnumMap, e))
           .toList(),
@@ -14,7 +15,7 @@ _$_AppState _$$_AppStateFromJson(Map<String, dynamic> json) => _$_AppState(
       isDarkMode: json['isDarkMode'] as bool,
     );
 
-Map<String, dynamic> _$$_AppStateToJson(_$_AppState instance) =>
+Map<String, dynamic> _$$AppStateImplToJson(_$AppStateImpl instance) =>
     <String, dynamic>{
       'contentList':
           instance.contentList.map((e) => _$ContentsEnumMap[e]!).toList(),

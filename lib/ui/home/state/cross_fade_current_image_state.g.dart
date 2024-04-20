@@ -6,16 +6,16 @@ part of 'cross_fade_current_image_state.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CrossFadeCurrentImageState _$$_CrossFadeCurrentImageStateFromJson(
+_$CrossFadeCurrentImageStateImpl _$$CrossFadeCurrentImageStateImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CrossFadeCurrentImageState(
+    _$CrossFadeCurrentImageStateImpl(
       currentImageIndex: json['currentImageIndex'] as int,
       visibleDuration: json['visibleDuration'] as int,
       imageCount: json['imageCount'] as int,
     );
 
-Map<String, dynamic> _$$_CrossFadeCurrentImageStateToJson(
-        _$_CrossFadeCurrentImageState instance) =>
+Map<String, dynamic> _$$CrossFadeCurrentImageStateImplToJson(
+        _$CrossFadeCurrentImageStateImpl instance) =>
     <String, dynamic>{
       'currentImageIndex': instance.currentImageIndex,
       'visibleDuration': instance.visibleDuration,

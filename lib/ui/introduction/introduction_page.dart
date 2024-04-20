@@ -9,7 +9,7 @@ import 'package:mypage/ui/introduction/resume/resume_component.dart';
 import 'package:mypage/ui/introduction/state/introduction_state.dart';
 
 class IntroductionPage extends HookConsumerWidget {
-  const IntroductionPage({Key? key}) : super(key: key);
+  const IntroductionPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

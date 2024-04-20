@@ -11,9 +11,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ContactServiceComponent extends HookConsumerWidget {
   const ContactServiceComponent({
-    Key? key,
+    super.key,
     required this.contactService,
-  }) : super(key: key);
+  });
 
   final ContactServiceEntity contactService;
 
@@ -38,10 +38,10 @@ class ContactServiceComponent extends HookConsumerWidget {
   Widget _getFontAwesomeIcon(
       ContactService service, double size, bool isHover) {
     switch (service) {
-      case ContactService.twitter:
+      case ContactService.x:
         return FaIcon(
-          FontAwesomeIcons.twitter,
-          color: isHover ? Colors.blue : Colors.grey,
+          FontAwesomeIcons.xTwitter,
+          color: isHover ? Colors.black : Colors.grey,
           size: size,
         );
       case ContactService.facebook:

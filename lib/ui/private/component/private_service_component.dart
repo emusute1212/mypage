@@ -6,9 +6,9 @@ import 'package:mypage/ui/common/skills/skill_list_component.dart';
 
 class PrivateServiceComponent extends HookConsumerWidget {
   const PrivateServiceComponent({
-    Key? key,
+    super.key,
     required this.service,
-  }) : super(key: key);
+  });
 
   final PrivateCreatedServiceEntity service;
 

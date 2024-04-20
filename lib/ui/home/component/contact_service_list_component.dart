@@ -4,8 +4,7 @@ import 'package:mypage/model/entities/home/services/contact_service_entity.dart'
 import 'package:mypage/ui/home/component/contact_service_component.dart';
 
 class ContactServiceListComponent extends HookConsumerWidget {
-  const ContactServiceListComponent({Key? key, required this.contactServiceList})
-      : super(key: key);
+  const ContactServiceListComponent({super.key, required this.contactServiceList});
 
   final List<ContactServiceEntity> contactServiceList;
 

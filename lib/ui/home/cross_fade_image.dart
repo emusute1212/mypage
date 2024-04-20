@@ -7,12 +7,12 @@ import 'package:mypage/ui/home/state/cross_fade_current_image_state.dart';
 
 class CrossFadeImage extends HookConsumerWidget {
   const CrossFadeImage({
-    Key? key,
+    super.key,
     required this.images,
     required this.visibleDuration,
     required this.width,
     required this.height,
-  }) : super(key: key);
+  });
 
   final List<Widget> images;
   final int visibleDuration;

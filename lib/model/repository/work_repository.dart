@@ -10,10 +10,10 @@ class WorkRepository {
       topImage: "images/top_image/work_image.jpeg",
       services: [
         WorkCreatedServiceEntity(
-          title: "ライブストリーミングサービスの開発",
+          title: "ライブ配信アプリの開発",
           detail: "PocochaのAndroidエンジニアとして、2023/7月よりJoin。\n"
-              "現時点（2023/7）では、オンボーディング機関なのでまだ開発には従事していないですが、\n"
-              "サービスの商品力強化、及び価値提供に最大限貢献できることを目指しています！\n",
+              "Androidエンジニアのみならず、ProductOwner的な役割も担いながら、\n"
+              "サービスの商品力強化、及び価値提供に最大限貢献することを常に意識しています！",
           skills: [
             "Kotlin",
             "Android",
@@ -21,11 +21,10 @@ class WorkRepository {
         ),
         WorkCreatedServiceEntity(
           title: "タブレットを利用した家庭学習サービス",
-          detail: "タブレットを利用した家庭学習サービスのクライアントサイドを担当。\n"
-              "タブレットはタブレット対応アプリとかではなく、専用端末になっています。\n"
-              "なので、KIOSKアプリのような物をイメージしていただけるとわかりやすいと思います。\n"
-              "タブレット自体はAndroid端末で、一般的なAndroidアプリの開発からプリインアプリ郡の開発など、幅広く携わりました。\n"
-              "他にもPOやEMといったマネジメントに近い業務も行っていました。",
+          detail: "Androidクライアントサイドと開発責任者を担当。\n"
+              "開発的な側面では、一般的なAndroidアプリ開発はもちろん、\n"
+              "専用端末という特性上、プリインストールされるアプリ郡の開発などのコアな領域にも従事。\n"
+              "開発責任者としては、ユーザに価値を提供するためにエンジニアという垣根を超えて商品力強化に従事。",
           skills: [
             "Kotlin",
             "Android",

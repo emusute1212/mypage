@@ -4,9 +4,9 @@ import 'package:mypage/model/entities/introduction/career_entity.dart';
 
 class CareerComponent extends HookConsumerWidget {
   const CareerComponent({
-    Key? key,
+    super.key,
     required this.careerEntity,
-  }) : super(key: key);
+  });
 
   final CareerEntity careerEntity;
 

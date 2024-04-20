@@ -4,8 +4,7 @@ import 'package:mypage/model/entities/private/private_created_service_entity.dar
 import 'package:mypage/ui/private/component/private_service_component.dart';
 
 class ServiceListComponent extends HookConsumerWidget {
-  const ServiceListComponent({Key? key, required this.services})
-      : super(key: key);
+  const ServiceListComponent({super.key, required this.services});
 
   final List<PrivateCreatedServiceEntity> services;
 

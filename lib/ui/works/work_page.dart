@@ -7,8 +7,8 @@ import 'package:mypage/ui/works/work_view_model.dart';
 
 class WorkPage extends HookConsumerWidget {
   const WorkPage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

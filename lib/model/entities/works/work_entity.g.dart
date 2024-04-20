@@ -6,8 +6,8 @@ part of 'work_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_WorkEntity _$$_WorkEntityFromJson(Map<String, dynamic> json) =>
-    _$_WorkEntity(
+_$WorkEntityImpl _$$WorkEntityImplFromJson(Map<String, dynamic> json) =>
+    _$WorkEntityImpl(
       topImage: json['topImage'] as String,
       services: (json['services'] as List<dynamic>)
           .map((e) =>
@@ -15,7 +15,7 @@ _$_WorkEntity _$$_WorkEntityFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_WorkEntityToJson(_$_WorkEntity instance) =>
+Map<String, dynamic> _$$WorkEntityImplToJson(_$WorkEntityImpl instance) =>
     <String, dynamic>{
       'topImage': instance.topImage,
       'services': instance.services,

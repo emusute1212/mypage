@@ -6,8 +6,8 @@ part of 'private_entity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PrivateEntity _$$_PrivateEntityFromJson(Map<String, dynamic> json) =>
-    _$_PrivateEntity(
+_$PrivateEntityImpl _$$PrivateEntityImplFromJson(Map<String, dynamic> json) =>
+    _$PrivateEntityImpl(
       topImage: json['topImage'] as String,
       services: (json['services'] as List<dynamic>)
           .map((e) =>
@@ -15,7 +15,7 @@ _$_PrivateEntity _$$_PrivateEntityFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_PrivateEntityToJson(_$_PrivateEntity instance) =>
+Map<String, dynamic> _$$PrivateEntityImplToJson(_$PrivateEntityImpl instance) =>
     <String, dynamic>{
       'topImage': instance.topImage,
       'services': instance.services,

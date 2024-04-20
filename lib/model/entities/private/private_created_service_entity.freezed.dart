@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'private_created_service_entity.dart';
 
@@ -12,7 +12,7 @@ part of 'private_created_service_entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PrivateCreatedServiceEntity _$PrivateCreatedServiceEntityFromJson(
     Map<String, dynamic> json) {
@@ -99,12 +99,12 @@ class _$PrivateCreatedServiceEntityCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PrivateCreatedServiceEntityCopyWith<$Res>
+abstract class _$$PrivateCreatedServiceEntityImplCopyWith<$Res>
     implements $PrivateCreatedServiceEntityCopyWith<$Res> {
-  factory _$$_PrivateCreatedServiceEntityCopyWith(
-          _$_PrivateCreatedServiceEntity value,
-          $Res Function(_$_PrivateCreatedServiceEntity) then) =
-      __$$_PrivateCreatedServiceEntityCopyWithImpl<$Res>;
+  factory _$$PrivateCreatedServiceEntityImplCopyWith(
+          _$PrivateCreatedServiceEntityImpl value,
+          $Res Function(_$PrivateCreatedServiceEntityImpl) then) =
+      __$$PrivateCreatedServiceEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -115,13 +115,13 @@ abstract class _$$_PrivateCreatedServiceEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PrivateCreatedServiceEntityCopyWithImpl<$Res>
+class __$$PrivateCreatedServiceEntityImplCopyWithImpl<$Res>
     extends _$PrivateCreatedServiceEntityCopyWithImpl<$Res,
-        _$_PrivateCreatedServiceEntity>
-    implements _$$_PrivateCreatedServiceEntityCopyWith<$Res> {
-  __$$_PrivateCreatedServiceEntityCopyWithImpl(
-      _$_PrivateCreatedServiceEntity _value,
-      $Res Function(_$_PrivateCreatedServiceEntity) _then)
+        _$PrivateCreatedServiceEntityImpl>
+    implements _$$PrivateCreatedServiceEntityImplCopyWith<$Res> {
+  __$$PrivateCreatedServiceEntityImplCopyWithImpl(
+      _$PrivateCreatedServiceEntityImpl _value,
+      $Res Function(_$PrivateCreatedServiceEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -132,7 +132,7 @@ class __$$_PrivateCreatedServiceEntityCopyWithImpl<$Res>
     Object? link = freezed,
     Object? skills = null,
   }) {
-    return _then(_$_PrivateCreatedServiceEntity(
+    return _then(_$PrivateCreatedServiceEntityImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -155,16 +155,18 @@ class __$$_PrivateCreatedServiceEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PrivateCreatedServiceEntity implements _PrivateCreatedServiceEntity {
-  const _$_PrivateCreatedServiceEntity(
+class _$PrivateCreatedServiceEntityImpl
+    implements _PrivateCreatedServiceEntity {
+  const _$PrivateCreatedServiceEntityImpl(
       {required this.title,
       required this.detail,
       required this.link,
       required final List<String> skills})
       : _skills = skills;
 
-  factory _$_PrivateCreatedServiceEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_PrivateCreatedServiceEntityFromJson(json);
+  factory _$PrivateCreatedServiceEntityImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$PrivateCreatedServiceEntityImplFromJson(json);
 
   @override
   final String title;
@@ -175,6 +177,7 @@ class _$_PrivateCreatedServiceEntity implements _PrivateCreatedServiceEntity {
   final List<String> _skills;
   @override
   List<String> get skills {
+    if (_skills is EqualUnmodifiableListView) return _skills;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_skills);
   }
@@ -185,10 +188,10 @@ class _$_PrivateCreatedServiceEntity implements _PrivateCreatedServiceEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PrivateCreatedServiceEntity &&
+            other is _$PrivateCreatedServiceEntityImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.detail, detail) || other.detail == detail) &&
             (identical(other.link, link) || other.link == link) &&
@@ -203,13 +206,13 @@ class _$_PrivateCreatedServiceEntity implements _PrivateCreatedServiceEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PrivateCreatedServiceEntityCopyWith<_$_PrivateCreatedServiceEntity>
-      get copyWith => __$$_PrivateCreatedServiceEntityCopyWithImpl<
-          _$_PrivateCreatedServiceEntity>(this, _$identity);
+  _$$PrivateCreatedServiceEntityImplCopyWith<_$PrivateCreatedServiceEntityImpl>
+      get copyWith => __$$PrivateCreatedServiceEntityImplCopyWithImpl<
+          _$PrivateCreatedServiceEntityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrivateCreatedServiceEntityToJson(
+    return _$$PrivateCreatedServiceEntityImplToJson(
       this,
     );
   }
@@ -221,10 +224,10 @@ abstract class _PrivateCreatedServiceEntity
       {required final String title,
       required final String detail,
       required final LinkEntity? link,
-      required final List<String> skills}) = _$_PrivateCreatedServiceEntity;
+      required final List<String> skills}) = _$PrivateCreatedServiceEntityImpl;
 
   factory _PrivateCreatedServiceEntity.fromJson(Map<String, dynamic> json) =
-      _$_PrivateCreatedServiceEntity.fromJson;
+      _$PrivateCreatedServiceEntityImpl.fromJson;
 
   @override
   String get title;
@@ -236,6 +239,6 @@ abstract class _PrivateCreatedServiceEntity
   List<String> get skills;
   @override
   @JsonKey(ignore: true)
-  _$$_PrivateCreatedServiceEntityCopyWith<_$_PrivateCreatedServiceEntity>
+  _$$PrivateCreatedServiceEntityImplCopyWith<_$PrivateCreatedServiceEntityImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

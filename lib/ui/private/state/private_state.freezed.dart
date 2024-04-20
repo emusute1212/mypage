@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'private_state.dart';
 
@@ -12,7 +12,7 @@ part of 'private_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PrivateState _$PrivateStateFromJson(Map<String, dynamic> json) {
   return _PrivateState.fromJson(json);
@@ -72,11 +72,11 @@ class _$PrivateStateCopyWithImpl<$Res, $Val extends PrivateState>
 }
 
 /// @nodoc
-abstract class _$$_PrivateStateCopyWith<$Res>
+abstract class _$$PrivateStateImplCopyWith<$Res>
     implements $PrivateStateCopyWith<$Res> {
-  factory _$$_PrivateStateCopyWith(
-          _$_PrivateState value, $Res Function(_$_PrivateState) then) =
-      __$$_PrivateStateCopyWithImpl<$Res>;
+  factory _$$PrivateStateImplCopyWith(
+          _$PrivateStateImpl value, $Res Function(_$PrivateStateImpl) then) =
+      __$$PrivateStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PrivateEntity entity});
@@ -86,11 +86,11 @@ abstract class _$$_PrivateStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PrivateStateCopyWithImpl<$Res>
-    extends _$PrivateStateCopyWithImpl<$Res, _$_PrivateState>
-    implements _$$_PrivateStateCopyWith<$Res> {
-  __$$_PrivateStateCopyWithImpl(
-      _$_PrivateState _value, $Res Function(_$_PrivateState) _then)
+class __$$PrivateStateImplCopyWithImpl<$Res>
+    extends _$PrivateStateCopyWithImpl<$Res, _$PrivateStateImpl>
+    implements _$$PrivateStateImplCopyWith<$Res> {
+  __$$PrivateStateImplCopyWithImpl(
+      _$PrivateStateImpl _value, $Res Function(_$PrivateStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +98,7 @@ class __$$_PrivateStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = null,
   }) {
-    return _then(_$_PrivateState(
+    return _then(_$PrivateStateImpl(
       entity: null == entity
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
@@ -109,11 +109,11 @@ class __$$_PrivateStateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PrivateState implements _PrivateState {
-  const _$_PrivateState({required this.entity});
+class _$PrivateStateImpl implements _PrivateState {
+  const _$PrivateStateImpl({required this.entity});
 
-  factory _$_PrivateState.fromJson(Map<String, dynamic> json) =>
-      _$$_PrivateStateFromJson(json);
+  factory _$PrivateStateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PrivateStateImplFromJson(json);
 
   @override
   final PrivateEntity entity;
@@ -124,10 +124,10 @@ class _$_PrivateState implements _PrivateState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PrivateState &&
+            other is _$PrivateStateImpl &&
             (identical(other.entity, entity) || other.entity == entity));
   }
 
@@ -138,12 +138,12 @@ class _$_PrivateState implements _PrivateState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PrivateStateCopyWith<_$_PrivateState> get copyWith =>
-      __$$_PrivateStateCopyWithImpl<_$_PrivateState>(this, _$identity);
+  _$$PrivateStateImplCopyWith<_$PrivateStateImpl> get copyWith =>
+      __$$PrivateStateImplCopyWithImpl<_$PrivateStateImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrivateStateToJson(
+    return _$$PrivateStateImplToJson(
       this,
     );
   }
@@ -151,15 +151,15 @@ class _$_PrivateState implements _PrivateState {
 
 abstract class _PrivateState implements PrivateState {
   const factory _PrivateState({required final PrivateEntity entity}) =
-      _$_PrivateState;
+      _$PrivateStateImpl;
 
   factory _PrivateState.fromJson(Map<String, dynamic> json) =
-      _$_PrivateState.fromJson;
+      _$PrivateStateImpl.fromJson;
 
   @override
   PrivateEntity get entity;
   @override
   @JsonKey(ignore: true)
-  _$$_PrivateStateCopyWith<_$_PrivateState> get copyWith =>
+  _$$PrivateStateImplCopyWith<_$PrivateStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

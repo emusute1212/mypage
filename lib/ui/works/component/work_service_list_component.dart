@@ -4,8 +4,7 @@ import 'package:mypage/model/entities/works/work_created_service_entity.dart';
 import 'package:mypage/ui/works/component/work_service_component.dart';
 
 class ServiceListComponent extends HookConsumerWidget {
-  const ServiceListComponent({Key? key, required this.services})
-      : super(key: key);
+  const ServiceListComponent({super.key, required this.services});
 
   final List<WorkCreatedServiceEntity> services;
 

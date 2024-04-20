@@ -6,9 +6,9 @@ import 'package:mypage/ui/common/skills/skill_list_component.dart';
 
 class WorkServiceComponent extends HookConsumerWidget {
   const WorkServiceComponent({
-    Key? key,
+    super.key,
     required this.service,
-  }) : super(key: key);
+  });
 
   final WorkCreatedServiceEntity service;
 
