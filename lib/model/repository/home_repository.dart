@@ -39,6 +39,10 @@ class HomeRepository {
           service: ContactService.zenn,
           url: "https://zenn.dev/emusute",
         ),
+        ContactServiceEntity(
+          service: ContactService.shizukanainternet,
+          url: "https://sizu.me/emusute",
+        ),
       ],
     );
   }

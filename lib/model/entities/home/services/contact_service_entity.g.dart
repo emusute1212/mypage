@@ -27,4 +27,5 @@ const _$ContactServiceEnumMap = {
   ContactService.qiita: 'qiita',
   ContactService.stackoverflow: 'stackoverflow',
   ContactService.zenn: 'zenn',
+  ContactService.shizukanainternet: 'shizukanainternet',
 };
