@@ -74,6 +74,12 @@ class ContactServiceComponent extends HookConsumerWidget {
           color: isHover ? Colors.lightBlue : Colors.grey,
           width: size,
         );
+      case ContactService.shizukanainternet:
+        return Image.asset(
+          "images/service_favicon/shizukana_internet.png",
+          color: isHover ? Colors.black : Colors.grey,
+          width: size,
+        );
     }
   }
 

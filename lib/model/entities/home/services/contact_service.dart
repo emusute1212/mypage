@@ -5,4 +5,5 @@ enum ContactService {
   qiita,
   stackoverflow,
   zenn,
+  shizukanainternet,
 }
