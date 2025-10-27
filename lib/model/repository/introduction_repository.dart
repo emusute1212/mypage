@@ -12,22 +12,18 @@ class IntroductionRepository {
       topImage: "images/top_image/introduction_image.jpeg",
       from: const TopicEntity(
         topic: "石川県金沢市",
-        detail: "なんやかんやで地元が好きです。😊\n現在は東京でお仕事をしています。",
+        detail: "お魚が美味しいところです！\n現在は東京でお仕事をしています。",
       ),
       likes: const TopicEntity(
         topic: "ゲーム🎮とドライブ🚗",
         detail: "🎮：色々かじっていますが、オフラインでできるゲームが一番好きです。\n"
-            "APEXなどのFPSにも手は出したのですが、あまり性に合わず...。\n"
-            "ドラクエなり龍が如くなり、オフラインでかつストーリー性のあるゲームが好きです！\n"
-            "🚗：暇があればドライブをしています。\n"
-            "車で関東はきついと言われていますが、積極的に車に乗っています！\n"
-            "（首都高の合流は今でも怖いです...。）",
+            "🚗：暇があればドライブをしています。\n",
       ),
       resume: [
         CareerEntity(
           date: DateTime(2011, 4),
           where: "金沢工業高等専門学校",
-          detail: "高専の情報系学科へ入学し、IT業界へ進むことを決意。",
+          detail: "ものを直したり作ったりすることが好きだったので高専の情報系学科へ入学。",
         ),
         CareerEntity(
           date: DateTime(2016, 4),
@@ -43,7 +39,7 @@ class IntroductionRepository {
           date: DateTime(2023, 7),
           where: "DeNA Co., Ltd.",
           detail:
-              "PocochaのAndroidエンジニアとしてJoin。Androidのクライアントサイド及びProductOwnerを担当。",
+              "PocochaのAndroidアプリエンジニアとしてJoinし、今はPOやGLなどのマネージャーレイヤーを担当している。",
         ),
       ],
       mainSkills: [
